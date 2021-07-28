@@ -5,7 +5,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "yarn lerna run build",
     "commit": "git-cz",
     "precommit": "lint-staged"
   },
