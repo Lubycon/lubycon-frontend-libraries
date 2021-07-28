@@ -31,7 +31,7 @@ jobs:
         run: yarn lerna run build
       - name: Set NPM
         run: |
-          echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} | tee .npmrc $HOME/.npmrc > /dev/null
+          echo //registry.npmjs.org/:_authToken=$NPM_TOKEN | tee .npmrc $HOME/.npmrc > /dev/null
           npm whoami
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
