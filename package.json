@@ -3,9 +3,43 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:all": "yarn workspaces foreach ",
+    "commit": "git-cz",
+    "precommit": "lint-staged"
   },
   "author": "Lubycon<lubycon@gmail.com>",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lubycon/lubycon-frontend-libraries"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.18"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@yarnpkg/pnpify": "^3.0.0-rc.14",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "typescript": "^4.3.5"
+  }
 }
