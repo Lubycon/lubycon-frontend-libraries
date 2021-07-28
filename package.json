@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build:all": "yarn workspaces foreach ",
+    "build": "yarn workspaces foreach run build",
     "commit": "git-cz",
     "precommit": "lint-staged"
   },
@@ -38,8 +38,12 @@
     "@yarnpkg/pnpify": "^3.0.0-rc.14",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
 }
