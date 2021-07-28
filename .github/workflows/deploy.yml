@@ -24,7 +24,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Pull main branch
-        run: git fetch origin main
+        run: git checkout "${GITHUB_REF:11}" && git pull
       - name: Install dependencies
         run: yarn
       - name: Build
