@@ -16,16 +16,34 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - name: Set Git User
+        run: |
+          git config --global user.name "lubycon-admin"
+          git config --global user.email "lubycon@gmail.com"
+          git remote set-url origin https://lubycon-admin:$GH_TOKEN@github.com/Lubycon/lubycon-frontend-libraries.git
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Pull main branch
+        run: git fetch origin main
       - name: Install dependencies
         run: yarn
       - name: Build
         run: yarn lerna run build
+      - name: Set NPM
+        run: |
+          yarn logout
+          echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} | tee .npmrc $HOME/.npmrc > /dev/null
+          npm whoami
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
       - name: Publish
         id: publish
-        run:
-          - yarn lerna version --conventional-commits --yes
-          - yarn lerna publish from-git --yes
+        run: |
+          yarn lerna version --conventional-commits --yes
+          yarn lerna publish from-git --yes
         env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          
         
