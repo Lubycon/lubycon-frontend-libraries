@@ -21,7 +21,6 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts",
     "start": "rollup -c rollup.config.ts -w",
-    "copy-version": "ncp dist/package.json package.json",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
