@@ -1,11 +1,13 @@
+---
+to: packages/<%= name %>/package.json
+---
 {
-  "name": "@lubycon/utils",
-  "description": "Utils which uses in Lubycon",
+  "name": "@lubycon/<%= name %>",
+  "description": "<%= description %>",
   "sideEffects": false,
-  "version": "1.6.4",
+  "version": "1.0.0",
   "keywords": [
-    "lubycon",
-    "utils"
+    "lubycon"
   ],
   "main": "./dist/index.js",
   "module": "./dist",
@@ -24,8 +26,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/amplitude-js": "^8.0.0",
     "@types/node": "^10.11.0",
+    "@types/react": "^17.0.13",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "cross-env": "^5.2.0",
@@ -40,12 +42,6 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "tslib": "^2.3.0",
-    "typescript": "^3.0.3"
-  },
-  "dependencies": {
-    "amplitude-js": "^8.3.0",
-    "date-fns": "^2.22.1",
-    "firebase": "^8.6.3"
+    "typescript": "^4.3.5"
   }
 }
