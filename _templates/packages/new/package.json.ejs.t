@@ -1,11 +1,13 @@
+---
+to: packages/<%= name %>/package.json
+---
 {
-  "name": "@lubycon/react",
-  "description": "React utils which uses in Lubycon",
+  "name": "@lubycon/<%= name %>",
+  "description": "<%= description %>",
   "sideEffects": false,
-  "version": "1.6.4",
+  "version": "1.0.0",
   "keywords": [
-    "lubycon",
-    "react"
+    "lubycon"
   ],
   "main": "./dist/index.js",
   "module": "./dist",
@@ -41,8 +43,5 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.3.5"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2"
   }
 }

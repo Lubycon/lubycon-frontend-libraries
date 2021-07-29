@@ -9,3 +9,9 @@ $ git clone https://github.com/Lubycon/lubycon-frontend-libraries.git
 $ cd lubycon-frontend-libraries
 $ yarn
 ```
+
+## Add new Package
+
+```sh
+$ yarn new-package
+```
