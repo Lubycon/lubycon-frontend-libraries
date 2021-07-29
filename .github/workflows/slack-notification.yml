@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Fire Notification
-        uses: Lubycon/github-reviewer-slack-noti-action@v1.3.0
+        uses: Lubycon/github-reviewer-slack-noti-action@v1.5.0
         with:
           slack-bot-token: ${{ secrets.LUBYCON_SLACK_BOT_TOKEN }}
           github-token: ${{ secrets.LUBYCON_GITHUB_TOKEN }}
