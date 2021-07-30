@@ -8,7 +8,9 @@
     "firebase",
     "amplitude"
   ],
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist",
+  "typings": "./dist/types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "main": "./dist/index.js",
