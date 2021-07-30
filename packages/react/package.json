@@ -7,6 +7,7 @@
     "lubycon",
     "react"
   ],
+  "main": "src/index.ts",
   "publishConfig": {
     "access": "public",
     "main": "./dist/index.js",
