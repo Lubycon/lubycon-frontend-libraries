@@ -7,19 +7,18 @@ to: packages/<%= name %>/package.json
   "sideEffects": false,
   "version": "1.0.0",
   "keywords": [
-    "lubycon"
+    "lubycon",
+    "<%= name %>"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist",
-  "typings": "./dist/types/index.d.ts",
+  "main": "src/index.ts",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "main": "dist/index.js",
+    "module": "dist",
+    "typings": "dist/types/index.d.ts"
   },
-  "files": [
-    "./dist"
-  ],
   "scripts": {
-    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts",
     "start": "rollup -c rollup.config.ts -w",
