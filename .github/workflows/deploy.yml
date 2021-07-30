@@ -39,7 +39,7 @@ jobs:
         id: publish
         run: |
           yarn lerna version --conventional-commits --yes
-          yarn lerna publish --yes
+          yarn lerna publish from-git --yes
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
