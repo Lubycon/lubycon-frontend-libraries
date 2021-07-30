@@ -12,12 +12,11 @@ export const initializeAmplitude = (apiKey: string): Promise<AmplitudeClient | n
     }
 
     const amplitudeModule = await import('amplitude-js');
-    amplitudeModule.default
-      .getInstance()
-      .init(apiKey, 'unknown', {}, async (client: AmplitudeClient) => {
-        initialized = true;
-        amplitudeClient = client;
-        resolve(client);
-      });
+
+    amplitudeModule.getInstance().init(apiKey, 'unknown', {}, async (client: AmplitudeClient) => {
+      initialized = true;
+      amplitudeClient = client;
+      resolve(client);
+    });
   });
 };
