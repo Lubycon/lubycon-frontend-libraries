@@ -10,7 +10,7 @@ to: packages/<%= name %>/package.json
     "lubycon",
     "<%= name %>"
   ],
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
