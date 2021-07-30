@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "new-package": "hygen packages new",
-    "commit": "git-cz",
     "postinstall": "husky install"
   },
   "author": "Lubycon<lubycon@gmail.com>",
