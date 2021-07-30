@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "new-package": "hygen packages new",
-    "commit": "git-cz",
-    "precommit": "lint-staged"
+    "postinstall": "husky install"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {
@@ -24,7 +23,7 @@
     ]
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
+    "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "git add"
     ]
@@ -47,6 +46,7 @@
     "hygen": "^6.1.0",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.1",
+    "pinst": "^2.1.6",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
