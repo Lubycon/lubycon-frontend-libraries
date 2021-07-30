@@ -64,6 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["hygen", "npm:6.1.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:11.1.1"],
+            ["pinst", "npm:2.1.6"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
@@ -5694,6 +5695,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["fromentries", [
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/fromentries-npm-1.3.2-f5392090b8-33729c529c.zip/node_modules/fromentries/",
+          "packageDependencies": [
+            ["fromentries", "npm:1.3.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["front-matter", [
         ["npm:4.0.2", {
           "packageLocation": "./.yarn/cache/front-matter-npm-4.0.2-e1cc0efa69-a5b4c36d75.zip/node_modules/front-matter/",
@@ -7484,6 +7494,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["hygen", "npm:6.1.0"],
             ["lerna", "npm:4.0.0"],
             ["lint-staged", "npm:11.1.1"],
+            ["pinst", "npm:2.1.6"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
@@ -8794,6 +8805,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pify-npm-5.0.0-f5abe8ab8d-443e3e198a.zip/node_modules/pify/",
           "packageDependencies": [
             ["pify", "npm:5.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["pinst", [
+        ["npm:2.1.6", {
+          "packageLocation": "./.yarn/cache/pinst-npm-2.1.6-750cbdedeb-3644c352a7.zip/node_modules/pinst/",
+          "packageDependencies": [
+            ["pinst", "npm:2.1.6"],
+            ["fromentries", "npm:1.3.2"]
           ],
           "linkType": "HARD",
         }]
