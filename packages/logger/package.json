@@ -8,14 +8,12 @@
     "firebase",
     "amplitude"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist",
-  "typings": "./dist/types/index.d.ts",
+  "main": "src/index.ts",
   "publishConfig": {
     "access": "public",
-    "main": "./dist/index.js",
-    "module": "./dist",
-    "typings": "./dist/types/index.d.ts"
+    "main": "dist/index.js",
+    "module": "dist",
+    "typings": "dist/types/index.d.ts"
   },
   "files": [
     "./dist"
