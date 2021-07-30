@@ -10,7 +10,7 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged && yarn workspaces typecheck"
+      "pre-commit": "lint-staged && yarn workspaces typecheck"
     }
   },
   "author": "Lubycon<lubycon@gmail.com>",
