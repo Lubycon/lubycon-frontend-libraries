@@ -126,7 +126,8 @@ class Logger {
   }
 }
 
-const instance = new Logger();
-export default instance;
+/** @deprecated */
+const logger = new Logger();
+export { logger };
 
 export { FirebaseConfig } from './firebase/models';
