@@ -7,14 +7,7 @@
   "scripts": {
     "new-package": "hygen packages new",
     "commit": "git-cz",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && yarn workspaces typecheck"
-    }
+    "postinstall": "husky install"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {
@@ -31,7 +24,7 @@
     ]
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
+    "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "git add"
     ]
