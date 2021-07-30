@@ -42,6 +42,7 @@ to: packages/<%= name %>/package.json
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.0",
     "typescript": "^4.3.5"
   }
 }
