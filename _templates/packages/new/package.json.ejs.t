@@ -11,6 +11,7 @@ to: packages/<%= name %>/package.json
     "<%= name %>"
   ],
   "main": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",

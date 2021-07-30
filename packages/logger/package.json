@@ -9,6 +9,7 @@
     "amplitude"
   ],
   "main": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
