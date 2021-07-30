@@ -12,7 +12,8 @@
   "module": "./dist",
   "typings": "./dist/types/index.d.ts",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "./dist"
   },
   "files": [
     "./dist"
