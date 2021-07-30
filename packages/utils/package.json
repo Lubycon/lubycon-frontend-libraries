@@ -2,7 +2,7 @@
   "name": "@lubycon/utils",
   "description": "Utils which uses in Lubycon",
   "sideEffects": false,
-  "version": "1.6.4",
+  "version": "1.7.0",
   "keywords": [
     "lubycon",
     "utils"

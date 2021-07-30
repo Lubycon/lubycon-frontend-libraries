@@ -9,11 +9,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **logger:** @lubycon/logger 패키지 추가 ([#8](https://github.com/Lubycon/lubycon-frontend-libraries/issues/8)) ([5f41284](https://github.com/Lubycon/lubycon-frontend-libraries/commit/5f41284ac0d78727446d6f21799120866cee68fe))
-
-
-
-
-
-## 1.6.4 (2021-07-28)
-
-**Note:** Version bump only for package @lubycon/utils
