@@ -2,7 +2,7 @@
   "name": "@lubycon/react",
   "description": "React utils which uses in Lubycon",
   "sideEffects": false,
-  "version": "1.7.8",
+  "version": "1.8.0",
   "keywords": [
     "lubycon",
     "react"
