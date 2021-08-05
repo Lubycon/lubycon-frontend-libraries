@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 type DefaultRequestParams = 'headers' | 'params' | 'paramsSerializer' | 'timeout';
-export type WithoutRequestBodyConfig = Pick<AxiosRequestConfig, DefaultRequestParams>;
-export type RequestBodyConfig = Pick<AxiosRequestConfig, DefaultRequestParams | 'data'>;
+type WithoutRequestBodyConfig = Pick<AxiosRequestConfig, DefaultRequestParams>;
+type RequestBodyConfig = Pick<AxiosRequestConfig, DefaultRequestParams | 'data'>;
 
 const mattermostInstance = axios.create({
   baseURL: 'https://mattermost.lubycon.io',
@@ -34,14 +34,14 @@ async function remove<ResponseBody>(path: string, config?: WithoutRequestBodyCon
 
 export default {
   rawGet: mattermostInstance.get,
-  get,
   rawPost: mattermostInstance.post,
-  post,
   rawPut: mattermostInstance.put,
-  put,
   rawPath: mattermostInstance.patch,
-  patch,
   rawDelete: mattermostInstance.delete,
+  get,
+  post,
+  put,
+  patch,
   delete: remove,
   instance: mattermostInstance,
 };
