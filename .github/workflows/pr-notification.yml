@@ -1,4 +1,4 @@
-name: PR Slack Notification
+name: PR Notification
 on: [pull_request, pull_request_review, pull_request_review_comment]
 
 jobs:
@@ -9,9 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Fire Notification
-        uses: Lubycon/github-reviewer-slack-noti-action@v1.6.0
+        uses: Lubycon/github-reviewer-noti-action@v2.0.1
         with:
-          slack-bot-token: ${{ secrets.LUBYCON_SLACK_BOT_TOKEN }}
           github-token: ${{ secrets.LUBYCON_GITHUB_TOKEN }}
-          channel-id: C01SSJ6HGTH
           mattermost-webhook: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
