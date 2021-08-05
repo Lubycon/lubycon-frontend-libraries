@@ -99,7 +99,7 @@ export class MattermostClient {
     return this.http.delete(`/channels/${channelId}/members/${userId}`);
   }
 
-  createIncomingWebhook(params: {
+  createIncomingWebhooks(params: {
     channelId: string;
     userId: string;
     displayName: string;
@@ -110,7 +110,7 @@ export class MattermostClient {
     return this.http.post<IncomingWebhook>('/hooks/incoming', params);
   }
 
-  fetchAllIncomingWebhook(queries: QueryParams) {
+  fetchAllIncomingWebhooks(queries: QueryParams) {
     return this.http.get<IncomingWebhook[]>('/hooks/incoming', {
       params: queries,
     });
