@@ -1701,6 +1701,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lubycon/mattermost@workspace:packages/mattermost":
+  version: 0.0.0-use.local
+  resolution: "@lubycon/mattermost@workspace:packages/mattermost"
+  dependencies:
+    "@types/node": ^10.11.0
+    "@types/react": ^17.0.13
+    "@typescript-eslint/eslint-plugin": ^4.28.5
+    "@typescript-eslint/parser": ^4.28.5
+    axios: ^0.21.1
+    cross-env: ^5.2.0
+    eslint: ^7.27.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^3.4.0
+    prettier: ^2.3.2
+    rimraf: ^2.6.2
+    rollup: ^2.38.5
+    rollup-plugin-commonjs: ^10.1.0
+    rollup-plugin-json: ^3.1.0
+    rollup-plugin-node-resolve: ^3.4.0
+    rollup-plugin-sourcemaps: ^0.4.2
+    rollup-plugin-typescript2: ^0.30.0
+    tslib: ^2.3.0
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
 "@lubycon/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@lubycon/react@workspace:packages/react"
@@ -2829,6 +2855,15 @@ __metadata:
   version: 1.11.0
   resolution: "aws4@npm:1.11.0"
   checksum: 5a00d045fd0385926d20ebebcfba5ec79d4482fe706f63c27b324d489a04c68edb0db99ed991e19eda09cb8c97dc2452059a34d97545cebf591d7a2b5a10999f
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.21.1":
+  version: 0.21.1
+  resolution: "axios@npm:0.21.1"
+  dependencies:
+    follow-redirects: ^1.10.0
+  checksum: c87915fa0b18c15c63350112b6b3563a3e2ae524d7707de0a73d2e065e0d30c5d3da8563037bc29d4cc1b7424b5a350cb7274fa52525c6c04a615fe561c6ab11
   languageName: node
   linkType: hard
 
@@ -4506,6 +4541,16 @@ __metadata:
   version: 3.2.1
   resolution: "flatted@npm:3.2.1"
   checksum: 569f3af4ba493d6446dafb45f3c709d0a0e8e0baf7d172ca80896ed985c40fde29290a0425f07d4bb6807752237aabb29bc6529c96edc30175bf8227906a7055
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.10.0":
+  version: 1.14.1
+  resolution: "follow-redirects@npm:1.14.1"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 7381a55bdc6951c5c1ab73a8da99d9fa4c0496ce72dba92cd2ac2babe0e3ebde9b81c5bca889498ad95984bc773d713284ca2bb17f1b1e1416e5f6531e39a488
   languageName: node
   linkType: hard
 
