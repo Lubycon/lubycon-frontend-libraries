@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.8.7...@lubycon/logger@1.8.8) (2021-07-30)
+
+
+### Bug Fixes
+
+* **logger:** fix amplitude module ([33c5b95](https://github.com/Lubycon/lubycon-frontend-libraries/commit/33c5b951e55132be985707555c88be273ce27f69))
+
+
+
+
+
 ## [1.8.7](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.8.6...@lubycon/logger@1.8.7) (2021-07-30)
 
 **Note:** Version bump only for package @lubycon/logger
