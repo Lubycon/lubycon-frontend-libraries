@@ -41,5 +41,8 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
