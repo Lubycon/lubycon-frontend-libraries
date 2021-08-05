@@ -27,6 +27,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/logger"
       },
       {
+        "name": "@lubycon/mattermost",
+        "reference": "workspace:packages/mattermost"
+      },
+      {
         "name": "@lubycon/react",
         "reference": "workspace:packages/react"
       },
@@ -39,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@lubycon/logger", ["workspace:packages/logger"]],
+      ["@lubycon/mattermost", ["workspace:packages/mattermost"]],
       ["@lubycon/react", ["workspace:packages/react"]],
       ["@lubycon/utils", ["workspace:packages/utils"]],
       ["lubycon-frontend-libraries", ["workspace:."]]
@@ -2312,6 +2317,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:3.4.0"],
             ["firebase", "npm:8.8.1"],
+            ["prettier", "npm:2.3.2"],
+            ["rimraf", "npm:2.7.1"],
+            ["rollup", "npm:2.55.0"],
+            ["rollup-plugin-commonjs", "virtual:521f280cef31214cd794e57ea9b96548ee6ec23554e4180e875e98d9db4275c703294e4a6556e75738758ef8357e1a297314ffb77c2cfb08adfcf647cca8d1d0#npm:10.1.0"],
+            ["rollup-plugin-json", "npm:3.1.0"],
+            ["rollup-plugin-node-resolve", "npm:3.4.0"],
+            ["rollup-plugin-sourcemaps", "virtual:521f280cef31214cd794e57ea9b96548ee6ec23554e4180e875e98d9db4275c703294e4a6556e75738758ef8357e1a297314ffb77c2cfb08adfcf647cca8d1d0#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:521f280cef31214cd794e57ea9b96548ee6ec23554e4180e875e98d9db4275c703294e4a6556e75738758ef8357e1a297314ffb77c2cfb08adfcf647cca8d1d0#npm:0.30.0"],
+            ["tslib", "npm:2.3.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@lubycon/mattermost", [
+        ["workspace:packages/mattermost", {
+          "packageLocation": "./packages/mattermost/",
+          "packageDependencies": [
+            ["@lubycon/mattermost", "workspace:packages/mattermost"],
+            ["@types/node", "npm:10.17.60"],
+            ["@types/react", "npm:17.0.15"],
+            ["@typescript-eslint/eslint-plugin", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:4.28.5"],
+            ["@typescript-eslint/parser", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:4.28.5"],
+            ["cross-env", "npm:5.2.1"],
+            ["eslint", "npm:7.31.0"],
+            ["eslint-config-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:8.3.0"],
+            ["eslint-plugin-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:3.4.0"],
             ["prettier", "npm:2.3.2"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
