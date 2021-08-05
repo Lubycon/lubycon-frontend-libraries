@@ -42,16 +42,18 @@ export interface LocalStorageEventPayload<T> {
   window.CustomEvent = CustomEvent as unknown as typeof window.CustomEvent;
 })();
 
-export class LocalStorageChanged<T> extends CustomEvent<LocalStorageEventPayload<T>> {
+export class LocalStorageChangeEvent<T> extends CustomEvent<LocalStorageEventPayload<T>> {
   static eventName = 'onLocalStorageChange';
 
   constructor(payload: LocalStorageEventPayload<T>) {
-    super(LocalStorageChanged.eventName, { detail: payload });
+    super(LocalStorageChangeEvent.eventName, { detail: payload });
   }
 }
 
-export function isTypeOfLocalStorageChanged<T>(event: any): event is LocalStorageChanged<T> {
-  return !!event && event.type === LocalStorageChanged.eventName;
+export function isTypeOfLocalStorageChangeEvent<T>(
+  event: any
+): event is LocalStorageChangeEvent<T> {
+  return !!event && event.type === LocalStorageChangeEvent.eventName;
 }
 
 function getExpiry(expiryHour?: number) {
@@ -77,7 +79,7 @@ export function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number
   };
 
   storage.setItem(key, JSON.stringify(payload));
-  window.dispatchEvent(new LocalStorageChanged({ key, data }));
+  window.dispatchEvent(new LocalStorageChangeEvent({ key, data }));
 }
 
 /**
@@ -110,7 +112,7 @@ export function getLocalStorageItem<T>(key: string): T | null {
  */
 export function removeLocalStorageItem(key: string) {
   storage.removeItem(key);
-  window.dispatchEvent(new LocalStorageChanged({ key, data: null }));
+  window.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
 }
 
 /**
