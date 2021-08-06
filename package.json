@@ -6,7 +6,7 @@
   "scripts": {
     "new-package": "hygen packages new",
     "postinstall": "husky install",
-    "build:all": "yarn workspaces foreach run build"
+    "build:all": "yarn workspaces foreach -pt run build"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {

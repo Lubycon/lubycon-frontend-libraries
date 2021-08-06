@@ -25,10 +25,10 @@ jobs:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Pull main branch
         run: git checkout "${GITHUB_REF:11}" && git pull
-      - name: Install dependencies
-        run: yarn
+      - name: Validate dependencies
+        run: yarn install --immutable --immutable-cache
       - name: Build
-        run: yarn workspaces foreach run build
+        run: yarn build:all
       - name: Set NPM
         run: |
           echo //registry.npmjs.org/:_authToken=$NPM_TOKEN | tee .npmrc $HOME/.npmrc > /dev/null

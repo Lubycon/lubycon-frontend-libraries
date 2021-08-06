@@ -1,6 +1,6 @@
 {
   "name": "@lubycon/react",
-  "description": "React utils which uses in Lubycon",
+  "description": "루비콘 팀의 리액트 라이브러리.",
   "sideEffects": false,
   "version": "1.9.0",
   "keywords": [

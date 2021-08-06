@@ -7,7 +7,7 @@
   "useWorkspaces": true,
   "command": {
     "version": {
-      "message": "chore(release): %s 배포 [skip ci]",
+      "message": "chore(release): 라이브러리 배포 [skip ci]",
       "registry": "https://registry.npmjs.org/"
     },
     "publish": {

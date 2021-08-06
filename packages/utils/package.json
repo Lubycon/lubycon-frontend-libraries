@@ -1,6 +1,6 @@
 {
   "name": "@lubycon/utils",
-  "description": "Utils which uses in Lubycon",
+  "description": "루비콘 팀의 유틸 라이브러리",
   "sideEffects": false,
   "version": "1.8.8",
   "keywords": [
