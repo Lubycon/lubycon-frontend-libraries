@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build
-        run: yarn lerna run build
+        run: yarn workspaces foreach run build
       - name: Set NPM
         run: |
           echo //registry.npmjs.org/:_authToken=$NPM_TOKEN | tee .npmrc $HOME/.npmrc > /dev/null

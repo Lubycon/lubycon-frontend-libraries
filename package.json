@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "new-package": "hygen packages new",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "build:all": "yarn workspaces foreach run build"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {
