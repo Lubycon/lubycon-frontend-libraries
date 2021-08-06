@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.9](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.8.8...@lubycon/utils@1.8.9) (2021-08-06)
+
+**Note:** Version bump only for package @lubycon/utils
+
+
+
+
+
 ## [1.8.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.8.7...@lubycon/utils@1.8.8) (2021-08-05)
 
 **Note:** Version bump only for package @lubycon/utils
