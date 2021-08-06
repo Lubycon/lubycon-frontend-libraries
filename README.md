@@ -21,7 +21,7 @@ Loaded templates: _templates
   added: packages/test/src/index.ts
   added: packages/test/package.json
   added: packages/test/README.md
-  added: packages/test/rollup.config.ts
+  added: packages/test/rollup.config.js
   added: packages/test/.vscode/settings.json
   added: packages/test/tsconfig.json
 Done.

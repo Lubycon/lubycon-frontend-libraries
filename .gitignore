@@ -5,6 +5,7 @@ coverage
 *.log
 .idea
 dist
+esm
 compiled
 .awcache
 .rpt2_cache

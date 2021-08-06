@@ -12,15 +12,16 @@
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
-    "module": "dist",
+    "module": "esm/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
-    "start": "rollup -c rollup.config.ts -w",
-    "typecheck": "tsc --noEmit"
+    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js -w",
+    "typecheck": "tsc --noEmit",
+    "test:lib": "node ./test/index.js"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
@@ -31,18 +32,21 @@
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "path": "^0.12.7",
     "prettier": "^2.3.2",
     "rimraf": "^2.6.2",
     "rollup": "^2.38.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-pnp-resolve": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "@lubycon/utils": "workspace:packages/utils",
+    "cross-fetch": "^3.1.4"
   }
 }

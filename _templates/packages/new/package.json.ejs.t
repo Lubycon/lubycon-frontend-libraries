@@ -15,14 +15,14 @@ to: packages/<%= name %>/package.json
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
-    "module": "dist",
+    "module": "esm/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
-    "start": "rollup -c rollup.config.ts -w",
+    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js -w",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@ to: packages/<%= name %>/package.json
     "rollup": "^2.38.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-pnp-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.3.0",
