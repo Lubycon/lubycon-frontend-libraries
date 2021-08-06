@@ -43,5 +43,8 @@
   },
   "peerDependencies": {
     "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@lubycon/utils": "workspace:packages/utils"
   }
 }
