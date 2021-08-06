@@ -43,8 +43,6 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
-    "amplitude-js": "^8.3.0",
-    "date-fns": "^2.22.1",
-    "firebase": "^8.6.3"
+    "date-fns": "^2.22.1"
   }
 }
