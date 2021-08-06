@@ -7,13 +7,11 @@
     "lubycon",
     "utils"
   ],
-  "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
-  "module": "esm/index.js",
+  "main": "esm/index.js",
   "publishConfig": {
     "access": "public",
-    "main": "dist/index.js",
-    "module": "esm/index.js",
+    "main": "esm/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {

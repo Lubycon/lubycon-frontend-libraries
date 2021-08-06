@@ -10,12 +10,11 @@ to: packages/<%= name %>/package.json
     "lubycon",
     "<%= name %>"
   ],
-  "main": "dist/index.js",
+  "main": "esm/index.js",
   "typings": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public",
-    "main": "dist/index.js",
-    "module": "esm/index.js",
+    "main": "esm/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
