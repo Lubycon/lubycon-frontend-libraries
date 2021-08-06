@@ -44,10 +44,17 @@
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
     "hygen": "^6.1.0",
-    "lerna": "^4.0.0",
+    "lerna": "^3.22.0",
     "lint-staged": "^11.1.1",
     "pinst": "^2.1.6",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
+  },
+  "resolutions": {
+    "@lerna/version": "patch:@lerna/version@npm:3.20.2#.yarn-patches/@lerna/version.patch",
+    "@lerna/npm-publish": "patch:@lerna/npm-publish@npm:3.18.5#.yarn-patches/@lerna/npm-publish.patch",
+    "@lerna/package": "patch:@lerna/package@npm:3.16.0#.yarn-patches/@lerna/package.patch",
+    "@lerna/package-graph": "patch:@lerna/package-graph@npm:3.18.5#.yarn-patches/@lerna/package-graph.patch",
+    "@lerna/pack-directory": "patch:@lerna/pack-directory@npm:3.16.4#.yarn-patches/@lerna/pack-directory.patch"
   }
 }
