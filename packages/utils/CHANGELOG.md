@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.10](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.8.9...@lubycon/utils@1.8.10) (2021-08-06)
+
+
+### Bug Fixes
+
+* **utils:** localStorage 유틸이 브라우저 환경에 최적화 되어있는 부분 수정 ([dd05ea8](https://github.com/Lubycon/lubycon-frontend-libraries/commit/dd05ea87a43af5efb03bbf97fc413960075de7fe))
+
+
+
+
+
 ## [1.8.9](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.8.8...@lubycon/utils@1.8.9) (2021-08-06)
 
 **Note:** Version bump only for package @lubycon/utils
