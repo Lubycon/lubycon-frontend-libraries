@@ -15,7 +15,7 @@ to: packages/<%= name %>/package.json
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
-    "module": "dist",
+    "module": "esm/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
