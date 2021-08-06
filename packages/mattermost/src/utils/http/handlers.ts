@@ -1,4 +1,3 @@
-import { Headers } from 'cross-fetch';
 import { QueryParam } from '@lubycon/utils';
 import { convertHeadersToObject } from './headers';
 
