@@ -9,3 +9,4 @@ export {
 export { default as commaizeNumber } from './commaizeNumber';
 export { default as getObjectKeys } from './getObjectKeys';
 export * from './is';
+export * from './queryString';
