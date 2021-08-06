@@ -1475,7 +1475,6 @@ __metadata:
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
     rollup-plugin-json: ^3.1.0
-    rollup-plugin-node-resolve: ^3.4.0
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
@@ -1504,7 +1503,6 @@ __metadata:
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
     rollup-plugin-json: ^3.1.0
-    rollup-plugin-node-resolve: ^3.4.0
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
@@ -1530,7 +1528,6 @@ __metadata:
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
     rollup-plugin-json: ^3.1.0
-    rollup-plugin-node-resolve: ^3.4.0
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
@@ -1559,7 +1556,6 @@ __metadata:
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
     rollup-plugin-json: ^3.1.0
-    rollup-plugin-node-resolve: ^3.4.0
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
@@ -2697,13 +2693,6 @@ __metadata:
   version: 1.1.1
   resolution: "buffer-from@npm:1.1.1"
   checksum: ccc53b69736008bff764497367c4d24879ba7122bc619ee499ff47eef3a5b885ca496e87272e7ebffa0bec3804c83f84041c616f6e3318f40624e27c1d80f045
-  languageName: node
-  linkType: hard
-
-"builtin-modules@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "builtin-modules@npm:2.0.0"
-  checksum: 6d779e54ad930130767ce5362829bff7c2089c013ad4eeb1bf292803482dd2ab1d0c51e9d1fa15a6df87947e563dca72ef4af025b639c77bd10132a27b93387f
   languageName: node
   linkType: hard
 
@@ -5239,13 +5228,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"is-module@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "is-module@npm:1.0.0"
-  checksum: 8cd5390730c7976fb4e8546dd0b38865ee6f7bacfa08dfbb2cc07219606755f0b01709d9361e01f13009bbbd8099fa2927a8ed665118a6105d66e40f1b838c3f
-  languageName: node
-  linkType: hard
-
 "is-negative-zero@npm:^2.0.1":
   version: 2.0.1
   resolution: "is-negative-zero@npm:2.0.1"
@@ -7714,7 +7696,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"resolve@1.20.0, resolve@^1.1.6, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.20.0":
+"resolve@1.20.0, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.20.0":
   version: 1.20.0
   resolution: "resolve@npm:1.20.0"
   dependencies:
@@ -7724,7 +7706,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.11.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
+"resolve@patch:resolve@1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.11.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
   version: 1.20.0
   resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"
   dependencies:
@@ -7820,17 +7802,6 @@ fsevents@~2.3.2:
   dependencies:
     rollup-pluginutils: ^2.3.1
   checksum: d4606fa7d94fb98799e6aa727a93b61c0e1f2b547f6098cbfa54490cc4e5d74d4116a31be47be67f4db9b3470926c9b36578fe9cf8fcc1a58304c90faa111469
-  languageName: node
-  linkType: hard
-
-"rollup-plugin-node-resolve@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "rollup-plugin-node-resolve@npm:3.4.0"
-  dependencies:
-    builtin-modules: ^2.0.0
-    is-module: ^1.0.0
-    resolve: ^1.1.6
-  checksum: 75ce3843dbc20dcd9997d597835aa8c827c9995fc4dce3ab1dc4e5508a444eda0b41173e9b0773b6275a032e6fed51b2438bd2da58faa68496cf73a5693170eb
   languageName: node
   linkType: hard
 
