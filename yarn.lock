@@ -1705,12 +1705,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/mattermost@workspace:packages/mattermost"
   dependencies:
+    "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
     "@typescript-eslint/eslint-plugin": ^4.28.5
     "@typescript-eslint/parser": ^4.28.5
     axios: ^0.21.1
     cross-env: ^5.2.0
+    cross-fetch: ^3.1.4
     eslint: ^7.27.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^3.4.0
@@ -3567,6 +3569,15 @@ __metadata:
     cross-env: dist/bin/cross-env.js
     cross-env-shell: dist/bin/cross-env-shell.js
   checksum: 364f72482f0d6b65c6d560b942ce9da7e71ea66ec2eaa8226f7127b49094355277aadd23e6ff922c1d154a6ab1ad828ebc4ec8af9b44a39936d9013fb23ae4df
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^3.1.4":
+  version: 3.1.4
+  resolution: "cross-fetch@npm:3.1.4"
+  dependencies:
+    node-fetch: 2.6.1
+  checksum: 2107e5e633aa327bdacab036b1907c7ddd28651ede0c1d4fd14db04510944d56849a8255e2f5b8f9a1da0e061b6cee943f6819fe29ed9a130195e7fadd82a4ff
   languageName: node
   linkType: hard
 

@@ -43,6 +43,8 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "@lubycon/utils": "workspace:packages/utils",
+    "axios": "^0.21.1",
+    "cross-fetch": "^3.1.4"
   }
 }

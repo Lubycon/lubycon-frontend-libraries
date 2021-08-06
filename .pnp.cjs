@@ -2336,12 +2336,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/mattermost/",
           "packageDependencies": [
             ["@lubycon/mattermost", "workspace:packages/mattermost"],
+            ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],
             ["@typescript-eslint/eslint-plugin", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:4.28.5"],
             ["@typescript-eslint/parser", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:4.28.5"],
             ["axios", "npm:0.21.1"],
             ["cross-env", "npm:5.2.1"],
+            ["cross-fetch", "npm:3.1.4"],
             ["eslint", "npm:7.31.0"],
             ["eslint-config-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:3.4.0"],
@@ -4598,6 +4600,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cross-env", "npm:5.2.1"],
             ["cross-spawn", "npm:6.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["cross-fetch", [
+        ["npm:3.1.4", {
+          "packageLocation": "./.yarn/cache/cross-fetch-npm-3.1.4-45e4517cba-2107e5e633.zip/node_modules/cross-fetch/",
+          "packageDependencies": [
+            ["cross-fetch", "npm:3.1.4"],
+            ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]

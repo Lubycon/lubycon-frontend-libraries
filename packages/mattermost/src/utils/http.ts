@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+// import fetch from 'cross-fetch';
 
 type DefaultRequestParams = 'headers' | 'params' | 'paramsSerializer' | 'timeout';
 type WithoutRequestBodyConfig = Pick<AxiosRequestConfig, DefaultRequestParams>;
