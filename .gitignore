@@ -11,6 +11,7 @@ compiled
 .rpt2_cache
 docs
 demo
+package.tgz
 
 /.yarn/*
 !/.yarn/releases
