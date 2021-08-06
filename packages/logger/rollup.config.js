@@ -47,7 +47,7 @@ function buildCJS(input) {
 }
 
 function buildESM(input) {
-  return buildJS(input, path.dirname(packageJSON.publishConfig.module), 'es');
+  return buildJS(input, path.dirname(packageJSON.main), 'es');
 }
 
 export default [buildCJS('src/index.ts'), buildESM('src/index.ts')];
