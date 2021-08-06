@@ -32,7 +32,7 @@ function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number) {
   };
 
   storage.setItem(key, JSON.stringify(payload));
-  window.dispatchEvent(new LocalStorageChangeEvent({ key, data }));
+  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data }));
 }
 
 /**
@@ -65,7 +65,7 @@ function getLocalStorageItem<T>(key: string): T | null {
  */
 function removeLocalStorageItem(key: string) {
   storage.removeItem(key);
-  window.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
 }
 
 /**

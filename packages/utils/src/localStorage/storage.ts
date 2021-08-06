@@ -1,5 +1,9 @@
 function canUseStorage() {
-  const storage = window.localStorage;
+  const storage = globalThis.localStorage;
+  if (storage == null) {
+    return false;
+  }
+
   try {
     const testItem = '__storage_test__';
     storage.setItem(testItem, testItem);
