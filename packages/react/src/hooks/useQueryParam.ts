@@ -6,7 +6,7 @@ import { useMemo } from 'react';
  *
  * @example
  * // https://lubycon.io?foo=1&bar=hello
- * const foo = useQueryParam('foo', Number) ?? -1; // number | undefined
+ * const foo = useQueryParam('foo', Number) ?? -1; // number
  * const bar = useQueryParam('bar'); // string | undefined
  * const baz = useQueryParam('baz') ?? 'empty'; // string
  */
