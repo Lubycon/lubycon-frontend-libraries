@@ -2072,6 +2072,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react/",
           "packageDependencies": [
             ["@lubycon/react", "workspace:packages/react"],
+            ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],
             ["@typescript-eslint/eslint-plugin", "virtual:c584ecca439fd35c1407ed0a46b3c7985915c24e218beb0a9034896060eabb3e01896eab20ae939250cc4e4ba0463055f0ac33c7385fc7308759e377ff2e2589#npm:4.28.5"],
