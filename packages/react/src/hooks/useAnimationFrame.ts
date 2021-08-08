@@ -17,7 +17,6 @@ export function useAnimationFrame(callback: () => void) {
   useEffect(() => {
     const animate = () => {
       callback();
-      console.log('callback');
       animateRequestRef.current = requestAnimationFrame(animate);
     };
 
