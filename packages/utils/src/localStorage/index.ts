@@ -74,7 +74,7 @@ function removeLocalStorageItem(key: string) {
 function popLocalStorageItem<T>(key: string): T | null {
   const data = getLocalStorageItem<T>(key);
   removeLocalStorageItem(key);
-  window.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
   return data;
 }
 
