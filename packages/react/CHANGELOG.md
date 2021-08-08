@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.10.0...@lubycon/react@1.11.0) (2021-08-08)
+
+
+### Features
+
+* **react:** useAnimationFrame 훅 추가 ([#30](https://github.com/Lubycon/lubycon-frontend-libraries/issues/30)) ([f15308e](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f15308e47ada8f2e1d1e622ecd71e88297a3b029))
+
+
+
+
+
 # [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.9.4...@lubycon/react@1.10.0) (2021-08-08)
 
 
