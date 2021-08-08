@@ -1,8 +1,10 @@
 export { default as delay } from './delay';
+export { LocalStorageChangeEvent } from './localStorage/localStorageEvent';
 export {
   setLocalStorageItem,
   getLocalStorageItem,
   removeLocalStorageItem,
+  popLocalStorageItem,
   clearLocalStorage,
 } from './localStorage';
 export { default as commaizeNumber } from './commaizeNumber';
