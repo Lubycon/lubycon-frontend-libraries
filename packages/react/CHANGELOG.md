@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.9.4...@lubycon/react@1.10.0) (2021-08-08)
+
+
+### Features
+
+* **react:** useQueryParam 훅 추가 ([#29](https://github.com/Lubycon/lubycon-frontend-libraries/issues/29)) ([f3c5fe1](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f3c5fe166ac0f3d3cf1faebaf8d6767d27a92dfc))
+
+
+
+
+
 ## [1.9.4](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.9.3...@lubycon/react@1.9.4) (2021-08-06)
 
 
