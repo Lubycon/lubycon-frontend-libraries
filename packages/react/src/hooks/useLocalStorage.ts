@@ -31,18 +31,18 @@ export function useLocalStorage<T = string>(
   defaulValue: T
 ): LocalStorageReturnValue<T>;
 export function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) {
-  const [localState, updateLocalState] = useState<T | null>(
+  const [localState, setLocalState] = useState<T | null>(
     localStorage.getItem(key) === null ? defaulValue : tryParse(localStorage.getItem(key)!)
   );
 
   const onLocalStorageChange = (event: LocalStorageChangeEvent<T> | StorageEvent) => {
     if (isTypeOfLocalStorageChangeEvent<T>(event)) {
       if (event.detail.key === key) {
-        updateLocalState(event.detail.data);
+        setLocalState(event.detail.data);
       }
     } else {
       if (event.key === key) {
-        updateLocalState(event.newValue === null ? null : tryParse(event.newValue));
+        setLocalState(event.newValue === null ? null : tryParse(event.newValue));
       }
     }
   };
