@@ -1,5 +1,5 @@
 export { default as delay } from './delay';
-export { LocalStorageChangeEvent } from './localStorage/localStorageEvent';
+export { createLocalStorageChangeEvent } from './localStorage/localStorageEvent';
 export {
   setLocalStorageItem,
   getLocalStorageItem,
