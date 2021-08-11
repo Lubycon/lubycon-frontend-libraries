@@ -33,10 +33,6 @@ import { localStorageChangeEvent } from './localStorageEvent';
   window.CustomEvent = CustomEvent as unknown as typeof window.CustomEvent;
 })();
 
-export interface LocalStorageEventPayload<TValue> {
-  key: string;
-  value: TValue;
-}
 interface LubyconStorageData<T> {
   data: T;
   expiry: string;
