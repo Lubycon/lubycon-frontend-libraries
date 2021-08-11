@@ -1733,6 +1733,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/react@workspace:packages/react"
   dependencies:
+    "@lubycon/logger": "workspace:packages/logger"
     "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
