@@ -2,8 +2,41 @@ import formatISO from 'date-fns/formatISO';
 import addHours from 'date-fns/addHours';
 import isBefore from 'date-fns/isBefore';
 import { storage } from './storage';
-import { LocalStorageChangeEvent } from './localStorageEvent';
+import { localStorageChangeEvent } from './localStorageEvent';
 
+/**
+ * CustomEvent polyfill 적용: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
+ */
+(() => {
+  if (typeof window === 'undefined') {
+    window = {} as unknown as Window & typeof globalThis;
+  }
+
+  if (typeof window.CustomEvent === 'function') {
+    return;
+  }
+
+  function CustomEvent<T>(
+    typeArg: string,
+    params: CustomEventInit<T> = { bubbles: false, cancelable: false }
+  ): CustomEvent<T> {
+    const evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(
+      typeArg,
+      params?.bubbles ?? false,
+      params?.cancelable ?? false,
+      params?.detail
+    );
+    return evt;
+  }
+
+  window.CustomEvent = CustomEvent as unknown as typeof window.CustomEvent;
+})();
+
+export interface LocalStorageEventPayload<TValue> {
+  key: string;
+  value: TValue;
+}
 interface LubyconStorageData<T> {
   data: T;
   expiry: string;
@@ -32,7 +65,7 @@ function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number) {
   };
 
   storage.setItem(key, JSON.stringify(payload));
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data }));
+  globalThis.dispatchEvent(localStorageChangeEvent({ key, data }));
 }
 
 /**
@@ -65,7 +98,7 @@ function getLocalStorageItem<T>(key: string): T | null {
  */
 function removeLocalStorageItem(key: string) {
   storage.removeItem(key);
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(localStorageChangeEvent({ key, data: null }));
 }
 
 /**
@@ -74,7 +107,7 @@ function removeLocalStorageItem(key: string) {
 function popLocalStorageItem<T>(key: string): T | null {
   const data = getLocalStorageItem<T>(key);
   removeLocalStorageItem(key);
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(localStorageChangeEvent({ key, data: null }));
   return data;
 }
 
