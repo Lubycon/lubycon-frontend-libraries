@@ -10,9 +10,9 @@ import { useMemo } from 'react';
  * const bar = useQueryParam('bar'); // string | undefined
  * const baz = useQueryParam('baz') ?? 'empty'; // string
  */
-export function useQueryParam<T extends string = string>(key: string): T | undefined;
-export function useQueryParam<T>(key: string, parser: (value: string) => T): T | undefined;
-export function useQueryParam<T = string>(key: string, parser?: (value: string) => T) {
+export default function useQueryParam<T extends string = string>(key: string): T | undefined;
+export default function useQueryParam<T>(key: string, parser: (value: string) => T): T | undefined;
+export default function useQueryParam<T = string>(key: string, parser?: (value: string) => T) {
   return useMemo(() => {
     const queryString = location != null ? location.search : '';
     const query = parseQueryString(queryString);
