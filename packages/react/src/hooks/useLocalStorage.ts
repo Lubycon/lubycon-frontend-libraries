@@ -18,7 +18,7 @@ function tryParse(value: string) {
 function isTypeOflocalStorageChangeEvent<T>(
   evt: any
 ): evt is CustomEvent<LocalStorageEventPayload<T>> {
-  return !!evt && evt.type === createLocalStorageChangeEvent.eventName;
+  return Boolean(evt) && evt.type === createLocalStorageChangeEvent.eventName;
 }
 
 export type LocalStorageNullableReturnValue<T> = [
@@ -26,7 +26,7 @@ export type LocalStorageNullableReturnValue<T> = [
   (newValue: T | null) => void,
   () => void
 ];
-export type LocalStorageReturnValue<T> = [T, (newValue: T | null) => void, () => void];
+export type LocalStorageReturnValue<T> = [T, (newValue: T) => void, () => void];
 
 function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaulValue: T): LocalStorageReturnValue<T>;
