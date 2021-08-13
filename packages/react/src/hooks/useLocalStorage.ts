@@ -26,7 +26,7 @@ export type LocalStorageNullableReturnValue<T> = [
   (newValue: T | null) => void,
   () => void
 ];
-export type LocalStorageReturnValue<T> = [T, (newValue: T) => void, () => void];
+export type LocalStorageReturnValue<T> = [T, (newValue: T | null) => void, () => void];
 
 function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaultValue: T): LocalStorageReturnValue<T>;
@@ -65,7 +65,7 @@ function useLocalStorage<T = string>(key: string, defaultValue: T | null = null)
     };
   }, [key]);
 
-  const writeState = useCallback((value: T) => setLocalStorageItem(key, value), [key]);
+  const writeState = useCallback((value: T | null) => setLocalStorageItem(key, value), [key]);
   const deleteState = useCallback(() => removeLocalStorageItem(key), [key]);
   const state: T | null = localState ?? defaultValue;
 
