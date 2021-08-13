@@ -1,7 +1,8 @@
 import {
   setLocalStorageItem,
   removeLocalStorageItem,
-  LocalStorageChangeEvent,
+  LocalStorageEventPayload,
+  createLocalStorageChangeEvent,
 } from '@lubycon/utils';
 
 import { useEffect, useState, useCallback } from 'react';
@@ -14,8 +15,10 @@ function tryParse(value: string) {
   }
 }
 
-function isTypeOfLocalStorageChangeEvent<TValue>(evt: any): evt is LocalStorageChangeEvent<TValue> {
-  return !!evt && evt.type === LocalStorageChangeEvent.eventName;
+function isTypeOflocalStorageChangeEvent<T>(
+  evt: any
+): evt is CustomEvent<LocalStorageEventPayload<T>> {
+  return !!evt && evt.type === createLocalStorageChangeEvent.eventName;
 }
 
 export type LocalStorageNullableReturnValue<T> = [
@@ -25,18 +28,16 @@ export type LocalStorageNullableReturnValue<T> = [
 ];
 export type LocalStorageReturnValue<T> = [T, (newValue: T | null) => void, () => void];
 
-export function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
-export function useLocalStorage<T = string>(
-  key: string,
-  defaulValue: T
-): LocalStorageReturnValue<T>;
-export function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) {
+function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
+function useLocalStorage<T = string>(key: string, defaulValue: T): LocalStorageReturnValue<T>;
+function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) {
   const [localState, setLocalState] = useState<T | null>(
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     localStorage.getItem(key) === null ? defaulValue : tryParse(localStorage.getItem(key)!)
   );
 
-  const onLocalStorageChange = (event: LocalStorageChangeEvent<T> | StorageEvent) => {
-    if (isTypeOfLocalStorageChangeEvent<T>(event)) {
+  const onLocalStorageChange = (event: CustomEvent<LocalStorageEventPayload<T>> | StorageEvent) => {
+    if (isTypeOflocalStorageChangeEvent<T>(event)) {
       if (event.detail.key === key) {
         setLocalState(event.detail.data);
       }
@@ -48,9 +49,10 @@ export function useLocalStorage<T = string>(key: string, defaulValue: T | null =
   };
 
   useEffect(() => {
-    const listener = (e: Event) => onLocalStorageChange(e as LocalStorageChangeEvent<T>);
-    window.addEventListener(LocalStorageChangeEvent.eventName, listener);
+    const listener = (e: Event) =>
+      onLocalStorageChange(e as CustomEvent<LocalStorageEventPayload<T>>);
 
+    window.addEventListener(createLocalStorageChangeEvent.eventName, listener);
     window.addEventListener('storage', listener);
 
     if (localStorage.getItem(key) === null && defaulValue !== null) {
@@ -58,7 +60,7 @@ export function useLocalStorage<T = string>(key: string, defaulValue: T | null =
     }
 
     return () => {
-      window.removeEventListener(LocalStorageChangeEvent.eventName, listener);
+      window.removeEventListener(createLocalStorageChangeEvent.eventName, listener);
       window.removeEventListener('storage', listener);
     };
   }, [key]);
@@ -69,3 +71,5 @@ export function useLocalStorage<T = string>(key: string, defaulValue: T | null =
 
   return [state, writeState, deleteState];
 }
+
+export default useLocalStorage;
