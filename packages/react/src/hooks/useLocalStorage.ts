@@ -29,11 +29,11 @@ export type LocalStorageNullableReturnValue<T> = [
 export type LocalStorageReturnValue<T> = [T, (newValue: T) => void, () => void];
 
 function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
-function useLocalStorage<T = string>(key: string, defaulValue: T): LocalStorageReturnValue<T>;
-function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) {
+function useLocalStorage<T = string>(key: string, defaultValue: T): LocalStorageReturnValue<T>;
+function useLocalStorage<T = string>(key: string, defaultValue: T | null = null) {
   const [localState, setLocalState] = useState<T | null>(
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    localStorage.getItem(key) === null ? defaulValue : tryParse(localStorage.getItem(key)!)
+    localStorage.getItem(key) === null ? defaultValue : tryParse(localStorage.getItem(key)!)
   );
 
   const onLocalStorageChange = (event: CustomEvent<LocalStorageEventPayload<T>> | StorageEvent) => {
@@ -55,8 +55,8 @@ function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) 
     window.addEventListener(createLocalStorageChangeEvent.eventName, listener);
     window.addEventListener('storage', listener);
 
-    if (localStorage.getItem(key) === null && defaulValue !== null) {
-      setLocalStorageItem(key, defaulValue);
+    if (localStorage.getItem(key) === null && defaultValue !== null) {
+      setLocalStorageItem(key, defaultValue);
     }
 
     return () => {
@@ -67,7 +67,7 @@ function useLocalStorage<T = string>(key: string, defaulValue: T | null = null) 
 
   const writeState = useCallback((value: T) => setLocalStorageItem(key, value), [key]);
   const deleteState = useCallback(() => removeLocalStorageItem(key), [key]);
-  const state: T | null = localState ?? defaulValue;
+  const state: T | null = localState ?? defaultValue;
 
   return [state, writeState, deleteState];
 }
