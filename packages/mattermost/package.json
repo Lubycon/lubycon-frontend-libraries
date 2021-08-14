@@ -7,11 +7,11 @@
     "lubycon",
     "mattermost"
   ],
-  "main": "esm/index.js",
+  "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public",
-    "main": "esm/index.js",
+    "main": "dist/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {

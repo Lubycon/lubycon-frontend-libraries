@@ -8,10 +8,10 @@
     "utils"
   ],
   "typings": "dist/types/index.d.ts",
-  "main": "esm/index.js",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "public",
-    "main": "esm/index.js",
+    "main": "dist/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
