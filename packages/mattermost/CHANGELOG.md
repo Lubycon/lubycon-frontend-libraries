@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.7...@lubycon/mattermost@1.1.8) (2021-08-14)
+
+**Note:** Version bump only for package @lubycon/mattermost
+
+
+
+
+
 ## [1.1.7](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.6...@lubycon/mattermost@1.1.7) (2021-08-13)
 
 **Note:** Version bump only for package @lubycon/mattermost
