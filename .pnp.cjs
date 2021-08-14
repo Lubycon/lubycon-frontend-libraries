@@ -2072,6 +2072,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react/",
           "packageDependencies": [
             ["@lubycon/react", "workspace:packages/react"],
+            ["@lubycon/logger", "workspace:packages/logger"],
             ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],

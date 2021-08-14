@@ -45,6 +45,7 @@
     "react": "^17.0.2"
   },
   "dependencies": {
+    "@lubycon/logger": "workspace:packages/logger",
     "@lubycon/utils": "workspace:packages/utils"
   }
 }
