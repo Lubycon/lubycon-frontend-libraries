@@ -1,7 +1,12 @@
+export { default as useAnimationFrame } from './hooks/useAnimationFrame';
+export { default as useAsyncEffect } from './hooks/useAsyncEffect';
+export { default as useBindInput } from './hooks/useBindInput';
 export { default as useBooleanState } from './hooks/useBooleanState';
-export { default as usePreviousState } from './hooks/usePreviousState';
-export { default as useThrottle } from './hooks/useThrottle';
 export { default as useDebounce } from './hooks/useDebounce';
-export { default as useWindow } from './hooks/useWindowSize';
+export { default as usePreviousState } from './hooks/usePreviousState';
+export { default as useQueryParam } from './hooks/useQueryParam';
+export { default as useThrottle } from './hooks/useThrottle';
 export { default as useUpload } from './hooks/useUpload';
+export { default as useLocalStorage } from './hooks/useLocalStorage';
+export { default as useWindowSize } from './hooks/useWindowSize';
 export { default as LoggingClick } from './LoggingClick';
