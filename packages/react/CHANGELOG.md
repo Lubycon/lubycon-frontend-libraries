@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.12.0...@lubycon/react@1.13.0) (2021-08-14)
+
+
+### Features
+
+* **react:** LoggingClick 추가 ([#38](https://github.com/Lubycon/lubycon-frontend-libraries/issues/38)) ([f546f93](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f546f93faa25ff44f3c243c3200156c408200490))
+
+
+
+
+
 # [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.11.6...@lubycon/react@1.12.0) (2021-08-14)
 
 
