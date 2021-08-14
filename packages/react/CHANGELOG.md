@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.11.6...@lubycon/react@1.12.0) (2021-08-14)
+
+
+### Features
+
+* **react:** add useLocalStorage ([#32](https://github.com/Lubycon/lubycon-frontend-libraries/issues/32)) ([72ba173](https://github.com/Lubycon/lubycon-frontend-libraries/commit/72ba1735ab8a5e31b5f958c123b6a21ba3b6dbb3))
+
+
+
+
+
 ## [1.11.6](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.11.5...@lubycon/react@1.11.6) (2021-08-14)
 
 **Note:** Version bump only for package @lubycon/react
