@@ -1,10 +1,11 @@
 import { logger, LoggerEventParams } from '@lubycon/logger';
-import React, { MouseEvent, PropsWithChildren } from 'react';
+import React, { MouseEvent, ReactElement, useEffect } from 'react';
 
 interface LoggingClickProps {
   view: string;
   logName: string;
   params?: LoggerEventParams;
+  children: ReactElement;
 }
 
 /**
@@ -16,28 +17,19 @@ interface LoggingClickProps {
  *   <button>구독 취소</button>
  * </LoggingClick>
  */
-export default function LoggingClick({
-  view,
-  logName,
-  params,
-  children,
-}: PropsWithChildren<LoggingClickProps>) {
-  let child: any;
-
-  try {
-    child = React.Children.only(children);
-  } catch (err) {
-    throw new Error('LoggingClick은 하나의 children만 감싸야합니다.');
-  }
-
+export default function LoggingClick({ view, logName, params, children }: LoggingClickProps) {
   const onClick = (e: MouseEvent) => {
     const clickLogger = logger.getPageLogger(view);
     clickLogger.click(logName, params);
 
-    if (child.props && typeof child.props.onClick === 'function') {
-      child.props.onClick(e);
+    if (children.props && typeof children.props.onClick === 'function') {
+      children.props.onClick(e);
     }
   };
 
-  return React.cloneElement(child, { onClick });
+  useEffect(() => {
+    React.Children.only(children);
+  }, [children]);
+
+  return React.cloneElement(children, { onClick });
 }
