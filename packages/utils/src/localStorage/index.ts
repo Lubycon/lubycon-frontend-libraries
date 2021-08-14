@@ -2,7 +2,7 @@ import formatISO from 'date-fns/formatISO';
 import addHours from 'date-fns/addHours';
 import isBefore from 'date-fns/isBefore';
 import { storage } from './storage';
-import { LocalStorageChangeEvent } from './localStorageEvent';
+import { createLocalStorageChangeEvent } from './localStorageEvent';
 
 interface LubyconStorageData<T> {
   data: T;
@@ -32,7 +32,7 @@ function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number) {
   };
 
   storage.setItem(key, JSON.stringify(payload));
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data }));
+  globalThis.dispatchEvent(createLocalStorageChangeEvent({ key, data }));
 }
 
 /**
@@ -65,7 +65,7 @@ function getLocalStorageItem<T>(key: string): T | null {
  */
 function removeLocalStorageItem(key: string) {
   storage.removeItem(key);
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(createLocalStorageChangeEvent({ key, data: null }));
 }
 
 /**
@@ -74,7 +74,7 @@ function removeLocalStorageItem(key: string) {
 function popLocalStorageItem<T>(key: string): T | null {
   const data = getLocalStorageItem<T>(key);
   removeLocalStorageItem(key);
-  globalThis.dispatchEvent(new LocalStorageChangeEvent({ key, data: null }));
+  globalThis.dispatchEvent(createLocalStorageChangeEvent({ key, data: null }));
   return data;
 }
 

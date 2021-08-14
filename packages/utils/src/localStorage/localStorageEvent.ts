@@ -3,10 +3,13 @@ export interface LocalStorageEventPayload<T> {
   data: T;
 }
 
-export class LocalStorageChangeEvent<T> extends CustomEvent<LocalStorageEventPayload<T>> {
-  static eventName = 'onLocalStorageChange';
+export function createLocalStorageChangeEvent<T>(payload: LocalStorageEventPayload<T>) {
+  return new CustomEvent('onLocalStorageChange', { detail: payload });
+}
+createLocalStorageChangeEvent.eventName = 'onLocalStorageChange';
 
-  constructor(payload: LocalStorageEventPayload<T>) {
-    super(LocalStorageChangeEvent.eventName, { detail: payload });
-  }
+export function isTypeOflocalStorageChangeEvent<T>(
+  evt: any
+): evt is CustomEvent<LocalStorageEventPayload<T>> {
+  return !!evt && evt.type === createLocalStorageChangeEvent.eventName;
 }

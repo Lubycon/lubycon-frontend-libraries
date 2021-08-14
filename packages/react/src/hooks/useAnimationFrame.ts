@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react';
  *
  * useAnimationFrame(updateProgress);
  */
-export function useAnimationFrame(callback: () => void) {
+export default function useAnimationFrame(callback: () => void) {
   const animateRequestRef = useRef<number>();
 
   useEffect(() => {

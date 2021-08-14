@@ -2,17 +2,17 @@
   "name": "@lubycon/logger",
   "description": "루비콘 내 제품의 데이터 로깅을 편하게 할 수 있는 패키지.",
   "sideEffects": false,
-  "version": "1.8.12",
+  "version": "1.8.13",
   "keywords": [
     "lubycon",
     "firebase",
     "amplitude"
   ],
   "typings": "dist/types/index.d.ts",
-  "main": "esm/index.js",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "public",
-    "main": "esm/index.js",
+    "main": "dist/index.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
