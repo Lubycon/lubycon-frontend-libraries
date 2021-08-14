@@ -8,7 +8,7 @@ interface LoggingClickProps {
 }
 
 /**
- * logger를 선언적으로 사용할 수 있는 컴포넌트입니다.
+ * @lubycon/logger를 선언적으로 사용할 수 있는 컴포넌트입니다.
  * 하나의 Children만 감쌀 수 있으며, Children은 onClick property를 받을 수 있어야 합니다.
  *
  * @example
