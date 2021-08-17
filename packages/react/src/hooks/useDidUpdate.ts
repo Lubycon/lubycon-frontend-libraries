@@ -12,7 +12,7 @@ export default function useDidUpdate(callback: () => void, dependencies: Depende
   const hasMount = useRef(false);
 
   if (JSON.stringify(dependencies) === '[]') {
-    throw "두번째 인자로 []을 사용하면 'useDidUpdate'는 동작하지 않습니다.";
+    throw new Error('useDidUpdate 훅의 Dependency Array는 빈 배열일 수 없습니다.');
   }
   useEffect(() => {
     if (hasMount.current) {
