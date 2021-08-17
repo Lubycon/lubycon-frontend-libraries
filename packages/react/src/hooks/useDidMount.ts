@@ -6,10 +6,8 @@ import { useEffect } from 'react';
  *
  * @param {Function} callback 마운트 될 때 호출 할 콜백 함수
  */
-export default function useDidMount(callback: () => any) {
+export default function useDidMount(callback: () => void) {
   useEffect(() => {
-    if (typeof callback === 'function') {
-      callback();
-    }
+    callback();
   }, []);
 }

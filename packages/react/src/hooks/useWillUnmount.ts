@@ -6,7 +6,7 @@ import { useEffect } from 'react';
  *
  * @param {Function} callback 컴포넌트가 언마운트 될 때 호출 할 콜백 함수
  */
-export default function useWillUnmount(callback: () => any) {
+export default function useWillUnmount(callback: () => void) {
   useEffect(() => {
     return callback;
   }, []);
