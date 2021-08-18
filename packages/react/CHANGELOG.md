@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.14.0...@lubycon/react@1.15.0) (2021-08-18)
+
+
+### Features
+
+* **react:** life cycle 추가 ([#41](https://github.com/Lubycon/lubycon-frontend-libraries/issues/41)) ([6b28979](https://github.com/Lubycon/lubycon-frontend-libraries/commit/6b289792f5d9eeb48fd5b0fee68f0a0dd014b538))
+
+
+
+
+
 # [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.13.0...@lubycon/react@1.14.0) (2021-08-15)
 
 
