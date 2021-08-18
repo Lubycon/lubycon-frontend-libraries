@@ -1680,15 +1680,9 @@ __metadata:
     "@types/amplitude-js": ^8.0.1
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
-    "@typescript-eslint/eslint-plugin": ^4.28.5
-    "@typescript-eslint/parser": ^4.28.5
     amplitude-js: ^8.3.1
     cross-env: ^5.2.0
-    eslint: ^7.27.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
     firebase: ^8.8.1
-    prettier: ^2.3.2
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -1708,15 +1702,9 @@ __metadata:
     "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
-    "@typescript-eslint/eslint-plugin": ^4.28.5
-    "@typescript-eslint/parser": ^4.28.5
     cross-env: ^5.2.0
     cross-fetch: ^3.1.4
-    eslint: ^7.27.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
     path: ^0.12.7
-    prettier: ^2.3.2
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -1737,13 +1725,7 @@ __metadata:
     "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
-    "@typescript-eslint/eslint-plugin": ^4.28.5
-    "@typescript-eslint/parser": ^4.28.5
     cross-env: ^5.2.0
-    eslint: ^7.27.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
-    prettier: ^2.3.2
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -1764,14 +1746,8 @@ __metadata:
   dependencies:
     "@types/amplitude-js": ^8.0.0
     "@types/node": ^10.11.0
-    "@typescript-eslint/eslint-plugin": ^4.28.5
-    "@typescript-eslint/parser": ^4.28.5
     cross-env: ^5.2.0
     date-fns: ^2.22.1
-    eslint: ^7.27.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
-    prettier: ^2.3.2
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -4515,7 +4491,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.27.0, eslint@npm:^7.31.0":
+"eslint@npm:^7.31.0":
   version: 7.31.0
   resolution: "eslint@npm:7.31.0"
   dependencies:

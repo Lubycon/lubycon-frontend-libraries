@@ -6,7 +6,8 @@
   "scripts": {
     "new-package": "hygen packages new",
     "postinstall": "husky install",
-    "build:all": "yarn workspaces foreach -pt run build"
+    "build:all": "yarn workspaces foreach -pt run build",
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {
@@ -25,6 +26,10 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
       "git add"
     ]
   },
