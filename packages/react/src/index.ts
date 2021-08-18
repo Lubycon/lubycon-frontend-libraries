@@ -10,3 +10,6 @@ export { default as useUpload } from './hooks/useUpload';
 export { default as useLocalStorage } from './hooks/useLocalStorage';
 export { default as useWindowSize } from './hooks/useWindowSize';
 export { default as LoggingClick } from './LoggingClick';
+export { default as useDidMount } from './hooks/useDidMount';
+export { default as useWillUnmount } from './hooks/useWillUnmount';
+export { default as useDidUpdate } from './hooks/useDidUpdate';
