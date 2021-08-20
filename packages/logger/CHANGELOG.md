@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.14](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.8.13...@lubycon/logger@1.8.14) (2021-08-20)
+
+
+### Bug Fixes
+
+* tslint remove eslint root 설정 [skip ci] ([#42](https://github.com/Lubycon/lubycon-frontend-libraries/issues/42)) ([4191a85](https://github.com/Lubycon/lubycon-frontend-libraries/commit/4191a85c35d3a56936755ffde1f979e8c47c4abe))
+
+
+
+
+
 ## [1.8.13](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.8.12...@lubycon/logger@1.8.13) (2021-08-14)
 
 **Note:** Version bump only for package @lubycon/logger

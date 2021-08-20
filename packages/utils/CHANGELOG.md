@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.9.1...@lubycon/utils@1.9.2) (2021-08-20)
+
+
+### Bug Fixes
+
+* tslint remove eslint root 설정 [skip ci] ([#42](https://github.com/Lubycon/lubycon-frontend-libraries/issues/42)) ([4191a85](https://github.com/Lubycon/lubycon-frontend-libraries/commit/4191a85c35d3a56936755ffde1f979e8c47c4abe))
+
+
+
+
+
 ## [1.9.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.9.0...@lubycon/utils@1.9.1) (2021-08-14)
 
 **Note:** Version bump only for package @lubycon/utils

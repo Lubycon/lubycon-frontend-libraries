@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.15.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.15.0...@lubycon/react@1.15.1) (2021-08-20)
+
+
+### Bug Fixes
+
+* **react:** export 되지 않고 있던 useImpression 훅 export ([#43](https://github.com/Lubycon/lubycon-frontend-libraries/issues/43)) ([f5c8b7c](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f5c8b7cba44b568e57cefbfffc7060e3df2a2dcc))
+* tslint remove eslint root 설정 [skip ci] ([#42](https://github.com/Lubycon/lubycon-frontend-libraries/issues/42)) ([4191a85](https://github.com/Lubycon/lubycon-frontend-libraries/commit/4191a85c35d3a56936755ffde1f979e8c47c4abe))
+
+
+
+
+
 # [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.14.0...@lubycon/react@1.15.0) (2021-08-18)
 
 
