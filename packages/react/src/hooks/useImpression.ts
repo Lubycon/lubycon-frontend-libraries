@@ -6,7 +6,7 @@ interface Options {
   rootMargin?: number;
   threshold?: number;
 }
-export function useImpression({
+export default function useImpression({
   onImpressionStart,
   onImpressionEnd,
   rootMargin = 0,
