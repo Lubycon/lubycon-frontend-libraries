@@ -1,17 +1,5 @@
 import { PresetInfo, PresetResult } from './types';
 
-export function some<T, U>(arr: T[], callback: (value: T, index: number) => U): boolean {
-  const length = arr.length;
-
-  for (let i = 0; i < length; ++i) {
-    if (callback(arr[i], i)) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
 export function execRegExp(pattern: string, text: string): RegExpExecArray | null {
   try {
     return new RegExp(pattern, 'g').exec(text);
@@ -22,9 +10,9 @@ export function execRegExp(pattern: string, text: string): RegExpExecArray | nul
 
 export function findPreset(presets: PresetInfo[], userAgent: string): PresetResult {
   let userPreset: PresetInfo | null = null;
-  let version = '-1';
+  let version = null;
 
-  some(presets, (preset) => {
+  presets.some((preset) => {
     const result = execRegExp(`(${preset.test})((?:\\/|\\s|:)([0-9|\\.|_]+))?`, userAgent);
 
     if (!result) {
@@ -32,7 +20,7 @@ export function findPreset(presets: PresetInfo[], userAgent: string): PresetResu
     }
 
     userPreset = preset;
-    version = result[3] || '-1';
+    version = result[3] || null;
 
     return true;
   });
@@ -43,7 +31,7 @@ export function findPreset(presets: PresetInfo[], userAgent: string): PresetResu
   };
 }
 
-export function getIsMobile(userAgent: string) {
+export function isMobile(userAgent: string) {
   const device = [
     'iPhone',
     'iPod',

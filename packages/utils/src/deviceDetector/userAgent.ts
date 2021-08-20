@@ -1,16 +1,15 @@
-import { AgentInfo } from './types';
-import { findPreset, getIsMobile } from './utils';
+import { AgentBrowserInfo, AgentInfo } from './types';
+import { findPreset, isMobile } from './utils';
 import { BROWSER_PRESET } from './presets';
 
 export function parseUserAgent(): AgentInfo {
-  const agent = navigator.userAgent.toLowerCase();
-  const isMobile = getIsMobile(agent);
-  const browser = {
-    name: 'unknown',
-    version: '-1',
+  const userAgent = navigator.userAgent.toLowerCase();
+  const browser: AgentBrowserInfo = {
+    name: null,
+    version: null,
   };
 
-  const { preset: browserPreset, version: browserVersion } = findPreset(BROWSER_PRESET, agent);
+  const { preset: browserPreset, version: browserVersion } = findPreset(BROWSER_PRESET, userAgent);
 
   if (browserPreset) {
     browser.name = browserPreset.id;
@@ -18,8 +17,8 @@ export function parseUserAgent(): AgentInfo {
   }
 
   return {
-    isMobile,
-    isDesktop: !isMobile,
+    isMobile: isMobile(userAgent),
+    isDesktop: !isMobile(userAgent),
     browser,
   };
 }

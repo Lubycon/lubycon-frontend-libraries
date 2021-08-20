@@ -1,11 +1,11 @@
 import { AgentInfo } from './types';
 
 export function parseUserAgentData(): AgentInfo {
-  const agent = navigator.userAgentData;
-  const brands = [...(agent.brands || agent.uaList)];
-  const isMobile = agent.mobile;
-  const isDesktop = !agent.mobile;
-  const browser = { name: brands[0].brand, version: brands[0].version };
+  const userAgentData = navigator.userAgentData;
+  const [brandInfo] = [...(userAgentData.brands || userAgentData.uaList)];
+  const isMobile = userAgentData.mobile;
+  const isDesktop = !userAgentData.mobile;
+  const browser = { name: brandInfo.brand, version: brandInfo.version };
 
   return {
     isMobile,

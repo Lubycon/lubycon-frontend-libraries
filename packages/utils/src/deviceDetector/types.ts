@@ -7,8 +7,8 @@ export interface UADataValues {
 }
 
 export interface AgentBrowserInfo {
-  name: string;
-  version: string;
+  name: string | null;
+  version: string | null;
 }
 export interface AgentInfo {
   isMobile: boolean;
@@ -28,14 +28,12 @@ export interface PresetInfo {
 
 export interface PresetResult {
   preset: PresetInfo | null;
-  version: string;
+  version: string | null;
 }
 
 export interface NavigatorUAData {
   brands: NavigatorUABrandVersion[];
   uaList?: NavigatorUABrandVersion[];
   mobile: boolean;
-  getHighEntropyValues<T extends keyof UADataValues>(
-    hints: T[]
-  ): Promise<{ [key in T]: UADataValues[T] }>;
+  getHighEntropyValues: <T extends keyof string>(hints: T[]) => Promise<{ [key in T]: string[T] }>;
 }
