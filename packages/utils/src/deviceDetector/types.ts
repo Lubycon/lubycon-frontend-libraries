@@ -35,5 +35,7 @@ export interface NavigatorUAData {
   brands: NavigatorUABrandVersion[];
   uaList?: NavigatorUABrandVersion[];
   mobile: boolean;
-  getHighEntropyValues: <T extends keyof string>(hints: T[]) => Promise<{ [key in T]: string[T] }>;
+  getHighEntropyValues: <T extends keyof UADataValues>(
+    hints: T[]
+  ) => Promise<{ [key in T]: UADataValues[T] }>;
 }
