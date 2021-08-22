@@ -5,7 +5,7 @@ import { Ref, useCallback, MutableRefObject, RefCallback } from 'react';
  * @example
  * const Foo = forwardRef((props, fowardedRef) => {
  *   const ref = useRef();
- *   const combinedRef = useCombinedRefs(fowardedRef, ref2);
+ *   const combinedRef = useCombinedRefs(fowardedRef, ref);
  *
  *   // div가 업데이트되면 ref, fowardedRef 둘 다 업데이트 됨
  *   return <div ref={combinedRef} />
