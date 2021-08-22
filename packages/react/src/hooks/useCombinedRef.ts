@@ -11,9 +11,7 @@ import { Ref, useCallback, MutableRefObject, RefCallback } from 'react';
  *   return <div ref={combinedRef} />
  * });
  */
-export default function useCombinedRefs<T>(
-  ...refs: Array<Ref<T> | RefCallback<T>>
-): RefCallback<T> {
+export default function useCombinedRefs<T>(...refs: Array<Ref<T>>): RefCallback<T> {
   const combinedRef = useCallback(
     (value: T) => {
       refs.forEach((ref) => {
