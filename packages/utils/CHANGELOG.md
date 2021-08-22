@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.9.2...@lubycon/utils@1.10.0) (2021-08-22)
+
+
+### Features
+
+* **utils:** device detector 추가 ([#40](https://github.com/Lubycon/lubycon-frontend-libraries/issues/40)) ([d9180cd](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d9180cdb6d5c02d416fbb10ba5e869313e4c726b))
+
+
+
+
+
 ## [1.9.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.9.1...@lubycon/utils@1.9.2) (2021-08-20)
 
 
