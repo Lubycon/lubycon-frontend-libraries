@@ -16,14 +16,12 @@ const useInterval = (callback: VoidFunction, delay: number) => {
   }, [callback]);
 
   useEffect(() => {
-    if (delay) {
-      const id = setInterval(() => {
-        savedCallback.current?.();
-      }, delay);
-      return () => {
-        clearInterval(id);
-      };
-    }
+    const id = setInterval(() => {
+      savedCallback.current?.();
+    }, delay);
+    return () => {
+      clearInterval(id);
+    };
   }, [delay]);
 };
 
