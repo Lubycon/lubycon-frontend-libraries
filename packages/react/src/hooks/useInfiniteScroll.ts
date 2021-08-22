@@ -69,12 +69,7 @@ const useInfiniteScroll = <T extends HTMLElement>({
     }
   };
 
-  useInterval(
-    () => {
-      listenBottomOffset();
-    },
-    hasNextPage ? interval : 0
-  );
+  useInterval(listenBottomOffset, hasNextPage ? interval : 0);
 
   return ref;
 };
