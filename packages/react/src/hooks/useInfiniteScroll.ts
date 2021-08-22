@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import useWindowSize from './useWindowSize';
 import useInterval from './useInterval';
 
-export interface UseInfiniteScrollArgs {
+export interface InfiniteScroll {
   isLoading: boolean;
   hasNextPage: boolean;
   onLoadMore: VoidFunction;
@@ -27,7 +27,7 @@ const useInfiniteScroll = <T extends HTMLElement>({
   onLoadMore,
   threshold = 150,
   interval = 200,
-}: UseInfiniteScrollArgs) => {
+}: InfiniteScroll) => {
   const ref = useRef<T>(null);
   const { height: windowHeight } = useWindowSize();
   const [listen, setListen] = useState(true);
