@@ -12,7 +12,7 @@ to: packages/<%= name %>/package.json
   ],
   "typings": "dist/types/index.d.ts",
   "main": "dist/index.js",
-	"module": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
