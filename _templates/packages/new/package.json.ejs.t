@@ -10,14 +10,17 @@ to: packages/<%= name %>/package.json
     "lubycon",
     "<%= name %>"
   ],
-  "main": "esm/index.js",
   "typings": "dist/types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "publishConfig": {
     "access": "public",
-    "main": "esm/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
+    "lint": "eslint . --ext .ts,.tsx",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
