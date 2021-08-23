@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "rm -rf dist && tsc --module commonjs && rollup -c rollup.config.js",
+    "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
     "typecheck": "tsc --noEmit"
   },
