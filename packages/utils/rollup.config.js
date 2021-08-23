@@ -1,4 +1,3 @@
-import path from 'path';
 import resolve from 'rollup-plugin-pnp-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
@@ -19,14 +18,13 @@ const external = (pkg) => {
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 function buildJS(input, output, format) {
-  const isESMFormat = format === 'es';
   return {
     input,
     external,
     output: [
       {
         format,
-        ...(isESMFormat ? { dir: output } : { file: output }),
+        file: output,
       },
     ],
     plugins: [
@@ -37,17 +35,15 @@ function buildJS(input, output, format) {
         include: 'node_modules/**',
       }),
     ],
-    preserveModules: isESMFormat,
   };
 }
 
 function buildCJS(input) {
-  const filename = path.parse(input).name;
-  return buildJS(input, `dist/${filename}.js`, 'cjs');
+  return buildJS(input, packageJSON.main, 'cjs');
 }
 
 function buildESM(input) {
-  return buildJS(input, path.dirname(packageJSON.main), 'es');
+  return buildJS(input, packageJSON.module, 'es');
 }
 
 export default [buildCJS('src/index.ts'), buildESM('src/index.ts')];
