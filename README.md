@@ -1,4 +1,8 @@
-# Lubycon Frontend Libraries
+<p align="center">
+  <img width="150" src="https://assets.lubycon.io/logo/symbol-color.svg" alt="Lubycon logo">
+</p>
+
+<h1 align="center">Lubycon Frontend Libraries</h1>
 
 루비콘에서 사용하는 모든 프론트엔드 라이브러리가 모여있는 모노레포지토리입니다.
 
