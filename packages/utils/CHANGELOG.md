@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.10.0...@lubycon/utils@1.10.1) (2021-08-23)
+
+
+### Bug Fixes
+
+* **all packages:** 각 패키지 package.json / rollup.config 수정 ([#47](https://github.com/Lubycon/lubycon-frontend-libraries/issues/47)) ([30047bd](https://github.com/Lubycon/lubycon-frontend-libraries/commit/30047bd00f6b21680cf318ef544f6353d0c3d5b6))
+* **logger,mattermost,react,utils:** 누락된 부분 추가 ([#48](https://github.com/Lubycon/lubycon-frontend-libraries/issues/48)) ([d008640](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d008640491ba3d97e31ab12571dcea54d06e7d5a))
+
+
+
+
+
 # [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.9.2...@lubycon/utils@1.10.0) (2021-08-22)
 
 
