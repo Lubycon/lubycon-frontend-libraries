@@ -10,14 +10,16 @@
   ],
   "typings": "dist/types/index.d.ts",
   "main": "dist/index.js",
+	"module": "dist/index.esm.js",
   "publishConfig": {
-    "access": "public",
+		"access": "public",
     "main": "dist/index.js",
+		"module": "dist/index.esm.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "build": "rm -rf dist && tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
     "typecheck": "tsc --noEmit"
   },
