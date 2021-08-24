@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.16.3...@lubycon/react@1.17.0) (2021-08-24)
+
+
+### Features
+
+* **react:** LoggingEvent, LoggingImpression, ImpressionArea 추가 ([#49](https://github.com/Lubycon/lubycon-frontend-libraries/issues/49)) ([5dcaae8](https://github.com/Lubycon/lubycon-frontend-libraries/commit/5dcaae8ff85cc45b157eba59e537b09aee5585af))
+
+
+
+
+
 ## [1.16.3](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.16.1...@lubycon/react@1.16.3) (2021-08-23)
 
 
