@@ -13,7 +13,7 @@ interface Props {
 
 /**
  * \@lubycon/logger를 선언적으로 사용할 수 있는 컴포넌트입니다.
- * 내부적으로 ImpressionArea를 사용하고 있기 때문에 자동으로 onImpressionStart 이벤트 발생 시 로거가 트리거링됩니다.
+ * 내부적으로 ImpressionArea를 사용하고 있기 때문에 자동으로 onImpressionStart 이벤트 발생 시 로거가 발송됩니다.
  *
  * @example
  * <LoggingImpression

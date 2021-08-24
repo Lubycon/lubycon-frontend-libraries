@@ -11,7 +11,7 @@ interface Props {
 
 /**
  * \@lubycon/logger를 선언적으로 사용할 수 있는 컴포넌트입니다.
- * 하나의 Children만 감쌀 수 있으며, Children은 onClick property를 받을 수 있어야 합니다.
+ * 자식 요소에서 onClick 이벤트가 발생하면 로거의 click 메소드를 사용하여 이벤트 로그를 발송합니다.
  *
  * @example
  * <LoggingClick view="구독_페이지" logName="구독해제_버튼클릭" params={{ 서비스: service.name }}>
