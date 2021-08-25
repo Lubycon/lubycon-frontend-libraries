@@ -1,4 +1,5 @@
 import { QueryParam } from '@lubycon/utils';
+import { Headers } from 'cross-fetch';
 import { convertHeadersToObject } from './headers';
 
 export interface LubyconResponse<T> {
@@ -28,7 +29,7 @@ export function requestHandler({
 }: RequestOptions): RequestInit {
   const contentType = rawHeaders?.['Content-Type'] ?? 'application/json';
 
-  const headers = Headers != null ? new Headers(rawHeaders) : rawHeaders;
+  const headers = new Headers(rawHeaders);
   const body = contentType && rawBody != null ? JSON.stringify(rawBody) : rawBody;
 
   return {
