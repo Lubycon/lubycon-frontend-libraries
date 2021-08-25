@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.13...@lubycon/mattermost@1.1.14) (2021-08-25)
+
+
+### Bug Fixes
+
+* **mattermost:** Incoming Webhook 응답으로 딸랑 "ok" 하나만 오는 경우 대응 ([#51](https://github.com/Lubycon/lubycon-frontend-libraries/issues/51)) ([f164ec1](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f164ec19410c10c6db4dcc46527c48868787e030))
+
+
+
+
+
 ## [1.1.13](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.12...@lubycon/mattermost@1.1.13) (2021-08-25)
 
 
