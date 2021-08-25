@@ -28,7 +28,7 @@ export function requestHandler({
 }: RequestOptions): RequestInit {
   const contentType = rawHeaders?.['Content-Type'] ?? 'application/json';
 
-  const headers = new Headers(rawHeaders);
+  const headers = Headers != null ? new Headers(rawHeaders) : rawHeaders;
   const body = contentType && rawBody != null ? JSON.stringify(rawBody) : rawBody;
 
   return {
