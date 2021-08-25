@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.13](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.12...@lubycon/mattermost@1.1.13) (2021-08-25)
+
+
+### Bug Fixes
+
+* **mattermost:** Header 클래스를 cross-fetch로부터 가져오도록 수정 ([#50](https://github.com/Lubycon/lubycon-frontend-libraries/issues/50)) ([daf884a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/daf884a2392a007976cf1ff02af12535d7c32e52))
+
+
+
+
+
 ## [1.1.12](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.1.10...@lubycon/mattermost@1.1.12) (2021-08-23)
 
 
