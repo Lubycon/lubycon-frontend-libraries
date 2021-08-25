@@ -1,4 +1,5 @@
 import { QueryParam } from '@lubycon/utils';
+import { Headers } from 'cross-fetch';
 import { convertHeadersToObject } from './headers';
 
 export interface LubyconResponse<T> {
