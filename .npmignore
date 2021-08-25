@@ -6,3 +6,4 @@ config
 tasks
 .vscode
 .idea
+test

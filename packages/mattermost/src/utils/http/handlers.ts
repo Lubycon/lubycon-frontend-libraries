@@ -4,18 +4,26 @@ import { convertHeadersToObject } from './headers';
 
 export interface LubyconResponse<T> {
   headers: Record<string, string>;
-  data: T;
+  data: T | null;
 }
 export async function responseHandler<T>(response: Response): Promise<LubyconResponse<T>> {
   if (response.status >= 400) {
     throw new Error(response.statusText);
   }
 
-  const data = await response.json();
-  return {
-    headers: convertHeadersToObject(response.headers),
-    data,
-  };
+  const headers = convertHeadersToObject(response.headers);
+  try {
+    const data = await response.json();
+    return {
+      headers,
+      data,
+    };
+  } catch {
+    return {
+      headers,
+      data: null,
+    };
+  }
 }
 
 export interface RequestOptions extends Omit<RequestInit, 'headers'> {
