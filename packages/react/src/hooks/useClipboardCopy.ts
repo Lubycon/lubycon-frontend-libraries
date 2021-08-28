@@ -9,7 +9,7 @@ import { useCallback } from 'react';
 const useClipboardCopy = (onCopyCallback: () => void) => {
   const copyString = useCallback(
     async (copyString: string) => {
-      if (typeof window === 'undefined') return null;
+      if (typeof navigator === 'undefined') return null;
       try {
         await navigator.clipboard.writeText(copyString);
         if (onCopyCallback !== undefined) onCopyCallback();
