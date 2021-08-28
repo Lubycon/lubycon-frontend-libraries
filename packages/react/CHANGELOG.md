@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.17.0...@lubycon/react@1.18.0) (2021-08-28)
+
+
+### Features
+
+* **react:**  useClipboardCopy hook 추가 ([#52](https://github.com/Lubycon/lubycon-frontend-libraries/issues/52)) ([05701d3](https://github.com/Lubycon/lubycon-frontend-libraries/commit/05701d36d170ad9c3fecdf29fdd2ec4533429381))
+
+
+
+
+
 # [1.17.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.16.3...@lubycon/react@1.17.0) (2021-08-24)
 
 
