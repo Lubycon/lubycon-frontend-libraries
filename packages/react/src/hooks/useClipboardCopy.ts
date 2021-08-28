@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-
 /**
  * 매개변수로 주어진 string을 clipboard copy하는 함수를 반환하는 hook입니다.
  * https환경에서만 사용 가능하며, IE는 지원하지 않습니다.
@@ -10,6 +9,7 @@ import { useCallback } from 'react';
 const useClipboardCopy = (onCopyCallback: () => void) => {
   const copyString = useCallback(
     async (copyString: string) => {
+      if (typeof window === 'undefined') return null;
       try {
         await navigator.clipboard.writeText(copyString);
         if (onCopyCallback !== undefined) onCopyCallback();
