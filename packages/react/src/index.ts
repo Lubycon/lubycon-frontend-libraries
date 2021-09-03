@@ -1,3 +1,4 @@
+/** @module React */
 export { default as useAnimationFrame } from './hooks/useAnimationFrame';
 export { default as useAsyncEffect } from './hooks/useAsyncEffect';
 export { default as useBindInput } from './hooks/useBindInput';
@@ -19,3 +20,4 @@ export { default as useDidUpdate } from './hooks/useDidUpdate';
 export { default as useImpression } from './hooks/useImpression';
 export { default as useCombinedRefs } from './hooks/useCombinedRef';
 export { default as useScrollEvent } from './hooks/useScrollEvent';
+export { default as useClipboardCopy } from './hooks/useClipboardCopy';

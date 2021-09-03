@@ -1,3 +1,4 @@
+/** @module Utils */
 export { default as delay } from './delay';
 export {
   createLocalStorageChangeEvent,
