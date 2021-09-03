@@ -7,6 +7,7 @@
     "new-package": "hygen packages new",
     "postinstall": "husky install",
     "build:all": "yarn workspaces foreach -pt run build",
+    "docs:generate": "typedoc --tsconfig tsconfig.doc.json",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "author": "Lubycon<lubycon@gmail.com>",
@@ -61,5 +62,8 @@
     "@lerna/package": "patch:@lerna/package@npm:3.16.0#.yarn-patches/@lerna/package.patch",
     "@lerna/package-graph": "patch:@lerna/package-graph@npm:3.18.5#.yarn-patches/@lerna/package-graph.patch",
     "@lerna/pack-directory": "patch:@lerna/pack-directory@npm:3.16.4#.yarn-patches/@lerna/pack-directory.patch"
+  },
+  "dependencies": {
+    "typedoc": "^0.21.9"
   }
 }
