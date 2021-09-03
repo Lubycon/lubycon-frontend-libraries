@@ -1,3 +1,4 @@
+/** @module React */
 export { default as useAnimationFrame } from './hooks/useAnimationFrame';
 export { default as useAsyncEffect } from './hooks/useAsyncEffect';
 export { default as useBindInput } from './hooks/useBindInput';
