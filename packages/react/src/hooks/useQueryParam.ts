@@ -20,10 +20,10 @@ export default function useQueryParam<T = string>(key: string, parser?: (value: 
     const query = parseQueryString(queryString);
 
     const value = query[key];
-    if (typeof value === 'string') {
-      setQueryParam(parser != null ? parser(value) : value);
-    } else {
+    if (value == undefined) {
       setQueryParam(undefined);
+    } else {
+      setQueryParam(parser != null ? parser(value) : value);
     }
   }, []);
 
