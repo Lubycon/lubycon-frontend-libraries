@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.18.1...@lubycon/react@1.18.2) (2021-09-05)
+
+
+### Bug Fixes
+
+* **libraries:** ssr issues ([#56](https://github.com/Lubycon/lubycon-frontend-libraries/issues/56)) ([6161282](https://github.com/Lubycon/lubycon-frontend-libraries/commit/61612827ac2967e42d1c06ed2b520eef84efd7e8))
+
+
+
+
+
 ## [1.18.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.18.0...@lubycon/react@1.18.1) (2021-09-04)
 
 **Note:** Version bump only for package @lubycon/react
