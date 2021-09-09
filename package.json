@@ -8,6 +8,7 @@
     "postinstall": "husky install",
     "build:all": "yarn workspaces foreach -pt run build",
     "docs:generate": "typedoc --tsconfig tsconfig.doc.json",
+    "docs:deploy": "node script/deploy.js",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "author": "Lubycon<lubycon@gmail.com>",
@@ -48,6 +49,7 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.1",
     "hygen": "^6.1.0",
     "lerna": "^3.22.0",

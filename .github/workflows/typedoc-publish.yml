@@ -1,0 +1,32 @@
+name: Publish Typodoc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  typodoc-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Set Git Configulations
+        run: |
+          git config --global user.email "lubycon@gmail.com"
+          git config --global user.name "lubycon"
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Install depedencies
+        run: yarn
+      - name: Build Typedoc
+        run: yarn docs:generate
+      - name: Publish
+        run: yarn docs:deploy
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        
