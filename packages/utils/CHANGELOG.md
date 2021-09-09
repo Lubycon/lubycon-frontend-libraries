@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.11.0...@lubycon/utils@1.12.0) (2021-09-09)
+
+
+### Features
+
+* **utils:** isAfterOrEqual, isBeforeOrEqual, getArrayFromCount 추가 ([#57](https://github.com/Lubycon/lubycon-frontend-libraries/issues/57)) ([32e8f9f](https://github.com/Lubycon/lubycon-frontend-libraries/commit/32e8f9fa0efdb5544ca8df9865bc2f3bc6b22f4d))
+
+
+
+
+
 # [1.11.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.10.2...@lubycon/utils@1.11.0) (2021-09-04)
 
 
