@@ -1,3 +1,4 @@
+/** @module Logger */
 export { default as logger } from './loggers';
 export { FirebaseConfig } from './models/firebase';
 export {

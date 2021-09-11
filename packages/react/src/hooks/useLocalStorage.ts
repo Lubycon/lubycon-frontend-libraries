@@ -1,4 +1,5 @@
 import {
+  getLocalStorageItem,
   setLocalStorageItem,
   removeLocalStorageItem,
   LocalStorageEventPayload,
@@ -31,10 +32,7 @@ export type LocalStorageReturnValue<T> = [T, (newValue: T | null) => void, () =>
 function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaultValue: T): LocalStorageReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaultValue: T | null = null) {
-  const [localState, setLocalState] = useState<T | null>(
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    localStorage.getItem(key) === null ? defaultValue : tryParse(localStorage.getItem(key)!)
-  );
+  const [localState, setLocalState] = useState<T | null>(getLocalStorageItem(key));
 
   const onLocalStorageChange = (event: CustomEvent<LocalStorageEventPayload<T>> | StorageEvent) => {
     if (isTypeOflocalStorageChangeEvent<T>(event)) {

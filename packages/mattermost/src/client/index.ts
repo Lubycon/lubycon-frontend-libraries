@@ -31,7 +31,7 @@ export class MattermostClient {
       login_id: email,
       password,
     });
-    const token: string = response.headers['Token'];
+    const token: string = response.headers['token'];
     return token;
   }
 

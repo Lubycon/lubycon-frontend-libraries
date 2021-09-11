@@ -2,16 +2,18 @@
   "name": "@lubycon/react",
   "description": "루비콘 팀의 리액트 라이브러리.",
   "sideEffects": false,
-  "version": "1.16.1",
+  "version": "1.18.3",
   "keywords": [
     "lubycon",
     "react"
   ],
   "typings": "dist/types/index.d.ts",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",
+    "module": "dist/index.esm.js",
     "typings": "dist/types/index.d.ts"
   },
   "scripts": {

@@ -1,0 +1,31 @@
+{
+  "include": ["packages/*/src/**/*.ts"],
+  "exclude": [
+    "**/node_modules/**",
+    "**/src/**/*.test.ts",
+    "**/src/**/__tests__/**",
+  ],
+  "baseUrl": "./packages",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "packages/logger/src/index.ts",
+      "packages/react/src/index.ts",
+      "packages/mattermost/src/index.ts",
+      "packages/utils/src/index.ts",
+    ],
+    "exclude": ["**/*.test.ts", "**/__tests__/**"],
+    "out": "docs",
+    "name":"루비콘 라이브러리 문서",
+    "excludePrivate": true,
+    "readme": "README.md",
+    "gitRevision": "main",
+  }
+}
