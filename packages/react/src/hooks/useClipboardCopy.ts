@@ -40,6 +40,7 @@ const useClipboardCopy = (onCopyCallback?: () => void) => {
         setCopiedText(copyString);
         onCopyCallback?.();
       } catch (error) {
+        setCopiedText(null);
         throw error;
       }
     },
