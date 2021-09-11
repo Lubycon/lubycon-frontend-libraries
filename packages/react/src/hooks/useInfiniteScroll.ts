@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import useWindowSize from './useWindowSize';
 import useInterval from './useInterval';
 
-export interface InfiniteScroll {
-  isLoading: boolean;
+export interface Queries {
   hasNextPage: boolean;
-  onLoadMore: VoidFunction;
   threshold?: number;
   interval?: number;
 }
@@ -18,25 +16,17 @@ export interface InfiniteScroll {
  * @param {boolean} isLoading 로딩 상태
  * @param {boolean} hasNextPage fetch 데이터의 유무
  * @param {Function} onLoadMore threshold 에 닿았을때 호출 할 함수
- * @param {number} threshold 업데이트를 위치
+ * @param {number} threshold onLoadMore 이 호출 될 높이
  * @param {number} interval 업데이트 간격
  */
-const useInfiniteScroll = <T extends HTMLElement>({
-  isLoading,
-  hasNextPage,
-  onLoadMore,
-  threshold = 150,
-  interval = 200,
-}: InfiniteScroll) => {
-  const ref = useRef<T>(null);
+const useInfiniteScroll = <T>(
+  fetcher: (params?: any) => Promise<T>,
+  { hasNextPage, threshold = 150, interval = 200 }: Queries
+) => {
+  const ref = useRef<HTMLElement>(null);
   const { height: windowHeight } = useWindowSize();
-  const [listen, setListen] = useState(true);
-
-  useEffect(() => {
-    if (!isLoading) {
-      setListen(true);
-    }
-  }, [isLoading]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState<T>();
 
   const getBottomOffset = () => {
     const element = ref.current;
@@ -53,24 +43,34 @@ const useInfiniteScroll = <T extends HTMLElement>({
     return bottomOffset;
   };
 
-  const listenBottomOffset = () => {
-    if (listen && !isLoading && hasNextPage) {
+  const listenBottomOffset = async () => {
+    if (!isLoading && hasNextPage) {
       if (ref.current) {
         const bottomOffset = getBottomOffset();
-        if (!bottomOffset) {
-          return;
-        }
+
+        if (!bottomOffset) return;
+
         const validOffset = bottomOffset < threshold;
         if (validOffset) {
-          setListen(false);
-          onLoadMore();
+          setIsLoading(true);
+          const fetchData = await fetcher();
+          setData(fetchData);
+          setIsLoading(false);
         }
       }
     }
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', listenBottomOffset);
+    return () => {
+      window.removeEventListener('scroll', listenBottomOffset);
+    };
+  });
+
   useInterval(listenBottomOffset, hasNextPage ? interval : 0);
 
-  return ref;
+  return { ref, data, isLoading };
 };
+
 export default useInfiniteScroll;
