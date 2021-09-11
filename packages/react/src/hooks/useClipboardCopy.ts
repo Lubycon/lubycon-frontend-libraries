@@ -22,7 +22,19 @@ const useClipboardCopy = (onCopyCallback?: () => void) => {
 
   const copyString = useCallback(
     async (copyString: string) => {
-      if (!navigator?.clipboard) return null;
+      if (!navigator?.clipboard) {
+        const textarea = <HTMLTextAreaElement>document.createElement('textarea');
+        textarea.value = copyString;
+        textarea.style.top = '0';
+        textarea.style.left = '0';
+        textarea.style.display = 'fixed';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        onCopyCallback?.();
+      }
       try {
         await navigator.clipboard.writeText(copyString);
         setCopiedText(copyString);
