@@ -20,9 +20,11 @@ jobs:
           git config --global user.email "lubycon@gmail.com"
           git config --global user.name "lubycon"
         env:
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      - name: Install depedencies
-        run: yarn
+          GHty_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Validate dependencies
+        run: yarn install --immutable --immutable-cache
+      - name: Build
+        run: yarn build:all
       - name: Build Typedoc
         run: yarn docs:generate
       - name: Publish

@@ -1,12 +1,11 @@
 {
   "include": ["packages/*/src/**/*.ts"],
-
   "exclude": [
     "**/node_modules/**",
     "**/src/**/*.test.ts",
-    "**/src/**/__tests__/**"
+    "**/src/**/__tests__/**",
   ],
-
+  "baseUrl": "./packages",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
