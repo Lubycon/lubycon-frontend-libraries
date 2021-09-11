@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 /**
  * 매개변수로 주어진 string을 clipboard copy하는 함수를 반환하는 hook입니다.
  * https환경에서만 사용 가능하며, IE는 지원하지 않습니다.
@@ -9,7 +9,7 @@ import { useCallback } from 'react';
  * @example
   ```javascript
     const Foo = () => {
-    const { copyString } = useClipboardCopy();
+    const [copiedText, copyString ] = useClipboardCopy();
     
     return (
      <button onClick={() => copyString('https://lubycon.io/')}>공유하기<button/>
@@ -17,13 +17,16 @@ import { useCallback } from 'react';
   };
   ```
  */
-const useClipboardCopy = (onCopyCallback: () => void) => {
+const useClipboardCopy = (onCopyCallback?: () => void) => {
+  const [copiedText, setCopiedText] = useState<string | null>(null);
+
   const copyString = useCallback(
     async (copyString: string) => {
-      if (typeof navigator === 'undefined') return null;
+      if (!navigator?.clipboard) return null;
       try {
         await navigator.clipboard.writeText(copyString);
-        if (onCopyCallback !== undefined) onCopyCallback();
+        setCopiedText(copyString);
+        onCopyCallback?.();
       } catch (error) {
         throw error;
       }
@@ -31,9 +34,7 @@ const useClipboardCopy = (onCopyCallback: () => void) => {
     [onCopyCallback]
   );
 
-  return {
-    copyString,
-  };
+  return [copiedText, copyString];
 };
 
 export default useClipboardCopy;
