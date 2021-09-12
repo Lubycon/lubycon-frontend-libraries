@@ -3425,6 +3425,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@juggle/resize-observer", [
+        ["npm:3.3.1", {
+          "packageLocation": "./.yarn/cache/@juggle-resize-observer-npm-3.3.1-f36d80a4f0-ddabc40442.zip/node_modules/@juggle/resize-observer/",
+          "packageDependencies": [
+            ["@juggle/resize-observer", "npm:3.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@lerna/add", [
         ["npm:3.21.0", {
           "packageLocation": "./.yarn/cache/@lerna-add-npm-3.21.0-5b0b33bc83-e2d9f1f4e6.zip/node_modules/@lerna/add/",
@@ -4432,6 +4441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react/",
           "packageDependencies": [
             ["@lubycon/react", "workspace:packages/react"],
+            ["@juggle/resize-observer", "npm:3.3.1"],
             ["@lubycon/logger", "workspace:packages/logger"],
             ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],

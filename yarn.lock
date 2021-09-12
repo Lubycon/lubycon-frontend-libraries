@@ -2088,6 +2088,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@juggle/resize-observer@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@juggle/resize-observer@npm:3.3.1"
+  checksum: ddabc4044276a2cb57d469c4917206c7e39f2463aa8e3430e33e4eda554412afe29c22afa40e6708b49dad5d56768dc83acd68a704b1dcd49a0906bb96b991b2
+  languageName: node
+  linkType: hard
+
 "@lerna/add@npm:3.21.0":
   version: 3.21.0
   resolution: "@lerna/add@npm:3.21.0"
@@ -3094,6 +3101,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/react@workspace:packages/react"
   dependencies:
+    "@juggle/resize-observer": ^3.3.1
     "@lubycon/logger": "workspace:packages/logger"
     "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
