@@ -1109,6 +1109,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@juggle/resize-observer", [
+        ["npm:3.3.1", {
+          "packageLocation": "./.yarn/cache/@juggle-resize-observer-npm-3.3.1-f36d80a4f0-ddabc40442.zip/node_modules/@juggle/resize-observer/",
+          "packageDependencies": [
+            ["@juggle/resize-observer", "npm:3.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@lerna/add", [
         ["npm:3.21.0", {
           "packageLocation": "./.yarn/cache/@lerna-add-npm-3.21.0-5b0b33bc83-e2d9f1f4e6.zip/node_modules/@lerna/add/",
@@ -2062,12 +2071,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react/",
           "packageDependencies": [
             ["@lubycon/react", "workspace:packages/react"],
+            ["@juggle/resize-observer", "npm:3.3.1"],
             ["@lubycon/logger", "workspace:packages/logger"],
             ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],
             ["cross-env", "npm:5.2.1"],
-            ["resize-observer-polyfill", "npm:1.5.1"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
             ["rollup-plugin-commonjs", "virtual:521f280cef31214cd794e57ea9b96548ee6ec23554e4180e875e98d9db4275c703294e4a6556e75738758ef8357e1a297314ffb77c2cfb08adfcf647cca8d1d0#npm:10.1.0"],
@@ -10436,15 +10445,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/require-main-filename-npm-2.0.0-03eef65c84-e9e294695f.zip/node_modules/require-main-filename/",
           "packageDependencies": [
             ["require-main-filename", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["resize-observer-polyfill", [
-        ["npm:1.5.1", {
-          "packageLocation": "./.yarn/cache/resize-observer-polyfill-npm-1.5.1-603120e8a0-57e7f79489.zip/node_modules/resize-observer-polyfill/",
-          "packageDependencies": [
-            ["resize-observer-polyfill", "npm:1.5.1"]
           ],
           "linkType": "HARD",
         }]

@@ -741,6 +741,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@juggle/resize-observer@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@juggle/resize-observer@npm:3.3.1"
+  checksum: ddabc4044276a2cb57d469c4917206c7e39f2463aa8e3430e33e4eda554412afe29c22afa40e6708b49dad5d56768dc83acd68a704b1dcd49a0906bb96b991b2
+  languageName: node
+  linkType: hard
+
 "@lerna/add@npm:3.21.0":
   version: 3.21.0
   resolution: "@lerna/add@npm:3.21.0"
@@ -1721,12 +1728,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/react@workspace:packages/react"
   dependencies:
+    "@juggle/resize-observer": ^3.3.1
     "@lubycon/logger": "workspace:packages/logger"
     "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
     cross-env: ^5.2.0
-    resize-observer-polyfill: ^1.5.1
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -9194,13 +9201,6 @@ fsevents@~2.3.2:
   version: 2.0.0
   resolution: "require-main-filename@npm:2.0.0"
   checksum: e9e294695fea08b076457e9ddff854e81bffbe248ed34c1eec348b7abbd22a0d02e8d75506559e2265e96978f3c4720bd77a6dad84755de8162b357eb6c778c7
-  languageName: node
-  linkType: hard
-
-"resize-observer-polyfill@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "resize-observer-polyfill@npm:1.5.1"
-  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
   languageName: node
   linkType: hard
 

@@ -1,5 +1,5 @@
 import { RefObject, useEffect, useRef } from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
+import { ResizeObserver } from '@juggle/resize-observer';
 
 function useResizeObserver(
   ref: RefObject<HTMLElement>,
