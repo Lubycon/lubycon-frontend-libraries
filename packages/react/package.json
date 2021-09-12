@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@lubycon/logger": "workspace:packages/logger",
-    "@lubycon/utils": "workspace:packages/utils"
+    "@lubycon/utils": "workspace:packages/utils",
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
