@@ -4415,6 +4415,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@lubycon-react-virtual-b862bd73db/1/packages/react/",
           "packageDependencies": [
             ["@lubycon/react", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#workspace:packages/react"],
+            ["@juggle/resize-observer", "npm:3.3.1"],
             ["@lubycon/logger", "workspace:packages/logger"],
             ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/node", "npm:10.17.60"],
