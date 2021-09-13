@@ -4,6 +4,8 @@ const fs = require('fs');
 const token = process.env.ACCESS_TOKEN;
 const subdomain = 'fe-lib';
 
+fs.renameSync(path.resolve(`./CNAME.live`), path.resolve('./docs/CNAME'));
+
 ghpages.publish(
   path.join(__dirname, '../docs'),
   {
