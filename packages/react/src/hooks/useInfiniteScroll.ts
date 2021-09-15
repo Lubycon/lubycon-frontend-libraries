@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import useWindowSize from './useWindowSize';
-import useInterval from './useInterval';
 
 export interface Queries {
-  hasNextPage: boolean;
+  page: number;
+  pageSize: number;
+}
+export interface InfiniteScroll<T> {
+  fetcher: (params: Queries) => Promise<T>;
+  initialQueries: Queries;
+  getQueries: (params?: any) => Queries;
   threshold?: number;
-  interval?: number;
 }
 
 /**
@@ -19,14 +23,25 @@ export interface Queries {
  * @param {number} threshold onLoadMore 이 호출 될 높이
  * @param {number} interval 업데이트 간격
  */
-const useInfiniteScroll = <T>(
-  fetcher: (params?: any) => Promise<T>,
-  { hasNextPage, threshold = 150, interval = 200 }: Queries
-) => {
+
+const useInfiniteScroll = <T>({
+  fetcher,
+  initialQueries,
+  getQueries,
+  threshold = 150,
+}: InfiniteScroll<T>) => {
   const ref = useRef<HTMLElement>(null);
   const { height: windowHeight } = useWindowSize();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState<T>();
+  const [query, setQuery] = useState(initialQueries);
+
+  const fetchData = () => {
+    const nextQuery = getQueries(query);
+    setQuery(nextQuery);
+
+    return fetcher(nextQuery);
+  };
 
   const getBottomOffset = () => {
     const element = ref.current;
@@ -44,7 +59,7 @@ const useInfiniteScroll = <T>(
   };
 
   const listenBottomOffset = async () => {
-    if (!isLoading && hasNextPage) {
+    if (!isLoading) {
       if (ref.current) {
         const bottomOffset = getBottomOffset();
 
@@ -53,8 +68,8 @@ const useInfiniteScroll = <T>(
         const validOffset = bottomOffset < threshold;
         if (validOffset) {
           setIsLoading(true);
-          const fetchData = await fetcher();
-          setData(fetchData);
+          const loadedData = await fetchData();
+          setData(loadedData);
           setIsLoading(false);
         }
       }
@@ -67,8 +82,6 @@ const useInfiniteScroll = <T>(
       window.removeEventListener('scroll', listenBottomOffset);
     };
   });
-
-  useInterval(listenBottomOffset, hasNextPage ? interval : 0);
 
   return { ref, data, isLoading };
 };
