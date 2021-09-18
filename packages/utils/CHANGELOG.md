@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.12.0...@lubycon/utils@1.13.0) (2021-09-18)
+
+
+### Features
+
+* **utils:** copyToClipboard 함수 추가 ([#65](https://github.com/Lubycon/lubycon-frontend-libraries/issues/65)) ([f486f1a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f486f1a527caf08778317a7eb92b4a18fc2f4218))
+
+
+
+
+
 # [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.11.0...@lubycon/utils@1.12.0) (2021-09-09)
 
 
