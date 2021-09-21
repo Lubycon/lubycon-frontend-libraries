@@ -1,4 +1,6 @@
-import { isEqual, isBefore, isAfter } from 'date-fns/esm';
+import isEqual from 'date-fns/isEqual';
+import isBefore from 'date-fns/isBefore';
+import isAfter from 'date-fns/isAfter';
 
 /**
  * 첫 번째 인자로 주어진 날짜가 두 번째 인자로 주어진 날짜와 같거나 과거인지 확인합니다.

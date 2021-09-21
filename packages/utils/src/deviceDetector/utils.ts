@@ -51,8 +51,9 @@ export function isMobile(userAgent: string) {
     'LG',
     'SAMSUNG',
   ].join('|');
-  const regExp = new RegExp(device, 'i').test(userAgent);
-  return regExp;
+  const regExp = new RegExp(device, 'i');
+
+  return regExp.test(userAgent);
 }
 
 export function getIsClientSideCheck() {

@@ -4,6 +4,7 @@
     "**/node_modules/**",
     "**/src/**/*.test.ts",
     "**/src/**/__tests__/**",
+    "packages/icons/*"
   ],
   "baseUrl": "./packages",
   "compilerOptions": {
@@ -19,13 +20,12 @@
       "packages/logger/src/index.ts",
       "packages/react/src/index.ts",
       "packages/mattermost/src/index.ts",
-      "packages/utils/src/index.ts",
+      "packages/utils/src/index.ts"
     ],
-    "exclude": ["**/*.test.ts", "**/__tests__/**"],
     "out": "docs",
     "name":"루비콘 라이브러리 문서",
     "excludePrivate": true,
     "readme": "README.md",
-    "gitRevision": "main",
+    "gitRevision": "main"
   }
 }

@@ -35,7 +35,7 @@ to: packages/<%= name %>/package.json
     "rollup": "^2.38.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-pnp-resolve": "^3.4.0",
+    "rollup-plugin-pnp-resolve": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.3.0",

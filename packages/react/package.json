@@ -2,7 +2,7 @@
   "name": "@lubycon/react",
   "description": "루비콘 팀의 리액트 라이브러리.",
   "sideEffects": false,
-  "version": "1.18.3",
+  "version": "1.19.3",
   "keywords": [
     "lubycon",
     "react"
@@ -41,6 +41,7 @@
     "react": "^17.0.2"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.3.1",
     "@lubycon/logger": "workspace:packages/logger",
     "@lubycon/utils": "workspace:packages/utils"
   }

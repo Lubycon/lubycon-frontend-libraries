@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.3](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.19.2...@lubycon/react@1.19.3) (2021-09-20)
+
+**Note:** Version bump only for package @lubycon/react
+
+
+
+
+
+## [1.19.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.19.1...@lubycon/react@1.19.2) (2021-09-20)
+
+**Note:** Version bump only for package @lubycon/react
+
+
+
+
+
+## [1.19.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.19.0...@lubycon/react@1.19.1) (2021-09-18)
+
+**Note:** Version bump only for package @lubycon/react
+
+
+
+
+
+# [1.19.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.18.3...@lubycon/react@1.19.0) (2021-09-13)
+
+
+### Features
+
+* **react:** useResizeObserver 추가 ([#61](https://github.com/Lubycon/lubycon-frontend-libraries/issues/61)) ([5ecfb22](https://github.com/Lubycon/lubycon-frontend-libraries/commit/5ecfb222066ea36eee43018f75a991655c665d7c))
+
+
+
+
+
 ## [1.18.3](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.18.2...@lubycon/react@1.18.3) (2021-09-09)
 
 **Note:** Version bump only for package @lubycon/react

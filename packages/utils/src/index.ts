@@ -18,3 +18,4 @@ export * from './queryString';
 export * from './promise';
 export * from './date';
 export * from './array';
+export * from './copyToClipboard';
