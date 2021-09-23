@@ -17,5 +17,6 @@ export * from './is';
 export * from './queryString';
 export * from './promise';
 export * from './date';
-export * from './array';
+export { default as getArrayFromCount } from './array/getArrayFromCount';
+export * from './array/createFromArray';
 export * from './copyToClipboard';

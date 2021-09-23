@@ -5,6 +5,6 @@
  * getArrayFromCount(5) // [0, 1, 2, 3, 4];
  * getArrayFromCount(5, i => `${i}!`); // ['0!', '1!', '2!', '3!', '4!']
  */
-export function getArrayFromCount<T>(count: number, mapper?: (i: number) => T) {
+export default function getArrayFromCount<T>(count: number, mapper?: (i: number) => T) {
   return Array.from({ length: count }, (_, i) => mapper?.(i) ?? i);
 }
