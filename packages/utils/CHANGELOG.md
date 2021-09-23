@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.2...@lubycon/utils@1.14.0) (2021-09-23)
+
+
+### Features
+
+* **utils:** createMapFromArray, createObjectFromArray 추가 ([#68](https://github.com/Lubycon/lubycon-frontend-libraries/issues/68)) ([b00c985](https://github.com/Lubycon/lubycon-frontend-libraries/commit/b00c98572edbeaf6b4d456b9dcb30500d371492c))
+
+
+
+
+
 ## [1.13.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.1...@lubycon/utils@1.13.2) (2021-09-20)
 
 **Note:** Version bump only for package @lubycon/utils
