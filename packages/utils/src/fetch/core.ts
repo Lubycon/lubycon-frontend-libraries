@@ -3,25 +3,42 @@ import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
-export function createInstance(baseUrl: string, options: RequestOptions) {
+export function create(baseUrl: string, options: RequestOptions) {
   return {
-    request: (path: string) => doRequest(`${baseUrl}/${path}`, options),
-    get: (path: string) => doGet(`${baseUrl}/${path}`, options),
-    post: (path: string, data: any) => doPost(`${baseUrl}/${path}`, data, options),
-    patch: (path: string, data: any) => doPatch(`${baseUrl}/${path}`, data, options),
-    put: (path: string, data: any) => doPut(`${baseUrl}/${path}`, data, options),
-    delete: (path: string) => doDelete(`${baseUrl}/${path}`, options),
+    doRequest: (path: string) => doRequest(`${baseUrl}/${path}`, options),
+    doGet: (path: string) => doGet(`${baseUrl}/${path}`, options),
+    doPost: (path: string, data: any) => doPost(`${baseUrl}/${path}`, data, options),
+    doPatch: (path: string, data: any) => doPatch(`${baseUrl}/${path}`, data, options),
+    doPut: (path: string, data: any) => doPut(`${baseUrl}/${path}`, data, options),
+    doDelete: (path: string) => doDelete(`${baseUrl}/${path}`, options),
   };
 }
 
-export async function doRequest<T>(url: string, options?: RequestOptions) {
-  const controller = new AbortController();
-  const response = async () => {
-    const result = await fetch(url, requestHandler({ ...options, signal: controller.signal }));
-    return responseHandler<T>(result);
-  };
+/**
+ * 모든 요청은 response와 함께 요청을 abort 시킬 수 있는 abort 메서드를 반환합니다
+ *
+ * @example
+ * ```ts
+ * import { doRequest } from '@lubycon/utils';
+ *
+ * const URL = 'https://pokeapi.co/api/v2/pokemon'
+ * const { response, abort: abortFetchPokemon } = doRequest(URL);
+ *
+ * response.then((data) => console.log(data));      // response는 pending 상태인 Promise를 반환합니다
+ * abortFetchPokemon();     // abort 메서드를 통해 pending 상태인 fetch 요청을 취소시킬 수 있습니다
+ * ```
+ */
 
-  return { response, abort: controller.abort };
+export function doRequest<T>(url: string, options?: RequestOptions) {
+  const controller = new AbortController();
+
+  const response = new Promise((resolve, reject) => {
+    fetch(url, requestHandler({ ...options, signal: controller.signal }))
+      .then((result) => resolve(responseHandler<T>(result)))
+      .catch((err) => reject(err));
+  });
+
+  return { response, abort: () => controller.abort() };
 }
 
 export function doGet<T>(url: string, options: WithoutRequestBodyOptions) {
