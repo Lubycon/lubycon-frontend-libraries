@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.2...@lubycon/utils@1.14.0) (2021-09-23)
+
+
+### Features
+
+* **utils:** createMapFromArray, createObjectFromArray 추가 ([#68](https://github.com/Lubycon/lubycon-frontend-libraries/issues/68)) ([b00c985](https://github.com/Lubycon/lubycon-frontend-libraries/commit/b00c98572edbeaf6b4d456b9dcb30500d371492c))
+
+
+
+
+
+## [1.13.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.1...@lubycon/utils@1.13.2) (2021-09-20)
+
+**Note:** Version bump only for package @lubycon/utils
+
+
+
+
+
+## [1.13.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.0...@lubycon/utils@1.13.1) (2021-09-20)
+
+
+### Bug Fixes
+
+* date-fns module import way - esm to cjs ([#67](https://github.com/Lubycon/lubycon-frontend-libraries/issues/67)) ([cd7d8d4](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cd7d8d451434878facb5e69e8f7ae639b2f21fbe))
+
+
+
+
+
+# [1.13.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.12.0...@lubycon/utils@1.13.0) (2021-09-18)
+
+
+### Features
+
+* **utils:** copyToClipboard 함수 추가 ([#65](https://github.com/Lubycon/lubycon-frontend-libraries/issues/65)) ([f486f1a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f486f1a527caf08778317a7eb92b4a18fc2f4218))
+
+
+
+
+
 # [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.11.0...@lubycon/utils@1.12.0) (2021-09-09)
 
 
