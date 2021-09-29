@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useBooleanState } from '..';
 import useWindowSize from './useWindowSize';
 
 export interface Queries {
@@ -7,21 +8,22 @@ export interface Queries {
 }
 export interface InfiniteScroll<T> {
   fetcher: (params: Queries) => Promise<T>;
-  initialQueries: Queries;
   getQueries: (params?: any) => Queries;
+  merger: (prevData?: T, newData?: T) => T;
+  initialQueries: Queries;
   threshold?: number;
 }
 
 /**
  *  useInfiniteScroll hook
  *
- *  threshold 에 닿았을때 fetch 함수를 실행합니다.
+ *  threshold 에 닿았을때 fetcher 함수를 실행합니다.
  *
- * @param {boolean} isLoading 로딩 상태
- * @param {boolean} hasNextPage fetch 데이터의 유무
- * @param {Function} onLoadMore threshold 에 닿았을때 호출 할 함수
- * @param {number} threshold onLoadMore 이 호출 될 높이
- * @param {number} interval 업데이트 간격
+ * @param {Function} fetcher 로딩 상태
+ * @param {Function} merger fetch 데이터의 유무
+ * @param {Function} getQueries threshold 에 닿았을때 호출 할 함수
+ * @param {Queries} initialQueries 업데이트 간격
+ * @param {number} threshold fetcher 함수의 호출 위치
  */
 
 const useInfiniteScroll = <T>({
@@ -29,10 +31,12 @@ const useInfiniteScroll = <T>({
   initialQueries,
   getQueries,
   threshold = 150,
+  merger,
 }: InfiniteScroll<T>) => {
   const ref = useRef<HTMLElement>(null);
   const { height: windowHeight } = useWindowSize();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, startLoading, endLoading] = useBooleanState(false);
+
   const [data, setData] = useState<T>();
   const [query, setQuery] = useState(initialQueries);
 
@@ -59,19 +63,19 @@ const useInfiniteScroll = <T>({
   };
 
   const listenBottomOffset = async () => {
-    if (!isLoading) {
-      if (ref.current) {
-        const bottomOffset = getBottomOffset();
+    if (!isLoading) return;
 
-        if (!bottomOffset) return;
+    if (ref.current) {
+      const bottomOffset = getBottomOffset();
+      if (!bottomOffset) return;
 
-        const validOffset = bottomOffset < threshold;
-        if (validOffset) {
-          setIsLoading(true);
-          const loadedData = await fetchData();
-          setData(loadedData);
-          setIsLoading(false);
-        }
+      const validOffset = bottomOffset < threshold;
+      if (validOffset) {
+        startLoading();
+        const loadedData = await fetchData();
+        const mergedData = merger(data, loadedData);
+        setData(mergedData);
+        endLoading();
       }
     }
   };
