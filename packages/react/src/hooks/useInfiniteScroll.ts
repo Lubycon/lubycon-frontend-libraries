@@ -19,10 +19,10 @@ export interface InfiniteScroll<T> {
  *
  *  threshold 에 닿았을때 fetcher 함수를 실행합니다.
  *
- * @param {Function} fetcher 로딩 상태
- * @param {Function} merger fetch 데이터의 유무
- * @param {Function} getQueries threshold 에 닿았을때 호출 할 함수
- * @param {Queries} initialQueries 업데이트 간격
+ * @param {Function} fetcher threshold 에 닿았을때 호출 할 데이터페칭 함수
+ * @param {Function} merger 이전 데이터와, 현재 받아온 데이터를 병합 하는 함수
+ * @param {Function} getQueries fetcher에서 가져올 초기 데이터 범위
+ * @param {Queries} initialQueries fetcher에서 가져올 데이터 범위 값
  * @param {number} threshold fetcher 함수의 호출 위치
  */
 
