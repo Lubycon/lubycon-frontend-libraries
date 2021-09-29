@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useBooleanState } from '..';
+import useBooleanState from './useBooleanState';
 import useWindowSize from './useWindowSize';
 
 export interface Queries {
