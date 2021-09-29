@@ -67,10 +67,10 @@ const useInfiniteScroll = <T>({
 
     if (ref.current) {
       const bottomOffset = getBottomOffset();
-      if (!bottomOffset) return;
+      if (bottomOffset === null) return;
 
-      const validOffset = bottomOffset < threshold;
-      if (validOffset) {
+      const isValidOffset = bottomOffset < threshold;
+      if (isValidOffset) {
         startLoading();
         const loadedData = await fetchData();
         const mergedData = merger(data, loadedData);
