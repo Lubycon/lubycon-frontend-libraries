@@ -18,6 +18,8 @@ export { default as useDidMount } from './hooks/useDidMount';
 export { default as useWillUnmount } from './hooks/useWillUnmount';
 export { default as useDidUpdate } from './hooks/useDidUpdate';
 export { default as useImpression } from './hooks/useImpression';
+export { default as useInfiniteScroll } from './hooks/useInfiniteScroll';
+export { default as useInterval } from './hooks/useInterval';
 export { default as useCombinedRefs } from './hooks/useCombinedRef';
 export { default as useScrollEvent } from './hooks/useScrollEvent';
 export { default as useClipboardCopy } from './hooks/useClipboardCopy';
