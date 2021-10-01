@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.19.4...@lubycon/react@1.20.0) (2021-10-01)
+
+
+### Features
+
+* **react:** useInterval, useInfiniteScroll 추가 ([#45](https://github.com/Lubycon/lubycon-frontend-libraries/issues/45)) ([29f2210](https://github.com/Lubycon/lubycon-frontend-libraries/commit/29f2210e64b0b9ac91e65740d9379ceedcda9165))
+
+
+
+
+
 ## [1.19.4](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.19.3...@lubycon/react@1.19.4) (2021-09-23)
 
 **Note:** Version bump only for package @lubycon/react
