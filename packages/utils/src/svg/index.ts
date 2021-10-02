@@ -1,11 +1,11 @@
+const MAX_DEGREE = 359.9;
+
 export interface ArcData {
   x: number;
   y: number;
   radius: number;
   degree: number;
 }
-
-export const MAX_DEGREE = 359.9;
 
 /**
  * @desc 삼각함수를 사용하여 x축으로부터 시계 방향으로 degree(θ)만큼 벌어진 좌표를 구합니다
@@ -15,7 +15,7 @@ export const MAX_DEGREE = 359.9;
  * const { x, y } = getCoordsOnCircle({ x: 50, y: 50, radius: 50, degree: 90 }); // { x: 50, y: 100 }
  * ```
  */
-const getCoordsOnCircle = ({ x, y, radius, degree }: ArcData) => {
+export const getCoordsOnCircle = ({ x, y, radius, degree }: ArcData) => {
   const radian = (degree / 180) * Math.PI;
   return {
     x: x + radius * Math.cos(radian),
