@@ -17,9 +17,9 @@ export async function responseHandler<T>(response: Response): Promise<LubyconRes
   };
   try {
     const data = await response.json();
-    return Object.assign(defaultResponse, { data });
+    return { ...defaultResponse, data };
   } catch {
-    return Object.assign(defaultResponse, { data: null });
+    return { ...defaultResponse, data: null };
   }
 }
 
