@@ -3,7 +3,7 @@ import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
-export function create(baseUrl: string, options: RequestOptions) {
+export function createFetchInstance(baseUrl: string, options: RequestOptions) {
   return {
     request: (path: string) => doRequest(`${baseUrl}/${path}`, options),
     get: (path: string) => doGet(`${baseUrl}/${path}`, options),
