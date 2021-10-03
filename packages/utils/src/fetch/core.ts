@@ -3,7 +3,7 @@ import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
-export function createFetchInstance(baseUrl: string, options: RequestOptions) {
+export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
   return {
     request: (path: string) => doRequest(`${baseUrl}/${path}`, options),
     get: (path: string) => doGet(`${baseUrl}/${path}`, options),
@@ -41,22 +41,22 @@ export function doRequest<T>(url: string, options?: RequestOptions) {
   return { response, abort: () => controller.abort() };
 }
 
-export function doGet<T>(url: string, options: WithoutRequestBodyOptions) {
+export function doGet<T>(url: string, options?: WithoutRequestBodyOptions) {
   doRequest<T>(url, { ...options, method: 'GET' });
 }
 
-export function doPost<T>(url: string, data: any, options: WithoutRequestBodyOptions) {
+export function doPost<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
   doRequest<T>(url, { ...options, method: 'POST', body: data });
 }
 
-export function doPatch<T>(url: string, data: any, options: WithoutRequestBodyOptions) {
+export function doPatch<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
   doRequest<T>(url, { ...options, method: 'PATCH', body: data });
 }
 
-export function doPut<T>(url: string, data: any, options: WithoutRequestBodyOptions) {
+export function doPut<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
   doRequest<T>(url, { ...options, method: 'PUT', body: data });
 }
 
-export function doDelete<T>(url: string, options: WithoutRequestBodyOptions) {
+export function doDelete<T>(url: string, options?: WithoutRequestBodyOptions) {
   doRequest<T>(url, { ...options, method: 'DELETE' });
 }
