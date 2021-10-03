@@ -5,12 +5,12 @@ export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
 export function create(baseUrl: string, options: RequestOptions) {
   return {
-    doRequest: (path: string) => doRequest(`${baseUrl}/${path}`, options),
-    doGet: (path: string) => doGet(`${baseUrl}/${path}`, options),
-    doPost: (path: string, data: any) => doPost(`${baseUrl}/${path}`, data, options),
-    doPatch: (path: string, data: any) => doPatch(`${baseUrl}/${path}`, data, options),
-    doPut: (path: string, data: any) => doPut(`${baseUrl}/${path}`, data, options),
-    doDelete: (path: string) => doDelete(`${baseUrl}/${path}`, options),
+    request: (path: string) => doRequest(`${baseUrl}/${path}`, options),
+    get: (path: string) => doGet(`${baseUrl}/${path}`, options),
+    post: (path: string, data: any) => doPost(`${baseUrl}/${path}`, data, options),
+    patch: (path: string, data: any) => doPatch(`${baseUrl}/${path}`, data, options),
+    put: (path: string, data: any) => doPut(`${baseUrl}/${path}`, data, options),
+    delete: (path: string) => doDelete(`${baseUrl}/${path}`, options),
   };
 }
 
