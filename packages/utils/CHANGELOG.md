@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.14.0...@lubycon/utils@1.15.0) (2021-10-04)
+
+
+### Features
+
+* **utils:** SVG 호 관련 유틸들 추가 ([#70](https://github.com/Lubycon/lubycon-frontend-libraries/issues/70)) ([229ffed](https://github.com/Lubycon/lubycon-frontend-libraries/commit/229ffedbe00f509a87c1c4393811f7a7dfc05a1a))
+
+
+
+
+
 # [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.13.2...@lubycon/utils@1.14.0) (2021-09-23)
 
 
