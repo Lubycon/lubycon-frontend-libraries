@@ -6131,6 +6131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:10.17.60"],
             ["babel-jest", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:27.2.0"],
             ["cross-env", "npm:5.2.1"],
+            ["cross-fetch", "npm:3.1.4"],
             ["date-fns", "npm:2.23.0"],
             ["jest", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:27.2.0"],
             ["rimraf", "npm:2.7.1"],
