@@ -21,3 +21,4 @@ export { default as getArrayFromCount } from './array/getArrayFromCount';
 export * from './array/createFromArray';
 export * from './copyToClipboard';
 export * from './svg';
+export * from './fetch';
