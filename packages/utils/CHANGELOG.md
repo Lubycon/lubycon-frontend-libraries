@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.16.0...@lubycon/utils@1.16.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* **utils:** doSomething 함수가 반환되지 않고 있던 이슈 수정 ([#74](https://github.com/Lubycon/lubycon-frontend-libraries/issues/74)) ([3c9f836](https://github.com/Lubycon/lubycon-frontend-libraries/commit/3c9f836ad80f98a0698ec6c1a7cca9dd45946a80))
+
+
+
+
+
 # [1.16.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.15.0...@lubycon/utils@1.16.0) (2021-10-11)
 
 
