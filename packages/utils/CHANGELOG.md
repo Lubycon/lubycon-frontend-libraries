@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.15.0...@lubycon/utils@1.16.0) (2021-10-11)
+
+
+### Bug Fixes
+
+* **utils:** export되지 않던 fetch 모듈 export ([#72](https://github.com/Lubycon/lubycon-frontend-libraries/issues/72)) ([86c358e](https://github.com/Lubycon/lubycon-frontend-libraries/commit/86c358e2d997d5d560197f6baa27da9d2ba55ff8))
+
+
+### Features
+
+* **utils:** cross-fetch util ([#69](https://github.com/Lubycon/lubycon-frontend-libraries/issues/69)) ([c1b6351](https://github.com/Lubycon/lubycon-frontend-libraries/commit/c1b6351385b93a1afa1bc3e50bc002fe2b13811f))
+
+
+
+
+
 # [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.14.0...@lubycon/utils@1.15.0) (2021-10-04)
 
 
