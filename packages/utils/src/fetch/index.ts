@@ -42,21 +42,21 @@ export function doRequest<T>(url: string, options?: RequestOptions) {
 }
 
 export function doGet<T>(url: string, options?: WithoutRequestBodyOptions) {
-  doRequest<T>(url, { ...options, method: 'GET' });
+  return doRequest<T>(url, { ...options, method: 'GET' });
 }
 
 export function doPost<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
-  doRequest<T>(url, { ...options, method: 'POST', body: data });
+  return doRequest<T>(url, { ...options, method: 'POST', body: data });
 }
 
 export function doPatch<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
-  doRequest<T>(url, { ...options, method: 'PATCH', body: data });
+  return doRequest<T>(url, { ...options, method: 'PATCH', body: data });
 }
 
 export function doPut<T>(url: string, data: any, options?: WithoutRequestBodyOptions) {
-  doRequest<T>(url, { ...options, method: 'PUT', body: data });
+  return doRequest<T>(url, { ...options, method: 'PUT', body: data });
 }
 
 export function doDelete<T>(url: string, options?: WithoutRequestBodyOptions) {
-  doRequest<T>(url, { ...options, method: 'DELETE' });
+  return doRequest<T>(url, { ...options, method: 'DELETE' });
 }
