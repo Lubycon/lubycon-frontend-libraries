@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.20.1...@lubycon/react@1.20.2) (2021-10-11)
+
+
+### Bug Fixes
+
+* **react:** useResizeObserver Export 안 되고 있던 이슈 수정 ([#71](https://github.com/Lubycon/lubycon-frontend-libraries/issues/71)) ([64da5aa](https://github.com/Lubycon/lubycon-frontend-libraries/commit/64da5aa26401b5bf3d1e7adab10a755a036f02f5))
+
+
+
+
+
 ## [1.20.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.20.0...@lubycon/react@1.20.1) (2021-10-04)
 
 **Note:** Version bump only for package @lubycon/react
