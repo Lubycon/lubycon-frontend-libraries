@@ -1,4 +1,4 @@
-import { QueryParam, stringifyQueryParams } from '@lubycon/utils';
+import { QueryParam, stringifyQueryParams } from '../queryString';
 
 export function getEndpoint(baseURL: string, path: string, params?: QueryParam) {
   const querystring = stringifyQueryParams(params);
