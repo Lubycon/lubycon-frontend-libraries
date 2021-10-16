@@ -1,8 +1,6 @@
 import { useRef, useEffect } from 'react';
 
 /**
- *  useInterval hook
- *
  *  일정 주기로 콜백 함수를 반복합니다.
  *
  * @param {Function} callback 주기 마다 반복 할 콜백 함수

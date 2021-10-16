@@ -1,9 +1,7 @@
 import { DependencyList, useEffect, useRef } from 'react';
 
 /**
- *  useDidUpdate hook
- *
- *  dependency 배열의 요소가 업데이트 됐을때 콜백 함수를 실행합니다.
+ * dependency 배열의 요소가 업데이트 됐을때 콜백 함수를 실행합니다. 첫 렌더링 때는 실행되지 않습니다.
  *
  * @param {Function} callback dependency 배열의 요소가 업데이트 될 때 호출 할 콜백 함수
  * @param {Array} conditions 업데이트를 트리거하는 변수 목록

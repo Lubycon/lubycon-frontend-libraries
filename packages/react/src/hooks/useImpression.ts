@@ -6,6 +6,20 @@ interface Options {
   rootMargin?: number;
   threshold?: number;
 }
+
+/**
+ * ref에 담긴 HTML 요소가 화면 안으로 들어오면 인자로 받은 이벤트 핸들러들을 알맞게 호출합니다.
+ *
+ * @example
+ * ```tsx
+ * const impressionRef = useImpression({
+ *   onImpressionStart: () => console.log('div 노출!'),
+ *   onImpressionEnd: () => console.log('div 숨음!'),
+ * });
+ *
+ * return <div ref={impressionRef} />
+ * ```
+ */
 export default function useImpression({
   onImpressionStart,
   onImpressionEnd,
