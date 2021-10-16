@@ -15,8 +15,6 @@ export interface InfiniteScroll<T> {
 }
 
 /**
- *  useInfiniteScroll hook
- *
  *  threshold 에 닿았을때 fetcher 함수를 실행합니다.
  *
  * @param {Function} fetcher threshold 에 닿았을때 호출 할 데이터페칭 함수
