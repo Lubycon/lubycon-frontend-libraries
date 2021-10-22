@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.16.1...@lubycon/utils@1.17.0) (2021-10-22)
+
+
+### Features
+
+* **utils:** uuid 생성 함수 추가 ([#76](https://github.com/Lubycon/lubycon-frontend-libraries/issues/76)) ([8767072](https://github.com/Lubycon/lubycon-frontend-libraries/commit/8767072f5673f464aa68de3c1a596ca4cadb65a2))
+
+
+
+
+
 ## [1.16.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.16.0...@lubycon/utils@1.16.1) (2021-10-11)
 
 
