@@ -29,5 +29,5 @@ export default function useClientQueryParam<T = string>(
     }
 
     return parser != null ? parser(value) : value;
-  }, []);
+  }, [key, parser]);
 }
