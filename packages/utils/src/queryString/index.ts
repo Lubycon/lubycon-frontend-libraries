@@ -49,13 +49,13 @@ export function parseQueryString(queryString: string) {
  * 쿼리 스트링 맵은 location.search의 값을 인자로 받은 parseQueryString 함수의 결과 값입니다.
  *
  * @example
- * findQueryParamValue('foo');
+ * findQueryParamInClient('foo');
  * // location.search -> '?foo=1&bar=%ED%95%98%EC%9D%B4'
  * // '1'
  * // location.search -> '?bar=%ED%95%98%EC%9D%B4'
  * // undefined
  */
-export function findQueryParamValue(key: string) {
+export function findQueryParamInClient(key: string) {
   const queryString = location != null ? location.search : '';
   const query = parseQueryString(queryString);
 

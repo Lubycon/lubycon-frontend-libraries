@@ -1,4 +1,4 @@
-import { findQueryParamValue } from '@lubycon/utils';
+import { findQueryParamInClient } from '@lubycon/utils';
 import { useMemo } from 'react';
 
 /**
@@ -22,7 +22,7 @@ export default function useClientQueryParam<T = string>(
   parser?: (value: string) => T
 ) {
   return useMemo(() => {
-    const value = findQueryParamValue(key);
+    const value = findQueryParamInClient(key);
 
     if (value === undefined) {
       return undefined;

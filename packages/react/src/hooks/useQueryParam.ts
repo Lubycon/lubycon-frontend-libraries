@@ -1,4 +1,4 @@
-import { findQueryParamValue } from '@lubycon/utils';
+import { findQueryParamInClient } from '@lubycon/utils';
 import { useState, useEffect } from 'react';
 
 /**
@@ -17,7 +17,7 @@ export default function useQueryParam<T = string>(key: string, parser?: (value: 
   const [queryParam, setQueryParam] = useState<string | T | undefined>(undefined);
 
   useEffect(() => {
-    const value = findQueryParamValue(key);
+    const value = findQueryParamInClient(key);
 
     if (value === undefined) {
       setQueryParam(undefined);
