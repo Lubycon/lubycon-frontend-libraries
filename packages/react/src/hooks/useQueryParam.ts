@@ -1,8 +1,9 @@
-import { parseQueryString } from '@lubycon/utils';
+import { findQueryParamValue } from '@lubycon/utils';
 import { useState, useEffect } from 'react';
 
 /**
  * 쿼리스트링의 키를 기반으로 값을 가져옵니다. 만약 값이 존재하지 않을 경우 undefined가 반환됩니다.
+ * SSR을 고려하여 처음에는 undefined를 반환하고 mounted 이후에 해당 값의 존재 여부에 따른 결과 값을 반환합니다.
  *
  * @example
  * // https://lubycon.io?foo=1&bar=hello
@@ -16,10 +17,8 @@ export default function useQueryParam<T = string>(key: string, parser?: (value: 
   const [queryParam, setQueryParam] = useState<string | T | undefined>(undefined);
 
   useEffect(() => {
-    const queryString = location != null ? location.search : '';
-    const query = parseQueryString(queryString);
+    const value = findQueryParamValue(key);
 
-    const value = query[key];
     if (value === undefined) {
       setQueryParam(undefined);
     } else {
