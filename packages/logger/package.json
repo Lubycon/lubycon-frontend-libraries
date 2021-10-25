@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "amplitude-js": "^8.3.1",
-    "firebase": "^8.8.1"
+    "firebase": "^8.8.1",
+    "@lubycon/utils": "workspace:packages/utils"
   }
 }

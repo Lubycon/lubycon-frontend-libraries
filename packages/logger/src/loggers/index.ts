@@ -7,6 +7,7 @@ import {
 } from '../models/loggers';
 import { initializeFirebase } from './firebase';
 import { initializeAmplitude } from './amplitude';
+import LubyconLogger from './lubyconLogger';
 import { TypeMap } from '../models/utils';
 import { getKeys } from '../utils';
 import { Defer, defer } from '../utils/promise';
@@ -14,6 +15,7 @@ import { Defer, defer } from '../utils/promise';
 const initializers: TypeMap<SupportedServices, (arg: any) => Promise<any>> = {
   firebase: initializeFirebase,
   amplitude: initializeAmplitude,
+  lubyconLogger: LubyconLogger.initializedLubyconLogger,
 };
 
 class Logger {
@@ -22,11 +24,13 @@ class Logger {
   private serviceAvailable: TypeMap<SupportedServices, Defer<boolean>> = {
     firebase: defer(),
     amplitude: defer(),
+    lubyconLogger: defer(),
   };
 
   private clients: TypeMap<SupportedServices, any> = {
     firebase: undefined,
     amplitude: undefined,
+    lubyconLogger: undefined,
   };
 
   public init({ mode, services }: LoggerInitializeConfig) {
@@ -54,6 +58,12 @@ class Logger {
 
     // 추상화 할 것
     await Promise.all([
+      (async () => {
+        /**
+         * amplitude, firebase는 serviceAvailable 활성상태를 체크하는거같은데 lubyconLogger에서는 어떻게 해줘야할지 고민이 되네요..
+         */
+        await LubyconLogger.logEvent({ view, action });
+      })(),
       (async () => {
         if (await this.serviceAvailable.firebase?.promise) {
           this.clients.firebase?.analytics().logEvent(logName, {

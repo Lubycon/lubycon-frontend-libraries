@@ -1,8 +1,10 @@
 import { FirebaseConfig } from './firebase';
+import { LubyconLoggerConfig } from './lubyconLogger';
 
 export interface SupportedServices {
   firebase?: FirebaseConfig;
   amplitude?: string;
+  lubyconLogger?: LubyconLoggerConfig;
 }
 
 export type LoggerEnvMode = 'production' | 'development';
