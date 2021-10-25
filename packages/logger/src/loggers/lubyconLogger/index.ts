@@ -1,6 +1,6 @@
-import { generateUUID } from '@lubycon/utils';
 import { getCookie, setCookie } from '../../utils/cookie';
 import { LubyconLoggerConfig, LubyconLoggerConfigProps } from '../../models/lubyconLogger';
+import { generateUUID } from '../../models/utils';
 
 interface LubyconLoggerEvent {
   view: string;
