@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.18.0...@lubycon/utils@1.18.1) (2021-10-27)
+
+
+### Bug Fixes
+
+* **utils:** uuid export 추가 ([#80](https://github.com/Lubycon/lubycon-frontend-libraries/issues/80)) ([4c58782](https://github.com/Lubycon/lubycon-frontend-libraries/commit/4c5878275c6a2d5df947e8f185954222440b3893))
+
+
+
+
+
 # [1.18.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.17.0...@lubycon/utils@1.18.0) (2021-10-27)
 
 

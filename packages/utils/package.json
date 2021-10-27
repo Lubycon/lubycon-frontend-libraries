@@ -2,7 +2,7 @@
   "name": "@lubycon/utils",
   "description": "루비콘 팀의 유틸 라이브러리",
   "sideEffects": false,
-  "version": "1.18.0",
+  "version": "1.18.1",
   "keywords": [
     "lubycon",
     "utils"
