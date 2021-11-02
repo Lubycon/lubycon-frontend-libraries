@@ -1,6 +1,6 @@
 import { getCookie, setCookie } from '../../utils/cookie';
 import { LubyconLoggerConfig, LubyconLoggerConfigProps } from '../../models/lubyconLogger';
-import { generateUUID } from '../../models/utils';
+import { generateUUID, doPost } from '@lubycon/utils';
 
 interface LubyconLoggerEvent {
   view: string;
@@ -24,8 +24,8 @@ class LubyconLogger {
    *  나머지는 해당 메서드에서 생성합니다.
    */
   public initializedLubyconLogger(config: LubyconLoggerConfigProps) {
-    return new Promise(async () => {
-      LubyconLogger.lubyconLoggerConfig = await {
+    return new Promise(() => {
+      LubyconLogger.lubyconLoggerConfig = {
         ...config,
         ...{
           tid: generateUUID(),
@@ -37,58 +37,53 @@ class LubyconLogger {
       };
 
       setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
+
       if (LubyconLogger.initialized) {
         return;
       }
 
-      return fetch('https://event-gateway.alpha.lubycon.io/v1/collect/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(LubyconLogger.lubyconLoggerConfig),
-      }).then((res) => {
-        res.json();
+      doPost(
+        'https://event-gateway.alpha.lubycon.io/v1/collect/',
+        LubyconLogger.lubyconLoggerConfig,
+        { headers: { 'Content-Type': 'application/json' } }
+      ).response.then(() => {
         LubyconLogger.initialized = true;
       });
     });
   }
 
-  public async logEvent({ view, action }: LubyconLoggerEvent) {
+  public logEvent({ view, action }: LubyconLoggerEvent) {
     if (LubyconLogger.initialized) {
       /**
        * 쿠키에 저장된 sid가 없으면 sid 다시 넣고 요청
        */
-      if (!getCookie('sid')) {
-        LubyconLogger.lubyconLoggerConfig = await {
+      if (getCookie('sid') === null) {
+        LubyconLogger.lubyconLoggerConfig = {
           ...LubyconLogger.lubyconLoggerConfig,
           sid: generateUUID(),
         };
 
-        await setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
-        await fetch('https://event-gateway.alpha.lubycon.io/v1/collect/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
+        setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
+
+        doPost(
+          'https://event-gateway.alpha.lubycon.io/v1/collect/',
+          {
             ...LubyconLogger.lubyconLoggerConfig,
             view,
             action,
-          }),
-        }).then((res) => res.json());
+          },
+          { headers: { 'Content-Type': 'application/json' } }
+        );
       } else {
-        return fetch('https://event-gateway.alpha.lubycon.io/v1/collect/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
+        doPost(
+          'https://event-gateway.alpha.lubycon.io/v1/collect/',
+          {
             ...LubyconLogger.lubyconLoggerConfig,
             view,
             action,
-          }),
-        }).then((res) => res.json());
+          },
+          { headers: { 'Content-Type': 'application/json' } }
+        );
       }
     }
   }

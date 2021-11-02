@@ -15,7 +15,7 @@ import { Defer, defer } from '../utils/promise';
 const initializers: TypeMap<SupportedServices, (arg: any) => Promise<any>> = {
   firebase: initializeFirebase,
   amplitude: initializeAmplitude,
-  lubyconLogger: LubyconLogger.initializedLubyconLogger,
+  lubycon: LubyconLogger.initializedLubyconLogger,
 };
 
 class Logger {
@@ -24,13 +24,13 @@ class Logger {
   private serviceAvailable: TypeMap<SupportedServices, Defer<boolean>> = {
     firebase: defer(),
     amplitude: defer(),
-    lubyconLogger: defer(),
+    lubycon: defer(),
   };
 
   private clients: TypeMap<SupportedServices, any> = {
     firebase: undefined,
     amplitude: undefined,
-    lubyconLogger: undefined,
+    lubycon: undefined,
   };
 
   public init({ mode, services }: LoggerInitializeConfig) {
