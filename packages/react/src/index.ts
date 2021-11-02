@@ -6,6 +6,7 @@ export { default as useBooleanState } from './hooks/useBooleanState';
 export { default as useDebounce } from './hooks/useDebounce';
 export { default as usePreviousState } from './hooks/usePreviousState';
 export { default as useQueryParam } from './hooks/useQueryParam';
+export { default as useClientQueryParam } from './hooks/useClientQueryParam';
 export { default as useThrottle } from './hooks/useThrottle';
 export { default as useUpload } from './hooks/useUpload';
 export { default as useLocalStorage } from './hooks/useLocalStorage';
