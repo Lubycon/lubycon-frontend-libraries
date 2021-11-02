@@ -6024,6 +6024,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/logger/",
           "packageDependencies": [
             ["@lubycon/logger", "workspace:packages/logger"],
+            ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/amplitude-js", "npm:8.0.1"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],
