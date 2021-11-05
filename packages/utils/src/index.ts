@@ -23,3 +23,4 @@ export * from './copyToClipboard';
 export * from './svg';
 export * from './fetch';
 export * from './uuid';
+export * from './cookies';
