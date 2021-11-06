@@ -1,4 +1,4 @@
-import { QueryParam } from '@lubycon/utils';
+import { QueryParam } from 'temen';
 import { Headers } from 'cross-fetch';
 import { convertHeadersToObject } from './headers';
 

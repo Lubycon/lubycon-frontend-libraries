@@ -3372,7 +3372,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/mattermost@workspace:packages/mattermost"
   dependencies:
-    "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
     cross-env: ^5.2.0
@@ -3385,6 +3384,7 @@ __metadata:
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
+    temen: "workspace:packages/temen"
     tslib: ^2.3.0
     typescript: ^4.3.5
   languageName: unknown
@@ -3396,7 +3396,6 @@ __metadata:
   dependencies:
     "@juggle/resize-observer": ^3.3.1
     "@lubycon/logger": "workspace:packages/logger"
-    "@lubycon/utils": "workspace:packages/utils"
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
     cross-env: ^5.2.0
@@ -3407,37 +3406,11 @@ __metadata:
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
+    temen: "workspace:packages/temen"
     tslib: ^2.3.0
     typescript: ^4.3.5
   peerDependencies:
     react: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
-"@lubycon/utils@workspace:packages/utils":
-  version: 0.0.0-use.local
-  resolution: "@lubycon/utils@workspace:packages/utils"
-  dependencies:
-    "@babel/core": ^7.15.5
-    "@babel/preset-env": ^7.15.6
-    "@babel/preset-typescript": ^7.15.0
-    "@types/amplitude-js": ^8.0.0
-    "@types/jest": ^27.0.1
-    "@types/node": ^10.11.0
-    babel-jest: ^27.2.0
-    cross-env: ^5.2.0
-    cross-fetch: ^3.1.4
-    date-fns: ^2.22.1
-    jest: ^27.2.0
-    rimraf: ^2.6.2
-    rollup: ^2.38.5
-    rollup-plugin-commonjs: ^10.1.0
-    rollup-plugin-json: ^3.1.0
-    rollup-plugin-pnp-resolve: ^2.0.0
-    rollup-plugin-sourcemaps: ^0.4.2
-    rollup-plugin-typescript2: ^0.30.0
-    tslib: ^2.3.0
-    typescript: ^4.3.5
   languageName: unknown
   linkType: soft
 

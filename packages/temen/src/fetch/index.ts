@@ -19,7 +19,7 @@ export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
  *
  * @example
  * ```ts
- * import { doRequest } from '@lubycon/utils';
+ * import { doRequest } from 'temen';
  *
  * const URL = 'https://pokeapi.co/api/v2/pokemon'
  * const { response, abort: abortFetchPokemon } = doRequest(URL);

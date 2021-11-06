@@ -1,4 +1,4 @@
-import { QueryParam, stringifyQueryParams } from '@lubycon/utils';
+import { QueryParam, stringifyQueryParams } from 'temen';
 import fetch from 'cross-fetch';
 import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
