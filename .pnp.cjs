@@ -39,6 +39,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/react"
       },
       {
+        "name": "temen",
+        "reference": "workspace:packages/temen"
+      },
+      {
         "name": "@lubycon/utils",
         "reference": "workspace:packages/utils"
       }
@@ -51,7 +55,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@lubycon/mattermost", ["workspace:packages/mattermost"]],
       ["@lubycon/react", ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#workspace:packages/react", "workspace:packages/react"]],
       ["@lubycon/utils", ["workspace:packages/utils"]],
-      ["lubycon-frontend-libraries", ["workspace:."]]
+      ["lubycon-frontend-libraries", ["workspace:."]],
+      ["temen", ["workspace:packages/temen"]]
     ],
     "fallbackPool": [
     ],
@@ -17654,6 +17659,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["yallist", "npm:4.0.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["temen", [
+        ["workspace:packages/temen", {
+          "packageLocation": "./packages/temen/",
+          "packageDependencies": [
+            ["temen", "workspace:packages/temen"],
+            ["@babel/core", "npm:7.15.5"],
+            ["@babel/preset-env", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:7.15.6"],
+            ["@babel/preset-typescript", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:7.15.0"],
+            ["@types/amplitude-js", "npm:8.0.1"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:10.17.60"],
+            ["babel-jest", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:27.2.0"],
+            ["cross-env", "npm:5.2.1"],
+            ["cross-fetch", "npm:3.1.4"],
+            ["date-fns", "npm:2.23.0"],
+            ["jest", "virtual:a042349d15a5efe4adb8981e87199f17ac7462f47677f28978a7dc5e637ca26c5929220698445625faebddbd8f3958c9ca2273c0484fc4b38b8145c27747ca7e#npm:27.2.0"],
+            ["rimraf", "npm:2.7.1"],
+            ["rollup", "npm:2.55.0"],
+            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-json", "npm:3.1.0"],
+            ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
+            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["tslib", "npm:2.3.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["temp-dir", [
