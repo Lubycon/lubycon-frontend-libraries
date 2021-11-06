@@ -9,7 +9,7 @@ $ yarn add @lubycon/logger
 데이터 로깅을 편하게 할 수 있는 패키지. [Firebase](https://firebase.google.com/)/[Google Analytics](https://analytics.google.com/analytics/web/) 통합 버전과 [Amplitude](https://amplitude.com/)를 선택하여 사용할 수 있습니다.
 
 ```js
-import { logger } from '@lubycon/utils';
+import { logger } from '@lubycon/logger';
 
 logger.init({
   services: {

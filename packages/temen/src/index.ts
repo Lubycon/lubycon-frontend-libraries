@@ -1,4 +1,4 @@
-/** @module Utils */
+/** @module Temen */
 export { default as delay } from './delay';
 export {
   createLocalStorageChangeEvent,
