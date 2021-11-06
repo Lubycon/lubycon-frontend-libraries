@@ -18,15 +18,15 @@ $ yarn
 
 ```sh
 $ yarn new-package
-? 패키지 이름을 입력해주세요. (react > @lubycon/react) › test
-? 패키지 설명을 입력해주세요. › 루비콘 테스트를 위한 패키지입니다.
+? 패키지 이름을 입력해주세요. › temen
+? 패키지 설명을 입력해주세요. › 테슬라 떡상 기원을 외치는 라이브러리입니다.
 
 Loaded templates: _templates
-  added: packages/test/src/index.ts
-  added: packages/test/package.json
-  added: packages/test/README.md
-  added: packages/test/rollup.config.js
-  added: packages/test/.vscode/settings.json
-  added: packages/test/tsconfig.json
+  added: packages/temen/src/index.ts
+  added: packages/temen/package.json
+  added: packages/temen/README.md
+  added: packages/temen/rollup.config.js
+  added: packages/temen/.vscode/settings.json
+  added: packages/temen/tsconfig.json
 Done.
 ```
