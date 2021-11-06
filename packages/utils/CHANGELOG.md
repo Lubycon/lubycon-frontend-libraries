@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.18.1...@lubycon/utils@1.19.0) (2021-11-06)
+
+
+### Features
+
+* **utils:** cookie 유틸 추가 ([#82](https://github.com/Lubycon/lubycon-frontend-libraries/issues/82)) ([6e61806](https://github.com/Lubycon/lubycon-frontend-libraries/commit/6e61806bf55e66740262753effde1692581e6c38))
+
+
+
+
+
 ## [1.18.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/utils@1.18.0...@lubycon/utils@1.18.1) (2021-10-27)
 
 
