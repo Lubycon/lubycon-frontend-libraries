@@ -2,7 +2,7 @@
 to: packages/<%= name %>/package.json
 ---
 {
-  "name": "@lubycon/<%= name %>",
+  "name": "<%= name %>",
   "description": "<%= description %>",
   "sideEffects": false,
   "version": "1.0.0",
