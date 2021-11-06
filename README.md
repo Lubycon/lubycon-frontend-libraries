@@ -5,6 +5,7 @@
 <h1 align="center">Lubycon Frontend Libraries</h1>
 
 루비콘에서 사용하는 모든 프론트엔드 라이브러리가 모여있는 모노레포지토리입니다.
+루비콘에 소속된 누구나 자유롭게 자신만의 라이브러리를 편하게 만들어 보실 수 있도록 Rollup을 사용한 빌드 설정 및 CI/CD까지 모두 세팅되어있습니다.
 
 ## Installation
 
