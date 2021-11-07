@@ -20,3 +20,17 @@ export function isNumber(value: any): value is number {
 export function isBoolean(value: any): value is boolean {
   return typeof value === 'boolean';
 }
+
+/**
+ * isNil 은 value가 null, undefined 인지 확인해주는 함수입니다.
+ *
+ * @example
+ * ```ts
+ * isNil(null)  => true
+ * isNil(void 0) => true
+ * isNil(NaN) => false
+ * ```
+ */
+export function isNil(value: unknown): value is null | undefined {
+  return value === null || value === undefined;
+}
