@@ -2,4 +2,3 @@
 . "$(dirname "$0")/_/husky.sh"
 
 yarn workspaces foreach run typecheck
-yarn workspaces foreach run test

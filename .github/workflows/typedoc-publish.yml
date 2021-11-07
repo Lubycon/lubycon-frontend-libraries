@@ -25,6 +25,8 @@ jobs:
         run: yarn install --immutable --immutable-cache
       - name: Build
         run: yarn build:all
+      - name: Test
+        run: yarn test:all
       - name: Build Typedoc
         run: yarn docs:generate
       - name: Publish
