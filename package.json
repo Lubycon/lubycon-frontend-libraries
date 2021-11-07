@@ -7,6 +7,7 @@
     "new-package": "hygen packages new",
     "postinstall": "husky install",
     "build:all": "yarn workspaces foreach -pt run build",
+    "test:all": "yarn workspaces foreach -pt run test",
     "docs:generate": "typedoc --tsconfig tsconfig.doc.json",
     "docs:deploy": "node script/deploy.js",
     "lint": "eslint . --ext .ts,.tsx"

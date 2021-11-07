@@ -22,7 +22,8 @@
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
     "typecheck": "tsc --noEmit",
-    "test:lib": "node ./test/index.js"
+    "test:lib": "node ./test/index.js",
+    "test": "echo '@lubycon/mattermost: 테스트가 없습니다'"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
