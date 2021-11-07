@@ -35,6 +35,6 @@ describe('isNil 함수는 value가 null 또는 undefined 인지 확인합니다.
     expect(isNil('')).toBeFalsy();
   });
   test(`isNil은 value가 undefined 이면 true 를 반환한다.`, () => {
-    expect(isNil(undefined)).toBeTruthy;
+    expect(isNil(undefined)).toBeTruthy();
   });
 });
