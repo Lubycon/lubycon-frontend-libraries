@@ -24,7 +24,8 @@ to: packages/<%= name %>/package.json
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "echo '<%= name %>: 테스트가 없습니다'"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
