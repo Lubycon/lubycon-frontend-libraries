@@ -6024,7 +6024,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/logger/",
           "packageDependencies": [
             ["@lubycon/logger", "workspace:packages/logger"],
-            ["@lubycon/utils", "workspace:packages/utils"],
             ["@types/amplitude-js", "npm:8.0.1"],
             ["@types/node", "npm:10.17.60"],
             ["@types/react", "npm:17.0.15"],
@@ -6038,6 +6037,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
             ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
             ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["temen", "workspace:packages/temen"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],

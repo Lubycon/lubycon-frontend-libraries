@@ -3350,7 +3350,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lubycon/logger@workspace:packages/logger"
   dependencies:
-    "@lubycon/utils": "workspace:packages/utils"
     "@types/amplitude-js": ^8.0.1
     "@types/node": ^10.11.0
     "@types/react": ^17.0.13
@@ -3364,6 +3363,7 @@ __metadata:
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
+    temen: "workspace:packages/temen"
     tslib: ^2.3.0
     typescript: ^4.3.5
   languageName: unknown
