@@ -8,9 +8,8 @@ import {
 import { initializeFirebase } from './firebase';
 import { initializeAmplitude } from './amplitude';
 import LubyconLogger from './lubyconLogger';
-import { TypeMap } from '../models/utils';
+import { Defer, defer, TypeMap } from 'temen';
 import { getKeys } from '../utils';
-import { Defer, defer } from '../utils/promise';
 
 const initializers: TypeMap<SupportedServices, (arg: any) => Promise<any>> = {
   firebase: initializeFirebase,
@@ -18,6 +17,13 @@ const initializers: TypeMap<SupportedServices, (arg: any) => Promise<any>> = {
   lubycon: LubyconLogger.initializedLubyconLogger,
 };
 
+/**
+ * amplitude, firebase, lubycon 로거를 등록하여 쉽게 사용할 수 있는 라이브러리입니다.
+ *
+ * 기본적으로 lubycon logger는 꼭 사용해야합니다.
+ *
+ * 사용전 devops guild에 문의해 clientId를 발급받아 주세요!
+ */
 class Logger {
   private mode: LoggerEnvMode = 'production';
 
@@ -33,6 +39,21 @@ class Logger {
     lubycon: undefined,
   };
 
+  /**
+   * 
+   * 사용하실 logger를 init 하는 함수입니다.
+   * @example
+   * ```ts
+   * logger.init({
+      services: {
+        firebase: firebaseConfig,
+        amplitude: process.env.AMPLITUDE_KEY ?? '',
+        lubycon: { cid: 'clientId', pl: 'dd', an: 'ddd' },
+      },
+      mode: isProduction ? 'production' : 'development',
+    })
+   * ```
+   */
   public init({ mode, services }: LoggerInitializeConfig) {
     this.mode = mode;
 

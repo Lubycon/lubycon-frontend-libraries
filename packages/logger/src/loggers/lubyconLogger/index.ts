@@ -1,6 +1,5 @@
-import { getCookie, setCookie } from '../../utils/cookie';
 import { LubyconLoggerConfig, LubyconLoggerConfigProps } from '../../models/lubyconLogger';
-import { generateUUID, doPost } from 'temen';
+import { generateUUID, createFetchInstance, getCookie, setCookie } from 'temen';
 
 interface LubyconLoggerEvent {
   view: string;
@@ -12,16 +11,11 @@ class LubyconLogger {
 
   static lubyconLoggerConfig: LubyconLoggerConfig = {};
 
+  static logHost = createFetchInstance('https://event-gateway.alpha.lubycon.io', {
+    headers: { 'Content-Type': 'application/json' },
+  });
   /**
    * Lubycon Logger를 init하는 메서드입니다.
-   * 받는 props는
-   * {
-   *    cid: string // devops guild에서 발급하는 unique client key
-   *    pl : string // site full url
-   *    an : string // application name
-   * }
-   *
-   *  나머지는 해당 메서드에서 생성합니다.
    */
   public initializedLubyconLogger(config: LubyconLoggerConfigProps) {
     return new Promise(() => {
@@ -41,14 +35,11 @@ class LubyconLogger {
       if (LubyconLogger.initialized) {
         return;
       }
-
-      doPost(
-        'https://event-gateway.alpha.lubycon.io/v1/collect/',
-        LubyconLogger.lubyconLoggerConfig,
-        { headers: { 'Content-Type': 'application/json' } }
-      ).response.then(() => {
-        LubyconLogger.initialized = true;
-      });
+      LubyconLogger.logHost
+        .post('/v1/collect/', { ...LubyconLogger.lubyconLoggerConfig })
+        .response.then(() => {
+          LubyconLogger.initialized = true;
+        });
     });
   }
 
@@ -65,25 +56,17 @@ class LubyconLogger {
 
         setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
 
-        doPost(
-          'https://event-gateway.alpha.lubycon.io/v1/collect/',
-          {
-            ...LubyconLogger.lubyconLoggerConfig,
-            view,
-            action,
-          },
-          { headers: { 'Content-Type': 'application/json' } }
-        );
+        LubyconLogger.logHost.post('/v1/collect/', {
+          ...LubyconLogger.lubyconLoggerConfig,
+          view,
+          action,
+        });
       } else {
-        doPost(
-          'https://event-gateway.alpha.lubycon.io/v1/collect/',
-          {
-            ...LubyconLogger.lubyconLoggerConfig,
-            view,
-            action,
-          },
-          { headers: { 'Content-Type': 'application/json' } }
-        );
+        LubyconLogger.logHost.post('/v1/collect/', {
+          ...LubyconLogger.lubyconLoggerConfig,
+          view,
+          action,
+        });
       }
     }
   }
