@@ -13,9 +13,9 @@ describe('cookies', () => {
       expect(stringifyCookie('foo', 1)).toBe(`foo=1;`);
     });
     test(`stringifyCoookie 함수는 쿠키의 옵션을 처리할 수 있다`, () => {
-      expect(stringifyCookie('foo', 1, { expires: new Date(2022, 1, 12), path: '/' })).toBe(
-        `foo=1; expires=Fri, 11 Feb 2022 15:00:00 GMT; path=/;`
-      );
+      expect(
+        stringifyCookie('foo', 1, { expires: new Date(Date.UTC(2022, 1, 12)), path: '/' })
+      ).toBe(`foo=1; expires=Sat, 12 Feb 2022 00:00:00 GMT; path=/;`);
     });
   });
   describe('parseCookies', () => {
