@@ -25,4 +25,5 @@ export * from './fetch';
 export * from './uuid';
 export * from './cookies';
 export * from './functions';
+export * from './models/utils';
 export { default as chunk } from './chunk';
