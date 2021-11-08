@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.21.3...@lubycon/react@1.22.0) (2021-11-08)
+
+
+### Features
+
+* **temen:** chunk 함수 추가 ([#86](https://github.com/Lubycon/lubycon-frontend-libraries/issues/86)) ([a4a1c30](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a4a1c301b9a09af0e923919f696db8706428f35c))
+
+
+
+
+
 ## [1.21.3](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.21.2...@lubycon/react@1.21.3) (2021-11-06)
 
 **Note:** Version bump only for package @lubycon/react
