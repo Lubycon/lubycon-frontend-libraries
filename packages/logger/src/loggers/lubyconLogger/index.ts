@@ -1,5 +1,5 @@
 import { LubyconLoggerConfig, LubyconLoggerConfigProps } from '../../models/lubyconLogger';
-import { generateUUID, createFetchInstance, getCookie, setCookie } from 'temen';
+import { generateUUID, createFetchInstance, getCookie, setCookie, isNil, isString } from 'temen';
 
 interface LubyconLoggerEvent {
   view: string;
@@ -29,8 +29,11 @@ class LubyconLogger {
           v: '1',
         },
       };
-
-      setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
+      if (isString(LubyconLogger.lubyconLoggerConfig.sid)) {
+        setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, {
+          expires: new Date(Date.now() + 5 * 60000),
+        });
+      }
 
       if (LubyconLogger.initialized) {
         return;
@@ -48,13 +51,17 @@ class LubyconLogger {
       /**
        * 쿠키에 저장된 sid가 없으면 sid 다시 넣고 요청
        */
-      if (getCookie('sid') === null) {
+      if (isNil(getCookie('sid'))) {
         LubyconLogger.lubyconLoggerConfig = {
           ...LubyconLogger.lubyconLoggerConfig,
           sid: generateUUID(),
         };
 
-        setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, 5);
+        if (isString(LubyconLogger.lubyconLoggerConfig.sid)) {
+          setCookie('sid', LubyconLogger.lubyconLoggerConfig.sid, {
+            expires: new Date(Date.now() + 5 * 60000),
+          });
+        }
 
         LubyconLogger.logHost.post('/v1/collect/', {
           ...LubyconLogger.lubyconLoggerConfig,
