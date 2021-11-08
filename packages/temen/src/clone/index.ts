@@ -1,6 +1,6 @@
 /**
- * @param {any} value 복제 할 값.
- * @returns {any} 복제 된 값을 반환.
+ * @param {T} value 복제 할 값.
+ * @returns {T} 복제 된 값을 반환.
  * @example
  *
  * const objects = [{ 'a': 1 }, { 'b': 2 }]
