@@ -1,8 +1,8 @@
 /**
  * `value`가 배열이 아닌 경우 배열으로 캐스팅합니다.`
  *
- * @param {*} 검사할 value 값.
- * @returns {Array<any>} 캐스팅 된 배열을 반환.
+ * @param {*} ...args 캐스팅 할 값
+ * @returns {Array} 캐스팅 된 배열을 반환.
  * @example
  *
  * castArray(1)
