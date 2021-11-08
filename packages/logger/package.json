@@ -2,7 +2,7 @@
   "name": "@lubycon/logger",
   "description": "루비콘 내 제품의 데이터 로깅을 편하게 할 수 있는 패키지.",
   "sideEffects": false,
-  "version": "1.8.17",
+  "version": "1.8.18",
   "keywords": [
     "lubycon",
     "firebase",
@@ -22,7 +22,8 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "echo '@lubycon/logger: 테스트가 없습니다'"
   },
   "devDependencies": {
     "@types/amplitude-js": "^8.0.1",

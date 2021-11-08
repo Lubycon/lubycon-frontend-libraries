@@ -2,7 +2,7 @@
   "name": "@lubycon/react",
   "description": "루비콘 팀의 리액트 라이브러리.",
   "sideEffects": false,
-  "version": "1.21.1",
+  "version": "1.21.3",
   "keywords": [
     "lubycon",
     "react"
@@ -21,7 +21,8 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "echo '@lubycon/react: 테스트가 없습니다'"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
@@ -43,6 +44,6 @@
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",
     "@lubycon/logger": "workspace:packages/logger",
-    "@lubycon/utils": "workspace:packages/utils"
+    "temen": "workspace:packages/temen"
   }
 }

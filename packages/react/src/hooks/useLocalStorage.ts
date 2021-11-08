@@ -4,7 +4,7 @@ import {
   removeLocalStorageItem,
   LocalStorageEventPayload,
   createLocalStorageChangeEvent,
-} from '@lubycon/utils';
+} from 'temen';
 
 import { useEffect, useState, useCallback } from 'react';
 

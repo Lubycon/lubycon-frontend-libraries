@@ -1,4 +1,4 @@
-/** @module Utils */
+/** @module Temen */
 export { default as delay } from './delay';
 export {
   createLocalStorageChangeEvent,
@@ -17,9 +17,12 @@ export * from './is';
 export * from './queryString';
 export * from './promise';
 export * from './date';
-export { default as getArrayFromCount } from './array/getArrayFromCount';
-export * from './array/createFromArray';
+export { default as getArrayFromCount } from './getArrayFromCount';
+export * from './createFromArray';
 export * from './copyToClipboard';
 export * from './svg';
 export * from './fetch';
 export * from './uuid';
+export * from './cookies';
+export * from './functions';
+export { default as chunk } from './chunk';

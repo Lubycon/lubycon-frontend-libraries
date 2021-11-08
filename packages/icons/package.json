@@ -2,7 +2,7 @@
   "name": "@lubycon/icons",
   "description": "루비콘에서 사용하는 Ionicons 아이콘 모음",
   "sideEffects": false,
-  "version": "1.1.13",
+  "version": "1.1.15",
   "keywords": [
     "lubycon",
     "icons"
@@ -21,7 +21,8 @@
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "echo '@lubycon/icons: 테스트가 없습니다'"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.15.6",

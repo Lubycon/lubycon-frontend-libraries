@@ -2,7 +2,7 @@ module.exports = [
   {
     type: 'input',
     name: 'name',
-    message: '패키지 이름을 입력해주세요. (react > @lubycon/react)',
+    message: '패키지 이름을 입력해주세요.',
   },
   {
     type: 'input',

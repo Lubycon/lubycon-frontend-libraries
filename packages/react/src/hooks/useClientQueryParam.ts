@@ -1,4 +1,4 @@
-import { findQueryParamInClient } from '@lubycon/utils';
+import { findQueryParamInClient } from 'temen';
 import { useMemo } from 'react';
 
 /**
