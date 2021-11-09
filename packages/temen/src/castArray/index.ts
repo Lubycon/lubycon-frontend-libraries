@@ -3,8 +3,9 @@
  *
  * @param {*} ...args 캐스팅 할 값
  * @returns {Array} 캐스팅 된 배열을 반환.
- * @example
  *
+ * @example
+ *```js
  * castArray(1)
  * // => [1]
  *
@@ -26,9 +27,11 @@
  * const array = [1, 2, 3]
  * console.log(castArray(array) === array)
  * // => true
+ * ```
  */
 
-function castArray(...args: any[]): Array<any> {
+function castArray<T>(...v: T[]): T[];
+function castArray(...args: any[]) {
   if (!args.length) {
     return [];
   }
