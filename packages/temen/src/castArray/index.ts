@@ -30,6 +30,7 @@
  * ```
  */
 
+function castArray<T extends unknown[]>(...v: T[]): T;
 function castArray<T>(...v: T[]): T[];
 function castArray(...args: any[]) {
   if (!args.length) {
