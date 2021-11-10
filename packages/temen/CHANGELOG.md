@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.1.0...temen@1.2.0) (2021-11-09)
+
+
+### Features
+
+* **teman:** castArray 추가 ([#91](https://github.com/Lubycon/lubycon-frontend-libraries/issues/91)) ([3a0b190](https://github.com/Lubycon/lubycon-frontend-libraries/commit/3a0b190a423a40f503fa29ba75a0128feb378ba1))
+
+
+
+
+
 # [1.1.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.0.2...temen@1.1.0) (2021-11-08)
 
 
