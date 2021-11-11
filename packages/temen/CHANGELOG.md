@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.3.0...temen@1.4.0) (2021-11-11)
+
+
+### Features
+
+* **temen:** cloneDeep 추가 ([#90](https://github.com/Lubycon/lubycon-frontend-libraries/issues/90)) ([47f6546](https://github.com/Lubycon/lubycon-frontend-libraries/commit/47f65466976eac431004e82db0dbda25fe44e280))
+
+
+
+
+
 # [1.3.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.2.0...temen@1.3.0) (2021-11-10)
 
 
