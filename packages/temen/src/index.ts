@@ -31,3 +31,4 @@ export { default as cloneDeep } from './cloneDeep';
 export { default as clone } from './clone';
 export { default as castArray } from './castArray';
 export { default as compact } from './compact';
+export { default as pick } from './pick';
