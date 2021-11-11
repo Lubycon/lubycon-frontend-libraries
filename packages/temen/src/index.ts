@@ -27,5 +27,6 @@ export * from './cookies';
 export * from './functions';
 export * from './models/utils';
 export { default as chunk } from './chunk';
+export { default as cloneDeep } from './cloneDeep';
 export { default as clone } from './clone';
 export { default as castArray } from './castArray';
