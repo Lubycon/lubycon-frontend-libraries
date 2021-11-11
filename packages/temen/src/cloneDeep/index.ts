@@ -87,7 +87,7 @@ function copySymbol(value: any) {
   const strSymbol = String(value);
   const braketIndex = strSymbol.indexOf('(');
   const strValue = strSymbol.substr(braketIndex).replace(/\(|\)/g, '');
-  return parseInt(strValue) ? Symbol(strValue) : Symbol(+strValue);
+  return parseInt(strValue) ? Symbol(+strValue) : Symbol(strValue);
 }
 
 function copyObject(value: any) {
