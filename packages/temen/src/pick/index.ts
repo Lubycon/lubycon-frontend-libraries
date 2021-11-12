@@ -11,12 +11,13 @@
  */
 function pick<T extends Record<string | number | symbol, unknown>, K extends keyof T>(
   object: T,
-  ...keys: readonly K[]
-): Pick<T, K> {
+  keys: readonly K[]
+) {
   return keys.reduce((acc, key) => {
-    acc[key] = object[key];
-
-    return acc;
+    return {
+      ...acc,
+      [key]: object[key],
+    };
   }, {} as Pick<T, K>);
 }
 
