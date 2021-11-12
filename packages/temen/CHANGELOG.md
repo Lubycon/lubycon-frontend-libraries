@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.4.0...temen@1.5.0) (2021-11-11)
+
+
+### Features
+
+* **temen:** compact 함수 추가 ([#93](https://github.com/Lubycon/lubycon-frontend-libraries/issues/93)) ([ad1f69a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/ad1f69a5560c7289f55582a7475a4e691defe901))
+
+
+
+
+
 # [1.4.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.3.0...temen@1.4.0) (2021-11-11)
 
 
