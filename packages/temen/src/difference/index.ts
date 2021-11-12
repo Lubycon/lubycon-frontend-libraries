@@ -13,6 +13,6 @@
  */
 export function differenceWith<T>(xs: T[], ys: T[], comparator: (x: T, y: T) => boolean): T[] {
   return xs.filter((x) => {
-    return ys.find((y) => comparator(x, y)) == null;
+    return ys.findIndex((y) => comparator(x, y)) === -1; // 찾는 원소가 null이나 undefined면 망함
   });
 }
