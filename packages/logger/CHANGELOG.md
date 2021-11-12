@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.9.0...@lubycon/logger@1.10.0) (2021-11-12)
+
+
+### Features
+
+* **logger:** Lubycon logger 추가 ([#81](https://github.com/Lubycon/lubycon-frontend-libraries/issues/81)) ([9be2c40](https://github.com/Lubycon/lubycon-frontend-libraries/commit/9be2c40e4e187d745e514e9bba918743bd10dba6))
+
+
+
+
+
 # [1.9.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.8.18...@lubycon/logger@1.9.0) (2021-11-08)
 
 

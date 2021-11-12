@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.5.0...temen@1.6.0) (2021-11-12)
+
+
+### Bug Fixes
+
+* **temen:** pick 함수 테스트 깨지는 부분 수정 ([#96](https://github.com/Lubycon/lubycon-frontend-libraries/issues/96)) ([9de4d95](https://github.com/Lubycon/lubycon-frontend-libraries/commit/9de4d952d2e9dfcc46b176063b489444e0e3d8b7))
+
+
+### Features
+
+* **temen:** differenceWith 함수 추가 ([#95](https://github.com/Lubycon/lubycon-frontend-libraries/issues/95)) ([3bd3c6a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/3bd3c6af3a845ef89d82e64e6d1727791a293eff))
+* pick 함수 추가 ([#94](https://github.com/Lubycon/lubycon-frontend-libraries/issues/94)) ([a4b7ef8](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a4b7ef860be6942988b0544595d23f1b0c0665eb))
+
+
+
+
+
 # [1.5.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.4.0...temen@1.5.0) (2021-11-11)
 
 
