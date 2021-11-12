@@ -7,28 +7,53 @@ import {
 } from '../models/loggers';
 import { initializeFirebase } from './firebase';
 import { initializeAmplitude } from './amplitude';
-import { TypeMap } from '../models/utils';
+import LubyconLogger from './lubyconLogger';
+import { Defer, defer, TypeMap } from 'temen';
 import { getKeys } from '../utils';
-import { Defer, defer } from '../utils/promise';
 
 const initializers: TypeMap<SupportedServices, (arg: any) => Promise<any>> = {
   firebase: initializeFirebase,
   amplitude: initializeAmplitude,
+  lubycon: LubyconLogger.initializedLubyconLogger,
 };
 
+/**
+ * amplitude, firebase, lubycon 로거를 등록하여 쉽게 사용할 수 있는 라이브러리입니다.
+ *
+ * 기본적으로 lubycon logger는 꼭 사용해야합니다.
+ *
+ * 사용전 devops guild에 문의해 clientId를 발급받아 주세요!
+ */
 class Logger {
   private mode: LoggerEnvMode = 'production';
 
   private serviceAvailable: TypeMap<SupportedServices, Defer<boolean>> = {
     firebase: defer(),
     amplitude: defer(),
+    lubycon: defer(),
   };
 
   private clients: TypeMap<SupportedServices, any> = {
     firebase: undefined,
     amplitude: undefined,
+    lubycon: undefined,
   };
 
+  /**
+   * 
+   * 사용하실 logger를 init 하는 함수입니다.
+   * @example
+   * ```ts
+   * logger.init({
+      services: {
+        firebase: firebaseConfig,
+        amplitude: process.env.AMPLITUDE_KEY ?? '',
+        lubycon: { cid: 'clientId', pl: 'dd', an: 'ddd' },
+      },
+      mode: isProduction ? 'production' : 'development',
+    })
+   * ```
+   */
   public init({ mode, services }: LoggerInitializeConfig) {
     this.mode = mode;
 
@@ -54,6 +79,12 @@ class Logger {
 
     // 추상화 할 것
     await Promise.all([
+      (async () => {
+        /**
+         * amplitude, firebase는 serviceAvailable 활성상태를 체크하는거같은데 lubyconLogger에서는 어떻게 해줘야할지 고민이 되네요..
+         */
+        await LubyconLogger.logEvent({ view, action });
+      })(),
       (async () => {
         if (await this.serviceAvailable.firebase?.promise) {
           this.clients.firebase?.analytics().logEvent(logName, {
