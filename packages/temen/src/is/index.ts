@@ -1,3 +1,5 @@
+import { getType } from '../_internal/getType';
+
 /**
  * 타입가드를 편하게 사용할 수 있는 유틸 함수 입니다.
  *
@@ -5,20 +7,20 @@
  *
  * 이 함수를 사용하면 반드시 타입 가딩 이후에 타입이 어떻게 평가되었는지 확인해주세요.
  */
-export function is<T>(value: any, validator: (v: any) => boolean): value is T {
+export function is<T>(value: unknown, validator: (v: unknown) => boolean): value is T {
   return validator(value);
 }
 
-export function isString(value: any): value is string {
-  return typeof value === 'string';
+export function isString(value: unknown): value is string {
+  return getType(value) === '[object String]';
 }
 
-export function isNumber(value: any): value is number {
-  return typeof value === 'number';
+export function isNumber(value: unknown): value is number {
+  return getType(value) === '[object Number]';
 }
 
-export function isBoolean(value: any): value is boolean {
-  return typeof value === 'boolean';
+export function isBoolean(value: unknown): value is boolean {
+  return getType(value) === '[object Boolean]';
 }
 
 /**
