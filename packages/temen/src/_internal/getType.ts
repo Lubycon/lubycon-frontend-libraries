@@ -21,6 +21,7 @@ export type JSTypes =
   | '[object Uint8ClampedArray]'
   | '[object BigInt64Array]'
   | '[object BigUint64Array]'
+  | '[object RegExp]'
   | '[object Date]'
   | '[object Null]'
   | '[object Undefined]';
