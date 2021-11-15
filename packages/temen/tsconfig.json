@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist",
     "declarationDir": "dist/types",
-    "lib": ["es2020"]
+    "lib": ["es2020"],
+    "downlevelIteration": true
   },
   "include": ["src"]
 }
