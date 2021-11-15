@@ -2,6 +2,22 @@ import getObjectKeys from '../getObjectKeys';
 import { getType } from '../_internal/getType';
 import { isMap, isSet, isPrimitiveType, isTypedArray, isRegExp } from '../_internal/is';
 
+/**
+ * 첫 번째 인자의 값과 두 번째 인자의 값을 깊은 비교합니다.
+ *
+ * isEqual이 true를 반환한다면 첫 번째 인자의 타입은 두 번째 인자의 타입과 동일하다고 평가됩니다.
+ *
+ * @example
+ * ```ts
+ * type Foo = { a: number; b?: string };
+ * const obj1 = { a: 1 };
+ * const obj2: Type = { a: 1 };
+ *
+ * if (isEqual(a, b)) {
+ *   // a는 Foo 타입으로 추론됩니다.
+ * }
+ * ```
+ */
 export function isEqual<T>(a: any, b: T): a is T {
   if (getType(a) !== getType(b)) {
     return false;
