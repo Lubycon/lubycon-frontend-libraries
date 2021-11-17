@@ -2,10 +2,6 @@ import getObjectKeys from '../getObjectKeys';
 import { getType } from '../_internal/getType';
 import { isMap, isSet, isPrimitiveType, isTypedArray, isRegExp } from '../_internal/is';
 
-export function isEqualWith<T>(a: any, b: T, compare: (a: any, b: T) => boolean): a is T {
-  return compare(a, b);
-}
-
 /**
  * 첫 번째 인자의 값과 두 번째 인자의 값을 깊은 비교합니다.
  *
