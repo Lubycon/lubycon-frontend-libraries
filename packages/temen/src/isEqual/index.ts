@@ -1,6 +1,6 @@
 import getObjectKeys from '../getObjectKeys';
 import { getType } from '../_internal/getType';
-import { isMap, isSet, isPrimitiveType, isTypedArray, isRegExp } from '../_internal/is';
+import { isMap, isSet, isPrimitiveType, isTypedArray, isRegExp } from '../is';
 
 /**
  * 첫 번째 인자의 값과 두 번째 인자의 값을 깊은 비교합니다.
