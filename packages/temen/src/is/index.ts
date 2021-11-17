@@ -1,4 +1,4 @@
-import { getType } from '../_internal/getType';
+import { getType, primitiveTypes, TypedArray, typedArrayTypeNames } from '../_internal/getType';
 
 /**
  * 타입가드를 편하게 사용할 수 있는 유틸 함수 입니다.
@@ -11,14 +11,38 @@ export function is<T>(value: unknown, validator: (v: unknown) => boolean): value
   return validator(value);
 }
 
+/**
+ * 인자로 받은 값이 String 타입인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * isString('foo'); // true
+ * ```
+ */
 export function isString(value: unknown): value is string {
   return getType(value) === '[object String]';
 }
 
+/**
+ * 인자로 받은 값이 Number 타입인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * isNumber(-1); // true
+ * ```
+ */
 export function isNumber(value: unknown): value is number {
   return getType(value) === '[object Number]';
 }
 
+/**
+ * 인자로 받은 값이 Boolean 타입인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * isBoolean(false); // true
+ * ```
+ */
 export function isBoolean(value: unknown): value is boolean {
   return getType(value) === '[object Boolean]';
 }
@@ -28,11 +52,82 @@ export function isBoolean(value: unknown): value is boolean {
  *
  * @example
  * ```ts
- * isNil(null)  => true
- * isNil(void 0) => true
- * isNil(NaN) => false
+ * isNil(null); // true
+ * isNil(void 0); // true
+ * isNil(NaN); // false
  * ```
  */
 export function isNil(value: unknown): value is null | undefined {
   return value === null || value === undefined;
+}
+
+/**
+ * 인자로 받은 값이 원시 자료형인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * isPrimitiveType('') // true
+ * isPrimitiveType(1) // true
+ * isPrimitiveType(false) // true
+ * isPrimitiveType(NaN) // true
+ * isPrimitiveType({}) // false
+ * isPrimitiveType([]) // false
+ * ```
+ */
+export function isPrimitiveType(
+  value: unknown
+): value is string | boolean | number | null | undefined {
+  return primitiveTypes.includes(getType(value));
+}
+
+/**
+ * 인자로 받은 값이 Map인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * const map = new Map();
+ * isMap(map); // true
+ * ```
+ */
+export function isMap(value: unknown): value is Map<unknown, unknown> {
+  return getType(value) === '[object Map]';
+}
+
+/**
+ * 인자로 받은 값이 Set인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * const set = new Set();
+ * isSet(set); // true
+ * ```
+ */
+export function isSet(value: unknown): value is Set<unknown> {
+  return getType(value) === '[object Set]';
+}
+
+/**
+ * 인자로 받은 값이 TypedArray인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * const arr = new Int16Array();
+ * isTypedArray(arr); // true
+ * ```
+ */
+export function isTypedArray(value: unknown): value is TypedArray {
+  return typedArrayTypeNames.includes(getType(value));
+}
+
+/**
+ * 인자로 받은 값이 정규식 객체인지 여부를 반환합니다.
+ *
+ * @example
+ * ```ts
+ * const regex = /123/;
+ * isRegExp(regex); // true
+ * ```
+ */
+export function isRegExp(value: any): value is RegExp {
+  return value.constructor !== null && value.constructor === RegExp;
 }
