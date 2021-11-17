@@ -33,3 +33,4 @@ export { default as castArray } from './castArray';
 export * from './difference';
 export { default as compact } from './compact';
 export { default as pick } from './pick';
+export { isEqual } from './isEqual';
