@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.6.0...temen@1.7.0) (2021-11-17)
+
+
+### Features
+
+* **temen:** isEqual 추가 ([#97](https://github.com/Lubycon/lubycon-frontend-libraries/issues/97)) ([a1d3914](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a1d3914b72370e2c95a8a5d1d7213f748dc7ae66))
+
+
+
+
+
 # [1.6.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.5.0...temen@1.6.0) (2021-11-12)
 
 
