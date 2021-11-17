@@ -1,6 +1,12 @@
 import { getType, JSTypes } from './getType';
 
-const primitiveTypes: JSTypes[] = ['[object Boolean]', '[object String]', '[object Number]'];
+const primitiveTypes: JSTypes[] = [
+  '[object Boolean]',
+  '[object String]',
+  '[object Number]',
+  '[object Null]',
+  '[object Undefined]',
+];
 export function isPrimitiveType(value: unknown) {
   return primitiveTypes.includes(getType(value));
 }
