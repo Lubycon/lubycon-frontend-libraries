@@ -1,4 +1,14 @@
-import { isBoolean, isNumber, isString, isNil } from '../src/is/index';
+import {
+  isBoolean,
+  isNumber,
+  isString,
+  isNil,
+  isPrimitiveType,
+  isMap,
+  isSet,
+  isTypedArray,
+  isRegExp,
+} from '../src/is/index';
 
 describe('is', () => {
   test('isString 함수는 string 타입을 인자로 받으면 true, 아니면 false를 반환한다', () => {
@@ -18,23 +28,47 @@ describe('is', () => {
     expect(isBoolean(1000)).toBe(false);
     expect(isBoolean(true)).toBe(true);
   });
-});
-
-describe('isNil 함수는 value가 null 또는 undefined 인지 확인합니다.', () => {
-  test(`isNil은 value가 null이면 true 를 반환한다. `, () => {
-    expect(isNil(null)).toBeTruthy();
+  test(`isNil은 value가 nullish한 값이면 true, 아니면 false를 반환한다. `, () => {
+    expect(isNil(null)).toBe(true);
+    expect(isNil(void 0)).toBe(true);
+    expect(isNil(NaN)).toBe(false);
+    expect(isNil('')).toBe(false);
+    expect(isNil(undefined)).toBe(true);
   });
-  test(`isNil은 value가 (void 0)이면 true 를 반환한다.`, () => {
-    expect(isNil(void 0)).toBeTruthy();
+  test(`isPrimitiveType 함수는 인자로 받은 값이 원시 자료형이면 true, 아니면 false를 반환한다`, () => {
+    expect(isPrimitiveType(null)).toBe(true);
+    expect(isPrimitiveType(1)).toBe(true);
+    expect(isPrimitiveType('')).toBe(true);
+    expect(isPrimitiveType(false)).toBe(true);
+    expect(isPrimitiveType(undefined)).toBe(true);
+    expect(isPrimitiveType({})).toBe(false);
+    expect(isPrimitiveType([])).toBe(false);
+    expect(isPrimitiveType(new Date())).toBe(false);
+    expect(isPrimitiveType(new Map())).toBe(false);
+    expect(isPrimitiveType(new Int16Array())).toBe(false);
   });
-
-  test(`isNil은 value가 NaN이면 false 를 반환한다.`, () => {
-    expect(isNil(NaN)).toBeFalsy();
+  test(`isMap 함수는 인자로 받은 값이 Map이면 true, 아니면 false를 반환한다`, () => {
+    expect(isMap(new Map())).toBe(true);
+    expect(isMap({})).toBe(false);
   });
-  test(`isNil은 value가 ''이면 false 를 반환한다.`, () => {
-    expect(isNil('')).toBeFalsy();
+  test(`isSet 함수는 인자로 받은 값이 Set이면 true, 아니면 false를 반환한다`, () => {
+    expect(isSet(new Set())).toBe(true);
+    expect(isSet([])).toBe(false);
+    expect(isSet(new Map())).toBe(false);
   });
-  test(`isNil은 value가 undefined 이면 true 를 반환한다.`, () => {
-    expect(isNil(undefined)).toBeTruthy();
+  test(`isTypedArray 함수는 인자로 받은 값이 TypedArray이면 true, 아니면 false를 반환한다`, () => {
+    expect(isTypedArray(new Int16Array())).toBe(true);
+    expect(isTypedArray(new Uint16Array())).toBe(true);
+    expect(isTypedArray(new BigInt64Array())).toBe(true);
+    expect(isTypedArray(new Float32Array())).toBe(true);
+    expect(isTypedArray(new ArrayBuffer())).toBe(false);
+    expect(isTypedArray(new RegExp())).toBe(false);
+    expect(isTypedArray([])).toBe(false);
+  });
+  test(`isRegExp 함수는 인자로 받은 값이 RegExp 객체이면 true, 아니면 false를 반환한다`, () => {
+    expect(isRegExp(new RegExp('123'))).toBe(true);
+    expect(isRegExp(/123/)).toBe(true);
+    expect(isRegExp('')).toBe(false);
+    expect(isRegExp(1)).toBe(false);
   });
 });
