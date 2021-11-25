@@ -14,7 +14,7 @@ const useScrollEvent = (ref: RefObject<HTMLElement>, scrollCallback: () => void)
 
     ref.current.addEventListener('scroll', scrollCallback, { passive: true });
     return () => ref.current?.removeEventListener('scroll', scrollCallback);
-  }, [ref, scrollCallback]);
+  }, [ref.current, scrollCallback]);
 };
 
 export default useScrollEvent;
