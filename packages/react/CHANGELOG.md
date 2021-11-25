@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.9](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.8...@lubycon/react@1.22.9) (2021-11-25)
+
+**Note:** Version bump only for package @lubycon/react
+
+
+
+
+
 ## [1.22.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.7...@lubycon/react@1.22.8) (2021-11-25)
 
 
