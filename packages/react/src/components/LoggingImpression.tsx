@@ -8,7 +8,7 @@ interface Props {
   logName: string;
   params?: LoggerEventParams;
   children: ReactElement;
-  impressionOptions: ComponentProps<typeof ImpressionArea>;
+  impressionOptions: Pick<ComponentProps<typeof ImpressionArea>, 'rootMargin' | 'threshold'>;
 }
 
 /**

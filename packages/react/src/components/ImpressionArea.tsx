@@ -1,5 +1,4 @@
-import React, { forwardRef, ReactNode, Ref } from 'react';
-import useCombinedRefs from '../hooks/useCombinedRef';
+import React, { ReactNode } from 'react';
 import useImpression from '../hooks/useImpression';
 
 interface Props {
@@ -20,16 +19,12 @@ interface Props {
  * </ImpressionArea>
  * ```
  */
-const ImpressionArea = forwardRef(
-  ({ children, ...rest }: Props, forwardedRef: Ref<HTMLDivElement>) => {
-    const impressionRef = useImpression({
-      ...rest,
-    });
+const ImpressionArea = ({ children, ...rest }: Props) => {
+  const impressionRef = useImpression({
+    ...rest,
+  });
 
-    const ref = useCombinedRefs(forwardedRef, impressionRef);
-
-    return <div ref={ref}>{children}</div>;
-  }
-);
+  return <div ref={impressionRef}>{children}</div>;
+};
 
 export default ImpressionArea;
