@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.7...@lubycon/react@1.22.8) (2021-11-25)
+
+
+### Bug Fixes
+
+* **react:** useScrollEvent가 ref를 제대로 추적하지 못 하는 이슈 수정 ([e78a955](https://github.com/Lubycon/lubycon-frontend-libraries/commit/e78a95511012a2c99d8a1e4fb83da52f1e304bc5))
+
+
+
+
+
 ## [1.22.7](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.6...@lubycon/react@1.22.7) (2021-11-21)
 
 **Note:** Version bump only for package @lubycon/react
