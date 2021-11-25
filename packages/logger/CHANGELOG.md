@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.1...@lubycon/logger@1.10.2) (2021-11-21)
+
+
+### Bug Fixes
+
+* **logger:** async import 모듈 접근 수정 ([c4c3acc](https://github.com/Lubycon/lubycon-frontend-libraries/commit/c4c3acc90287c68c1200ad1a5a13520f13fe8723))
+
+
+
+
+
 ## [1.10.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.0...@lubycon/logger@1.10.1) (2021-11-17)
 
 **Note:** Version bump only for package @lubycon/logger
