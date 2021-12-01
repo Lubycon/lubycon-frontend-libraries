@@ -11,7 +11,6 @@ jobs:
       - name: Fire Notification
         uses: Lubycon/github-reviewer-noti-action@v3.1.0
         with:
-          github-token: ${{ secrets.LUBYCON_GITHUB_TOKEN }}
           slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
           slack-channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           slack-bot-signing-secret: ${{ secrets.SLACK_SIGNING_SECRET }}
