@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.8.2...temen@1.9.0) (2021-12-01)
+
+
+### Features
+
+* add cloneWith ([#100](https://github.com/Lubycon/lubycon-frontend-libraries/issues/100)) ([0b9395a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/0b9395a8d58ecc2d65da80a0c450550c9aa493dd))
+
+
+
+
+
 ## [1.8.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.8.1...temen@1.8.2) (2021-11-25)
 
 **Note:** Version bump only for package temen
