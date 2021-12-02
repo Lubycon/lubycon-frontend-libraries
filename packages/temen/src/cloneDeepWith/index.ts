@@ -27,8 +27,8 @@ import cloneDeep from '../cloneDeep';
  * // => 20
  * ```
  */
-function cloneDeepWith<T, R>(value: T, customizer?: (params: T) => R): R;
-function cloneDeepWith<T>(value: T, customizer?: (params: T) => unknown) {
+function cloneDeepWith<T, R>(value: T, customizer: (params: T) => R): R;
+function cloneDeepWith<T>(value: T, customizer: (params: T) => unknown) {
   const clonedValue = cloneDeep(value);
   if (customizer) {
     return customizer(clonedValue);
