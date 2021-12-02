@@ -10,6 +10,7 @@ import cloneDeep from '../cloneDeep';
  * @see cloneWith
  * @example
  *
+ * ```ts
  * function customizer(value) {
  *   if (isElement(value)) {
  *     return value.cloneNode(true)
@@ -24,6 +25,7 @@ import cloneDeep from '../cloneDeep';
  * // => 'BODY'
  * console.log(el.childNodes.length)
  * // => 20
+ * ```
  */
 function cloneDeepWith<T, R>(value: T, customizer?: (params: T) => R): R;
 function cloneDeepWith<T>(value: T, customizer?: (params: T) => unknown) {
