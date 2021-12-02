@@ -34,4 +34,5 @@ export * from './difference';
 export { default as compact } from './compact';
 export { default as pick } from './pick';
 export * from './isEqual';
+export { default as cloneDeepWith } from './cloneDeepWith';
 export { default as cloneWith } from './cloneWith';
