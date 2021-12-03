@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.10.0...temen@1.11.0) (2021-12-03)
+
+
+### Features
+
+* **temen:** zip 함수 추가 ([#106](https://github.com/Lubycon/lubycon-frontend-libraries/issues/106)) ([170b85b](https://github.com/Lubycon/lubycon-frontend-libraries/commit/170b85bb3e493b2fb13e7ecd60a89fce1df5f2eb))
+
+
+
+
+
 # [1.10.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.9.0...temen@1.10.0) (2021-12-02)
 
 
