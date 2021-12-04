@@ -1,6 +1,10 @@
+type Conform<T> = {
+  [P in keyof T]: (args: T[keyof T]) => any;
+};
+
 /**
  * 'object'가 인라인 함수 'source'와 일치하는지 확인
- * properties of `source` with the corresponding property values of `object`.
+ * 'source'의 프로퍼티와 'object'의 프로퍼티는 일치
  *
  *
  * @param {Object} object 검사할 오브젝트
@@ -16,10 +20,6 @@
  * conformsTo(object, { 'b': function(n) { return n > 2 } })
  * // => false
  */
-
-type Conform<T> = {
-  [P in keyof T]: (args: T[keyof T]) => any;
-};
 
 function conformsTo<T>(object: T, source: Conform<T>) {
   const keys = Object.keys(source) as Array<keyof typeof source>;
