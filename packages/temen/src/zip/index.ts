@@ -1,4 +1,5 @@
 import getArrayFromCount from '../getArrayFromCount';
+import { getLongestArrayLength } from '../_internal/getLongestArrayLength';
 
 /**
  * 인자로 주어진 배열들의 같은 인덱스에 있는 원소들끼리 그룹핑합니다.
@@ -33,9 +34,7 @@ function zip<T1, T2, T3, T4, T5>(
   array5: T5[]
 ): Array<[T1 | undefined, T2 | undefined, T3 | undefined, T4 | undefined, T5 | undefined]>;
 function zip(...arrays: any[]) {
-  const longestLength = arrays.reduce((prevArrayLength: number, current: any[]) => {
-    return Math.max(prevArrayLength, current.length);
-  }, 0);
+  const longestLength = getLongestArrayLength(arrays);
 
   return getArrayFromCount(longestLength).map((_, i) => {
     return getArrayFromCount(arrays.length).map((_, j) => {
