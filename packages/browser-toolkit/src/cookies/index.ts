@@ -1,11 +1,9 @@
-import { identify } from '../functions';
+import { identify } from 'temen';
 import { parseCookies } from './parseCookies';
 import { CookieValue, SetCookieOptions, stringifyCookie } from './stringifyCookie';
 
 /**
  * 쿠키에 값을 세팅합니다. expires, path 등의 쿠키 옵션을 사용할 수 있습니다.
- *
- * @deprecated browser-toolkit을 사용해주세요.
  *
  * @example
  * ```ts
@@ -24,8 +22,6 @@ export function setCookie<T extends CookieValue>(
 /**
  * 전체 쿠키를 가져옵니다. 만약 쿠키가 없는 경우에는 빈 객체를 반환합니다.
  *
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * @example
  * ```ts
  * const { foo } = getCookies();
@@ -38,8 +34,6 @@ export function getCookies() {
 
 /**
  * 인자로 주어진 key에 해당하는 쿠키를 가져옵니다. 만약 해당 쿠키가 존재하지 않는 경우 undefined를 반환합니다.
- *
- * @deprecated browser-toolkit을 사용해주세요.
  *
  * @example
  * ```ts
