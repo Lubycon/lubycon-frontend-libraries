@@ -1,5 +1,5 @@
 type Conform<T> = {
-  [P in keyof T]: (args: T[keyof T]) => any;
+  [P in keyof T]: (args: T[keyof T]) => boolean;
 };
 
 /**
