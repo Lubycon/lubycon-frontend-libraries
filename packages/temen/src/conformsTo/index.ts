@@ -12,6 +12,7 @@ type Conform<T> = {
  * @returns {boolean} 'object'가 일치하면 'true'를 반환하고, 그렇지 않으면 'false'를 반환
  * @example
  *
+ * ```ts
  * const object = { 'a': 1, 'b': 2 }
  *
  * conformsTo(object, { 'b': function(n) { return n > 1 } })
@@ -19,6 +20,7 @@ type Conform<T> = {
  *
  * conformsTo(object, { 'b': function(n) { return n > 2 } })
  * // => false
+ * ```
  */
 
 function conformsTo<T>(object: T, source: Conform<T>) {

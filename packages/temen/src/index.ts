@@ -36,3 +36,6 @@ export { default as pick } from './pick';
 export * from './isEqual';
 export { default as cloneWith } from './cloneWith';
 export { default as conformsTo } from './conformsTo';
+export { default as cloneDeepWith } from './cloneDeepWith';
+export { default as cloneWith } from './cloneWith';
+export { default as zip } from './zip';
