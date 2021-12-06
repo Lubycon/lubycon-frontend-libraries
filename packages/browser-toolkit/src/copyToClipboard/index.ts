@@ -13,8 +13,6 @@ export const isClipboardCommandSupported = () => document.queryCommandSupported?
 /**
  * 인자로 받은 텍스트를 클립보드에 복사합니다.
  *
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * @example
  * ```ts
  * const result = await copyToClipboard('하이');

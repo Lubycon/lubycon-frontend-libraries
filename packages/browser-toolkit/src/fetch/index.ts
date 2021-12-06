@@ -17,11 +17,9 @@ export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
 /**
  * 모든 요청은 response와 함께 요청을 abort 시킬 수 있는 abort 메서드를 반환합니다
  *
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * @example
  * ```ts
- * import { doRequest } from 'temen';
+ * import { doRequest } from 'browser-toolkit';
  *
  * const URL = 'https://pokeapi.co/api/v2/pokemon'
  * const { response, abort: abortFetchPokemon } = doRequest(URL);

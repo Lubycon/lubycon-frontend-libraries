@@ -20,7 +20,8 @@
       "packages/logger/src/index.ts",
       "packages/react/src/index.ts",
       "packages/mattermost/src/index.ts",
-      "packages/temen/src/index.ts"
+      "packages/temen/src/index.ts",
+      "packages/browser-toolkit/src/index.ts"
     ],
     "out": "docs",
     "name":"루비콘 라이브러리 문서",

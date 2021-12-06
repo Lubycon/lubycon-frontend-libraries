@@ -23,8 +23,6 @@ function isLubyconUtilsItem<T>(item: LubyconStorageData<T> | T): item is Lubycon
 }
 
 /**
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * 로컬스토리지에 데이터를 저장합니다. 3번째 인자 expiryHour로 데이터의 만료 시간을 지정할 수 있습니다.
  */
 function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number) {
@@ -38,8 +36,6 @@ function setLocalStorageItem<T>(key: string, data: T, expiryHour?: number) {
 }
 
 /**
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * 로컬스토리지에서 데이터를 가져옵니다. 만약 만료 시간이 지정된 데이터이고, 만료 시간이 지난 상태라면 null이 반환됩니다.
  */
 function getLocalStorageItem<T>(key: string): T | null {
@@ -65,8 +61,6 @@ function getLocalStorageItem<T>(key: string): T | null {
 }
 
 /**
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * 로컬스토리지에서 데이터를 제거합니다.
  */
 function removeLocalStorageItem(key: string) {
@@ -75,8 +69,6 @@ function removeLocalStorageItem(key: string) {
 }
 
 /**
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * 로컬스토리지에서 데이터를 가져온 후 해당 데이터를 로컬스토리지에서 제거합니다.
  */
 function popLocalStorageItem<T>(key: string): T | null {
@@ -87,8 +79,6 @@ function popLocalStorageItem<T>(key: string): T | null {
 }
 
 /**
- * @deprecated browser-toolkit을 사용해주세요.
- *
  * 로컬스토리지 내의 모든 데이터를 제거합니다.
  */
 function clearLocalStorage() {
