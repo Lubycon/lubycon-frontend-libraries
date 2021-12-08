@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.12.0...temen@1.13.0) (2021-12-08)
+
+
+### Features
+
+* add cloneWith ([e3a9f57](https://github.com/Lubycon/lubycon-frontend-libraries/commit/e3a9f574d492bc6d0080bd199e77c90de9ee0c73))
+* add conformsTo ([2e66b63](https://github.com/Lubycon/lubycon-frontend-libraries/commit/2e66b63538d30c79acdcb39ed915a99bf4dc109c))
+* reflect the code review ([615bb18](https://github.com/Lubycon/lubycon-frontend-libraries/commit/615bb1876c62d06a298f081639b7fa10e9789b15))
+* udpate conflict ([fd7a5b2](https://github.com/Lubycon/lubycon-frontend-libraries/commit/fd7a5b2664e774bea30da7869dfc99eeea8a3db3))
+
+
+
+
+
 # [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.11.0...temen@1.12.0) (2021-12-05)
 
 
