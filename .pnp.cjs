@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "browser-toolkit",
+        "reference": "workspace:packages/browser-toolkit"
+      },
+      {
         "name": "@lubycon/icons",
         "reference": "workspace:packages/icons"
       },
@@ -50,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@lubycon/logger", ["workspace:packages/logger"]],
       ["@lubycon/mattermost", ["workspace:packages/mattermost"]],
       ["@lubycon/react", ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#workspace:packages/react", "workspace:packages/react"]],
+      ["browser-toolkit", ["workspace:packages/browser-toolkit"]],
       ["lubycon-frontend-libraries", ["workspace:."]],
       ["temen", ["workspace:packages/temen"]]
     ],
@@ -6008,11 +6013,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
@@ -6032,11 +6037,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["firebase", "npm:8.8.1"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["temen", "workspace:packages/temen"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -6056,11 +6061,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path", "npm:0.12.7"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["temen", "workspace:packages/temen"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -6081,11 +6086,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["temen", "workspace:packages/temen"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -6107,11 +6112,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:5.2.1"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["temen", "workspace:packages/temen"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -8083,6 +8088,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browser-process-hrtime", "npm:1.0.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["browser-toolkit", [
+        ["workspace:packages/browser-toolkit", {
+          "packageLocation": "./packages/browser-toolkit/",
+          "packageDependencies": [
+            ["browser-toolkit", "workspace:packages/browser-toolkit"],
+            ["@babel/core", "npm:7.15.5"],
+            ["@babel/preset-env", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:7.15.6"],
+            ["@babel/preset-typescript", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:7.15.0"],
+            ["@types/amplitude-js", "npm:8.0.1"],
+            ["@types/jest", "npm:27.0.1"],
+            ["@types/node", "npm:10.17.60"],
+            ["babel-jest", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:27.2.0"],
+            ["cross-env", "npm:5.2.1"],
+            ["cross-fetch", "npm:3.1.4"],
+            ["date-fns", "npm:2.23.0"],
+            ["jest", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:27.2.0"],
+            ["rimraf", "npm:2.7.1"],
+            ["rollup", "npm:2.55.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
+            ["rollup-plugin-json", "npm:3.1.0"],
+            ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
+            ["temen", "workspace:packages/temen"],
+            ["tslib", "npm:2.3.0"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["browserslist", [
@@ -16485,10 +16520,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0", {
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-commonjs-virtual-80af3e5bcf/0/cache/rollup-plugin-commonjs-npm-10.1.0-6b5ee23ea9-396fc4d536.zip/node_modules/rollup-plugin-commonjs/",
+        ["virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0", {
+          "packageLocation": "./.yarn/__virtual__/rollup-plugin-commonjs-virtual-1f564b3374/0/cache/rollup-plugin-commonjs-npm-10.1.0-6b5ee23ea9-396fc4d536.zip/node_modules/rollup-plugin-commonjs/",
           "packageDependencies": [
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["@types/rollup", null],
             ["estree-walker", "npm:0.6.1"],
             ["is-reference", "npm:1.2.1"],
@@ -16531,10 +16566,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2", {
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-sourcemaps-virtual-8bcbc9512e/0/cache/rollup-plugin-sourcemaps-npm-0.4.2-32db378741-c50dc47432.zip/node_modules/rollup-plugin-sourcemaps/",
+        ["virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2", {
+          "packageLocation": "./.yarn/__virtual__/rollup-plugin-sourcemaps-virtual-239347895e/0/cache/rollup-plugin-sourcemaps-npm-0.4.2-32db378741-c50dc47432.zip/node_modules/rollup-plugin-sourcemaps/",
           "packageDependencies": [
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
             ["@types/rollup", null],
             ["rollup", "npm:2.55.0"],
             ["rollup-pluginutils", "npm:2.8.2"],
@@ -16555,10 +16590,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0", {
-          "packageLocation": "./.yarn/__virtual__/rollup-plugin-typescript2-virtual-19de370cc3/0/cache/rollup-plugin-typescript2-npm-0.30.0-f985b92bb6-e3097bb25c.zip/node_modules/rollup-plugin-typescript2/",
+        ["virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0", {
+          "packageLocation": "./.yarn/__virtual__/rollup-plugin-typescript2-virtual-4632123648/0/cache/rollup-plugin-typescript2-npm-0.30.0-f985b92bb6-e3097bb25c.zip/node_modules/rollup-plugin-typescript2/",
           "packageDependencies": [
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["@rollup/pluginutils", "npm:4.1.1"],
             ["@types/rollup", null],
             ["@types/typescript", null],
@@ -17653,11 +17688,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:27.2.0"],
             ["rimraf", "npm:2.7.1"],
             ["rollup", "npm:2.55.0"],
-            ["rollup-plugin-commonjs", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:10.1.0"],
+            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],
             ["rollup-plugin-json", "npm:3.1.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
-            ["rollup-plugin-sourcemaps", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.4.2"],
-            ["rollup-plugin-typescript2", "virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#npm:0.30.0"],
+            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],
+            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],
             ["tslib", "npm:2.3.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
