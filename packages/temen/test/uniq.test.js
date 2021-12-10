@@ -13,6 +13,10 @@ describe('uniq', () => {
       'bar',
     ]);
   });
+  it('uniq 함수는 배열 내에서 중복되는 레퍼런스를 가진 원소를 제거한다', function () {
+    const o = { id: 1 };
+    assert.deepStrictEqual(uniq([o, o]), [{ id: 1 }]);
+  });
 });
 
 describe('uniqBy', () => {
