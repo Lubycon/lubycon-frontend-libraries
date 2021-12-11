@@ -7,13 +7,6 @@ const generateMap = (object) => {
   }
   return map;
 };
-const generateSet = (arr) => {
-  const set = new Set();
-  for (const i of arr) {
-    set.add(arr[i]);
-  }
-  return set;
-};
 
 describe('isEqual', () => {
   test('isEqual는 원시자료형을 비교할 수 있다', () => {
@@ -46,8 +39,8 @@ describe('isEqual', () => {
     expect(
       isEqual(generateMap({ name: 'evan', age: 31 }), generateMap({ name: 'evan', age: 12 }))
     ).toBe(false);
-    expect(isEqual(generateSet([1, 2, 3]), generateSet([1, 2, 3]))).toBe(true);
-    expect(isEqual(generateSet([1, 2, 3]), generateSet([1, 2]))).toBe(false);
+    expect(isEqual(new Set([1, 2, 3]), new Set([1, 2, 3]))).toBe(true);
+    expect(isEqual(new Set([1, 2, 3]), new Set([1, 2]))).toBe(false);
   });
   test('isEqual는 객체를 비교할 수 있다', () => {
     expect(isEqual({ name: 'evan' }, { name: 'evan' })).toBe(true);
