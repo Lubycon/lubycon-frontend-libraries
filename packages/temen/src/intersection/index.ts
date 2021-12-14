@@ -24,8 +24,8 @@ export function intersectionWith<T>(xs: T[], ys: T[], comparator: (x: T, y: T) =
  *
  * @example
  * ```ts
- * difference([1, 2, 3], [2, 3]); // [2, 3]
- * difference(
+ * intersection([1, 2, 3], [2, 3]); // [2, 3]
+ * intersection(
  *   [{ info: { id: 1 }, name: 'evan' }, { info: { id: 2 }, name: 'john' }],
  *   [{ info: { id: 2 }, name: 'john' }],
  * ); // [{ info: { id: 2 }, name: 'john' }]
