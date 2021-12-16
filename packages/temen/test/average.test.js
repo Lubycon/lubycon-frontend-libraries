@@ -30,13 +30,12 @@ describe('cumulativeAverage', () => {
 
 describe('createAverageFilter', () => {
   it('createAverageFilter 함수는 이전 평균 값을 토대로 새로운 평균 값을 계산하는 필터를 생성한다', function () {
-    const defaultData = [1, 2, 3];
-    const averageFilter = createAverageFilter(defaultData);
+    const averageFilter = createAverageFilter();
 
     let avg = 0;
-    let avg2 = average(defaultData);
+    let avg2 = 0;
 
-    for (let newValue = 4; newValue < 1001; newValue++) {
+    for (let newValue = 1; newValue < 11; newValue++) {
       avg = averageFilter(newValue);
       avg2 = cumulativeAverage(avg2, newValue, newValue);
     }
