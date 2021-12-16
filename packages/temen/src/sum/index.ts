@@ -22,5 +22,5 @@ export function sum(array: number[]) {
  * ```
  */
 export function sumBy<T>(array: T[], mapper: (item: T) => number) {
-  return sum(array.map((item) => mapper(item)));
+  return sum(array.map(mapper));
 }

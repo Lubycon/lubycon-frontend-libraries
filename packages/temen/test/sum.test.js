@@ -7,7 +7,7 @@ describe('sum', () => {
 });
 
 describe('sumBy', () => {
-  it('sumBy 함수는 인자로 받은 배열을 mapping한 후 원소의 값을 합산한다 ', function () {
+  it('sumBy 함수는 인자로 받은 배열을 mapping한 후 원소의 값을 합산한다', function () {
     expect(
       sumBy([{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }], (item) => item.value)
     ).toBe(10);
