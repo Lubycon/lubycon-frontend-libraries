@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.15.0...temen@1.16.0) (2021-12-16)
+
+
+### Features
+
+* **temen:** sum, max, min 함수 추가 ([#113](https://github.com/Lubycon/lubycon-frontend-libraries/issues/113)) ([f1f7340](https://github.com/Lubycon/lubycon-frontend-libraries/commit/f1f7340ff5fa58cfe5d8fef44056c03f242d159e))
+
+
+
+
+
 # [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.14.0...temen@1.15.0) (2021-12-16)
 
 
