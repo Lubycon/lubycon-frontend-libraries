@@ -7,7 +7,7 @@ describe('max', () => {
   });
 });
 
-describe('sumBy', () => {
+describe('maxBy', () => {
   it('maxBy 함수는 인자로 받은 배열을 mapping한 후 최대 값을 가진 원소를 반환한다', function () {
     assert.deepStrictEqual(
       maxBy([{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }], (item) => item.value),
