@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.2.13...@lubycon/mattermost@1.2.15) (2021-12-16)
+
+
+### Bug Fixes
+
+* 버전 꼬인 거 픽스 ([cc0489a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cc0489a1ebd71cf304a2bf5e82d337e71ce7c3d0))
+
+
+
+
+
 ## [1.2.13](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/mattermost@1.2.12...@lubycon/mattermost@1.2.13) (2021-12-05)
 
 **Note:** Version bump only for package @lubycon/mattermost
