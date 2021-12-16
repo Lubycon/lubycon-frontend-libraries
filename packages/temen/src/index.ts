@@ -40,3 +40,4 @@ export { default as cloneDeepWith } from './cloneDeepWith';
 export { default as zip } from './zip';
 export { default as unzip } from './unzip';
 export * from './uniq';
+export * from './intersection';
