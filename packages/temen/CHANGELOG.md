@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.14.0...temen@1.15.0) (2021-12-16)
+
+
+### Features
+
+* **temen:** intersection, intersectionWith 추가 ([#112](https://github.com/Lubycon/lubycon-frontend-libraries/issues/112)) ([1037017](https://github.com/Lubycon/lubycon-frontend-libraries/commit/10370176bdfe7e44b240768d90adec7818be935b))
+
+
+
+
+
 # [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.12.0...temen@1.14.0) (2021-12-16)
 
 
