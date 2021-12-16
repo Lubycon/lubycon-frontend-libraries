@@ -15,7 +15,7 @@ import { isEqual } from '../isEqual';
  */
 export function intersectionWith<T>(xs: T[], ys: T[], comparator: (x: T, y: T) => boolean): T[] {
   return xs.filter((x) => {
-    return ys.findIndex((y) => comparator(x, y)) !== -1;
+    return ys.some((y) => comparator(x, y));
   });
 }
 
