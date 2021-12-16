@@ -2,7 +2,7 @@
   "name": "@lubycon/icons",
   "description": "루비콘에서 사용하는 Ionicons 아이콘 모음",
   "sideEffects": false,
-  "version": "1.2.18",
+  "version": "1.2.19",
   "keywords": [
     "lubycon",
     "icons"
