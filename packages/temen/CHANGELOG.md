@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.12.0...temen@1.14.0) (2021-12-16)
+
+
+### Bug Fixes
+
+* 버전 꼬인 거 픽스 ([cc0489a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cc0489a1ebd71cf304a2bf5e82d337e71ce7c3d0))
+
+
+### Features
+
+* **temen:** conformsTo 추가 ([#109](https://github.com/Lubycon/lubycon-frontend-libraries/issues/109)) ([d50de1d](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d50de1d55b090db01e2ff8228b019aa5854061c1))
+* **temen:** uniq, uniqBy 함수 추가 ([#111](https://github.com/Lubycon/lubycon-frontend-libraries/issues/111)) ([be5a4f5](https://github.com/Lubycon/lubycon-frontend-libraries/commit/be5a4f57813bc17160e2a60f22d9eb17ef805bc7))
+
+
+
+
+
 # [1.12.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.11.0...temen@1.12.0) (2021-12-05)
 
 

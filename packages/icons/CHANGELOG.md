@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.13...@lubycon/icons@1.2.15) (2021-12-16)
+
+
+### Bug Fixes
+
+* **icons:** 버전 꼬인거 픽스 ([c5229bc](https://github.com/Lubycon/lubycon-frontend-libraries/commit/c5229bc449e938359da092810af91aa203de68cd))
+
+
+
+
+
 ## [1.2.13](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.12...@lubycon/icons@1.2.13) (2021-12-05)
 
 **Note:** Version bump only for package @lubycon/icons

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.10](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.8...@lubycon/logger@1.10.10) (2021-12-16)
+
+
+### Bug Fixes
+
+* 버전 꼬인 거 픽스 ([cc0489a](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cc0489a1ebd71cf304a2bf5e82d337e71ce7c3d0))
+
+
+
+
+
 ## [1.10.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.7...@lubycon/logger@1.10.8) (2021-12-05)
 
 **Note:** Version bump only for package @lubycon/logger
