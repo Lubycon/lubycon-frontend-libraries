@@ -15,9 +15,9 @@ export type Nullable<T> = {
 /**
  * Promise<T> 타입을 T 타입으로 변환합니다
  */
-export type UnwrapPromise<T> = T extends PromiseLike<infer U> ? U : T;
+export type UnwrapPromise<T> = T extends PromiseLike<infer U> ? UnwrapPromise<U> : T;
 
 /**
  * Array<T> 타입을 T 타입으로 변환합니다
  */
-export type UnwrapArray<T> = T extends Array<infer U> ? U : T;
+export type UnwrapArray<T> = T extends Array<infer U> ? UnwrapArray<U> : T;
