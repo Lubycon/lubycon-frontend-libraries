@@ -43,3 +43,4 @@ export * from './uniq';
 export * from './intersection';
 export * from './sum';
 export * from './max';
+export * from './min';
