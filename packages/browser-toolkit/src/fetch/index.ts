@@ -1,16 +1,17 @@
 import fetch from 'cross-fetch';
+import { LubyconResponse } from 'temen/dist/types/fetch/handlers';
 import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
 export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
   return {
-    request: (path: string) => doRequest(`${baseUrl}/${path}`, options),
-    get: (path: string) => doGet(`${baseUrl}/${path}`, options),
-    post: (path: string, data: any) => doPost(`${baseUrl}/${path}`, data, options),
-    patch: (path: string, data: any) => doPatch(`${baseUrl}/${path}`, data, options),
-    put: (path: string, data: any) => doPut(`${baseUrl}/${path}`, data, options),
-    delete: (path: string) => doDelete(`${baseUrl}/${path}`, options),
+    request: <T>(path: string) => doRequest<T>(`${baseUrl}/${path}`, options),
+    get: <T>(path: string) => doGet<T>(`${baseUrl}/${path}`, options),
+    post: <T>(path: string, data: any) => doPost<T>(`${baseUrl}/${path}`, data, options),
+    patch: <T>(path: string, data: any) => doPatch<T>(`${baseUrl}/${path}`, data, options),
+    put: <T>(path: string, data: any) => doPut<T>(`${baseUrl}/${path}`, data, options),
+    delete: <T>(path: string) => doDelete<T>(`${baseUrl}/${path}`, options),
   };
 }
 
@@ -32,7 +33,7 @@ export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
 export function doRequest<T>(url: string, options?: RequestOptions) {
   const controller = new AbortController();
 
-  const response = new Promise((resolve, reject) => {
+  const response = new Promise<LubyconResponse<T>>((resolve, reject) => {
     fetch(url, requestHandler({ ...options, signal: controller.signal }))
       .then((result) => resolve(responseHandler<T>(result)))
       .catch((err) => reject(err));
