@@ -32,3 +32,8 @@ export * from './max';
 export * from './min';
 export * from './average';
 export * from './drop';
+export { default as isArguments } from './isArguments';
+export { default as isArrayBuffer } from './isArrayBuffer';
+export { default as isArrayLike } from './isArrayLike';
+export { default as isArrayLikeObject } from './isArrayLikeObject';
+export { default as isObjectLike } from './isObjectLike';
