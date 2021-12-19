@@ -1,6 +1,5 @@
 import fetch from 'cross-fetch';
-import { LubyconResponse } from 'temen/dist/types/fetch/handlers';
-import { requestHandler, RequestOptions, responseHandler } from './handlers';
+import { LubyconResponse, requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
