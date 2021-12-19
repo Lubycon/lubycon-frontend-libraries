@@ -4,7 +4,7 @@ import {
   removeLocalStorageItem,
   LocalStorageEventPayload,
   createLocalStorageChangeEvent,
-} from 'temen';
+} from 'browser-toolkit';
 
 import { useEffect, useState, useCallback } from 'react';
 

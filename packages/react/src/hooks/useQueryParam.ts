@@ -1,4 +1,4 @@
-import { findQueryParamInClient } from 'temen';
+import { findQueryParamInClient } from 'browser-toolkit';
 import { useState, useEffect } from 'react';
 
 /**
