@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.0.7...browser-toolkit@1.0.8) (2021-12-19)
+
+
+### Bug Fixes
+
+* **browser-toolkit:** temen의 dist 디렉토리를 참조하고 있는 부분 제거 ([#119](https://github.com/Lubycon/lubycon-frontend-libraries/issues/119)) ([19d9c51](https://github.com/Lubycon/lubycon-frontend-libraries/commit/19d9c51c5cfbae29d23b8b43059f34ff6935968c))
+
+
+
+
+
 ## [1.0.7](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.0.6...browser-toolkit@1.0.7) (2021-12-19)
 
 **Note:** Version bump only for package browser-toolkit
