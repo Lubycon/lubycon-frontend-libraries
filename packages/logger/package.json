@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "amplitude-js": "^8.3.1",
+    "browser-toolkit": "workspace:packages/browser-toolkit",
     "firebase": "^8.8.1",
     "temen": "workspace:packages/temen"
   }

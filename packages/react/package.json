@@ -44,6 +44,7 @@
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",
     "@lubycon/logger": "workspace:packages/logger",
+    "browser-toolkit": "workspace:packages/browser-toolkit",
     "temen": "workspace:packages/temen"
   }
 }
