@@ -1,5 +1,6 @@
 import { LubyconLoggerConfig, LubyconLoggerConfigProps } from '../../models/lubyconLogger';
-import { generateUUID, createFetchInstance, getCookie, setCookie, isNil, isString } from 'temen';
+import { generateUUID, isNil, isString } from 'temen';
+import { createFetchInstance, getCookie, setCookie } from 'browser-toolkit';
 
 interface LubyconLoggerEvent {
   view: string;

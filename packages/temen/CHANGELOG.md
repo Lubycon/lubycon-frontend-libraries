@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.19.0...temen@1.19.1) (2021-12-19)
+
+
+### Bug Fixes
+
+* **temen:** cookie test 제거 ([#120](https://github.com/Lubycon/lubycon-frontend-libraries/issues/120)) ([d61bf42](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d61bf42a5916977f87ae90e257b6318120c7494e))
+
+
+
+
+
+# [1.19.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.18.0...temen@1.19.0) (2021-12-19)
+
+
+### Features
+
+* **temen:** drop, dropRight 함수 추가 ([#118](https://github.com/Lubycon/lubycon-frontend-libraries/issues/118)) ([8a88319](https://github.com/Lubycon/lubycon-frontend-libraries/commit/8a88319720eeb8de94ed6672fc10d287d372b63b))
+
+
+
+
+
 # [1.18.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.17.0...temen@1.18.0) (2021-12-16)
 
 
