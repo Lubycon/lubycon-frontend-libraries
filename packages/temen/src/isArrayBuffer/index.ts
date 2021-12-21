@@ -14,7 +14,7 @@
  * ```
  */
 
-function isArrayBuffer(value: any): boolean {
+function isArrayBuffer(value: any) value is ArrayBuffer {
   return value !== null && typeof value === 'object' && value.constructor === ArrayBuffer;
 }
 
