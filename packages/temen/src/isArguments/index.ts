@@ -14,8 +14,10 @@
  * ```
  */
 
+import { getType } from '../_internal/getType';
+
 function isArguments(value: any): boolean {
-  return toString.call(value) === '[object Arguments]';
+  return getType(value) === '[object Arguments]';
 }
 
 export default isArguments;
