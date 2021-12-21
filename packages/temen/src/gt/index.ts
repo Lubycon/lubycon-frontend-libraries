@@ -19,7 +19,7 @@
  * ```
  */
 
-function gt(value: number, other: number): boolean {
+function gt(value: number, other: number) {
   return value > other;
 }
 export default gt;
