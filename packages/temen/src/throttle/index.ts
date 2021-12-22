@@ -8,15 +8,15 @@
  *    return 'callback'
  *  }
  *
- *  const throttle(callback, 300);
+ *  throttle(callback, 300);
  * ```
  */
 
 function throttle<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
-  let isThrottle: boolean;
+  let isThrottle = false;
 
   return function throttledCallback(...args: T) {
-    if (!isThrottle) {
+    if (isThrottle === false) {
       callback(...args);
       isThrottle = true;
       setTimeout(() => {
