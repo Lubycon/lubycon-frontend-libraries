@@ -10,7 +10,49 @@ import {
   isRegExp,
 } from '../src/is/index';
 
+import { isArguments, isArrayBuffer, isArrayLike, isObjectLike } from '../src';
+
 describe('is', () => {
+  test('isArguments 함수는 반환값이 arguments이면 true를 반환한다', () => {
+    expect(isArguments(arguments)).toBe(true);
+    expect(isArguments([])).toBe(false);
+    expect(isArguments({})).toBe(false);
+    expect(isArguments(1)).toBe(false);
+    expect(isArguments('')).toBe(false);
+    expect(isArguments(null)).toBe(false);
+    expect(isArguments(undefined)).toBe(false);
+  });
+
+  test('isArrayBuffer 함수는 ArrayBuffer 객체를 인자로 받으면 true, 아니면 false를 반환한다.', () => {
+    expect(isArrayBuffer(new ArrayBuffer(1))).toBe(true);
+    expect(isArrayBuffer([])).toBe(false);
+    expect(isArrayBuffer({})).toBe(false);
+    expect(isArrayBuffer(1)).toBe(false);
+    expect(isArrayBuffer('')).toBe(false);
+    expect(isArrayBuffer(null)).toBe(false);
+    expect(isArrayBuffer(undefined)).toBe(false);
+  });
+
+  test('isArrayLike 함수는 인자로 받은 값이 유사 배열이면 true, 아니면 false를 반환한다.', () => {
+    expect(isArrayLike([])).toBe(true);
+    expect(isArrayLike({})).toBe(false);
+    expect(isArrayLike(1)).toBe(false);
+    expect(isArrayLike('')).toBe(true);
+    expect(isArrayLike(null)).toBe(false);
+    expect(isArrayLike(undefined)).toBe(false);
+    expect(isArrayLike(Function)).toBe(false);
+  });
+
+  test('isObjectLike 함수는 인자로 받은 값이 object-like 이면 true, 아니면 false를 반환한다.', () => {
+    expect(isObjectLike({})).toBe(true);
+    expect(isObjectLike([])).toBe(true);
+    expect(isObjectLike(1)).toBe(false);
+    expect(isObjectLike('')).toBe(false);
+    expect(isObjectLike(null)).toBe(false);
+    expect(isObjectLike(undefined)).toBe(false);
+    expect(isObjectLike(Function)).toBe(false);
+  });
+
   test('isString 함수는 string 타입을 인자로 받으면 true, 아니면 false를 반환한다', () => {
     expect(isString('test')).toBe(true);
     expect(isString(1000)).toBe(false);
