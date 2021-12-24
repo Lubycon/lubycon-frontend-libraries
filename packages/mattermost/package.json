@@ -2,7 +2,7 @@
   "name": "@lubycon/mattermost",
   "description": "루비콘 매터모스트 SDK",
   "sideEffects": false,
-  "version": "1.2.23",
+  "version": "1.2.24",
   "keywords": [
     "lubycon",
     "mattermost"
