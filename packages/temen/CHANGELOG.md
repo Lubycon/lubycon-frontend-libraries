@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.20.0...temen@1.21.0) (2021-12-24)
+
+
+### Features
+
+* **temen:** throttle 함수 추가 ([ceb6cbc](https://github.com/Lubycon/lubycon-frontend-libraries/commit/ceb6cbc1c60535bcd8675c302d07a2bbad8ab02d))
+
+
+
+
+
+# [1.20.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.19.1...temen@1.20.0) (2021-12-22)
+
+
+### Features
+
+* **temen:** is functions 추가 ([#122](https://github.com/Lubycon/lubycon-frontend-libraries/issues/122)) ([a1a8a74](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a1a8a74c5efb2c6ed098f044b1c6353716ee6bc4))
+
+
+
+
+
 ## [1.19.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.19.0...temen@1.19.1) (2021-12-19)
 
 

@@ -24,7 +24,8 @@ export type JSTypes =
   | '[object RegExp]'
   | '[object Date]'
   | '[object Null]'
-  | '[object Undefined]';
+  | '[object Undefined]'
+  | '[object Arguments]';
 
 export type TypedArray =
   | Float32Array
