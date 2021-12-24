@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.19.1...temen@1.20.0) (2021-12-22)
+
+
+### Features
+
+* **temen:** is functions 추가 ([#122](https://github.com/Lubycon/lubycon-frontend-libraries/issues/122)) ([a1a8a74](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a1a8a74c5efb2c6ed098f044b1c6353716ee6bc4))
+
+
+
+
+
 ## [1.19.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.19.0...temen@1.19.1) (2021-12-19)
 
 
