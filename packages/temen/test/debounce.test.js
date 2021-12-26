@@ -3,7 +3,7 @@ import debounce from '../src/debounce';
 describe('debounce', () => {
   jest.useFakeTimers();
 
-  test('두 번째 인자의 delay 동안 호출된 함수중 마지막 함수만 호출한다.', function () {
+  test('debounce는 정해진 delay 동안 중복되는 호출을 방지할 수 있다.', function () {
     const fn = jest.fn();
 
     const debounced = debounce(() => {
@@ -19,7 +19,7 @@ describe('debounce', () => {
     expect(fn).toBeCalledTimes(1);
   });
 
-  test('두 번째 인자의 delay 시간 이후 함수가 호출된다.', function () {
+  test('delay 시간 동안 호출되지 않으며, delay 시간이 지난 후에 호출한다.', function () {
     const fn = jest.fn();
     const debounced = debounce(() => fn(), 1000);
 
