@@ -40,3 +40,4 @@ export { default as isArrayLike } from './isArrayLike';
 export { default as isArrayLikeObject } from './isArrayLikeObject';
 export { default as isObjectLike } from './isObjectLike';
 export * from './throttle';
+export * from './groupBy';
