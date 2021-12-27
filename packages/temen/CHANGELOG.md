@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.22.0...temen@1.23.0) (2021-12-27)
+
+
+### Features
+
+* **temen:** debounce 함수 추가 ([#124](https://github.com/Lubycon/lubycon-frontend-libraries/issues/124)) ([390a20f](https://github.com/Lubycon/lubycon-frontend-libraries/commit/390a20f4735e1bf5da2f5b8eb285d54e4bfc0fda))
+
+
+
+
+
 # [1.22.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.21.0...temen@1.22.0) (2021-12-24)
 
 
