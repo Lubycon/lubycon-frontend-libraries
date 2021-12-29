@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.23.0...temen@1.24.0) (2021-12-29)
+
+
+### Features
+
+* **temen:** groupBy 함수 추가 ([#125](https://github.com/Lubycon/lubycon-frontend-libraries/issues/125)) ([aa18b53](https://github.com/Lubycon/lubycon-frontend-libraries/commit/aa18b53bb5792faa961316d1a48c22da398a98b7))
+
+
+
+
+
 # [1.23.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.22.0...temen@1.23.0) (2021-12-27)
 
 
