@@ -42,3 +42,4 @@ export { default as isObjectLike } from './isObjectLike';
 export * from './throttle';
 export * from './groupBy';
 export * from './debounce';
+export * from './memoize';
