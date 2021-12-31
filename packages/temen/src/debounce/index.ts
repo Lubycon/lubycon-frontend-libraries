@@ -12,7 +12,7 @@
  * ```
  */
 function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
-  let timeout = 0;
+  let timeout: NodeJS.Timeout;
   return function debouncedCallback(...args: T) {
     clearTimeout(timeout);
 
