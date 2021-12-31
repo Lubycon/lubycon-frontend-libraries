@@ -13,6 +13,7 @@ import { isEqual } from '../isEqual';
  * @returns {boolean} Returns value가 other와 동일한지 여부
  * @example
  *
+```ts
  * function isGreeting(value) {
  *   return /^h(?:i|ello)$/.test(value)
  * }
