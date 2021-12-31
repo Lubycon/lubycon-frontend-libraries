@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.24.0...temen@1.25.0) (2021-12-31)
+
+
+### Features
+
+* **temen:** memoize 함수 추가 ([#127](https://github.com/Lubycon/lubycon-frontend-libraries/issues/127)) ([449c6a7](https://github.com/Lubycon/lubycon-frontend-libraries/commit/449c6a7037fdff720075c7e5a3f082f1bb861285))
+
+
+
+
+
 # [1.24.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.23.0...temen@1.24.0) (2021-12-29)
 
 
