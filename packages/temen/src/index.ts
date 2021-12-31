@@ -43,3 +43,4 @@ export * from './throttle';
 export * from './groupBy';
 export * from './debounce';
 export { default as isBuffer } from './isBuffer';
+export { default as memoize } from './memoize';
