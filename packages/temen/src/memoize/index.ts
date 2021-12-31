@@ -1,3 +1,19 @@
+/**
+ * 인자로 주어진 함수를 메모아이징합니다. resolver 함수를 인자를 넘겨 메모아이징을 수행할 기준을 정할 수 있습니다.
+ *
+ * @example
+ * ```ts
+ * const foo = { a: 1, b: 2 };
+ * const func = memoize((value) => Object.values(value));
+ *
+ * cosnole.log(func(foo)); // [1, 2]
+ * foo.a = 2;
+ * console.log(func(foo)); // [1, 2]
+ *
+ * func.cache.delete(foo);
+ * console.log(func(foo)); // [2, 2]
+ * ```
+ */
 function memoize<T extends (...args: unknown[]) => unknown>(
   func: T,
   resolver?: (...args: Parameters<T>) => any
