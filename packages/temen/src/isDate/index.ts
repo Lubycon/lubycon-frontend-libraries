@@ -10,7 +10,7 @@ import { getType } from '../_internal/getType';
  * isDate(new Date)
  * // => true
  *
- * isDate('Mon April 23 2012')
+ * isDate('2021-12-31')
  * // => false
  * ```
  */
