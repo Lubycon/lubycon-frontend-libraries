@@ -151,7 +151,6 @@ describe('is', () => {
     expect(isError(new EvalError())).toBe(true);
     expect(isError(Error)).toBe(false);
   });
-
   test(`isElement 함수는 인자로 받은 값이 Element 객체이면 true 아니면 false를 반환한다.`, () => {
     expect(isElement(document.createElement('div'))).toBe(true);
   });
