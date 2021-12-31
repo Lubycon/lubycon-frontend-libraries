@@ -10,7 +10,7 @@ import {
   isRegExp,
 } from '../src/is/index';
 
-import { isArguments, isArrayBuffer, isArrayLike, isObjectLike } from '../src';
+import { isArguments, isArrayBuffer, isArrayLike, isObjectLike, isBuffer } from '../src';
 
 describe('is', () => {
   test('isArguments 함수는 반환값이 arguments이면 true를 반환한다', () => {
@@ -112,5 +112,13 @@ describe('is', () => {
     expect(isRegExp(/123/)).toBe(true);
     expect(isRegExp('')).toBe(false);
     expect(isRegExp(1)).toBe(false);
+  });
+  test(`isBuffer 함수는 인자로 받은 값이 Buffer 객체이면 true, 아니면 false를 반환한다`, () => {
+    expect(isBuffer(Buffer.from('123'))).toBe(true);
+    expect(isBuffer(Buffer.alloc(10))).toBe(true);
+    expect(isBuffer(Buffer.allocUnsafe(10))).toBe(true);
+    expect(isBuffer(Buffer.allocUnsafeSlow(10))).toBe(true);
+    expect(isBuffer('')).toBe(false);
+    expect(isBuffer(1)).toBe(false);
   });
 });
