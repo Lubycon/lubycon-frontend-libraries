@@ -1,5 +1,3 @@
-type Timeout = Window extends undefined ? number : NodeJS.Timeout;
-
 /**
  * throttle 입니다.
  * @param {Function} callback - 마지막 debounce 호출 이후 delay 이후 호출될 함수.
@@ -13,8 +11,10 @@ type Timeout = Window extends undefined ? number : NodeJS.Timeout;
  *  const debounce(callback, 300);
  * ```
  */
+
 function debounce<T extends unknown[]>(callback: (...args: T) => void, delay: number) {
-  let timeout: Timeout;
+  let timeout: NodeJS.Timeout;
+
   return function debouncedCallback(...args: T) {
     clearTimeout(timeout);
 
