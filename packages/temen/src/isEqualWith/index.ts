@@ -1,5 +1,3 @@
-import { isEqual } from '../isEqual';
-
 /**
  *
  * 이 메서드는 `isEqual`와 동일하지만 `customizer`를 전달합니다.
@@ -29,17 +27,10 @@ import { isEqual } from '../isEqual';
  *
  * isEqualWith(array, other, customizer)
  * // => true
+ * ```
  */
 
-function isEqualWith<V, O>(
-  value: V,
-  other: O,
-  customizer: (value: V, other: O, key?: any, object?: any, otherObject?: any, stack?: any) => any
-): boolean {
-  if (!customizer) {
-    return isEqual(value, other);
-  }
-
+function isEqualWith<V, O>(value: V, other: O, customizer: (value: V, other: O) => any): boolean {
   return customizer(value, other);
 }
 
