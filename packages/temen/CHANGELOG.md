@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.25.0...temen@1.26.0) (2022-01-02)
+
+
+### Features
+
+* **temen:** isDate, isEqualWith, isFunction, isError, isElement 추가 ([#128](https://github.com/Lubycon/lubycon-frontend-libraries/issues/128)) ([6f57309](https://github.com/Lubycon/lubycon-frontend-libraries/commit/6f573097769b2fae637a989acafad3eeadca10b7))
+
+
+
+
+
 # [1.25.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.24.0...temen@1.25.0) (2021-12-31)
 
 
