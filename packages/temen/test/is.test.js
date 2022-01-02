@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import {
   isBoolean,
   isNumber,
@@ -10,7 +14,17 @@ import {
   isRegExp,
 } from '../src/is/index';
 
-import { isArguments, isArrayBuffer, isArrayLike, isObjectLike } from '../src';
+import {
+  isArguments,
+  isArrayBuffer,
+  isArrayLike,
+  isObjectLike,
+  isDate,
+  isEqualWith,
+  isFunction,
+  isError,
+  isElement,
+} from '../src';
 
 describe('is', () => {
   test('isArguments 함수는 반환값이 arguments이면 true를 반환한다', () => {
@@ -112,5 +126,32 @@ describe('is', () => {
     expect(isRegExp(/123/)).toBe(true);
     expect(isRegExp('')).toBe(false);
     expect(isRegExp(1)).toBe(false);
+  });
+  test(`isDate 함수는 인자로 받은 값이 Date 객체이면 true, 아니면 false를 반환한다`, () => {
+    expect(isDate(new Date())).toBe(true);
+    expect(isDate(new Date('random string'))).toBe(true);
+    expect(isDate('2021-12-31')).toBe(false);
+  });
+  test(`isEqualWith 함수는 인자로 받은 값을 cutomizer로 비교 후 true, 아니면 false를 반환한다`, () => {
+    expect(isEqualWith(1, 1, (a, b) => a === b)).toBe(true);
+    expect(isEqualWith(1, 2, (a, b) => a + 1 === b)).toBe(true);
+    expect(isEqualWith(1, 2, (a, b) => a === b)).toBe(false);
+  });
+  test(`isFunction 함수는 인자로 받은 값이 function 이면 true, 아니면 false를 반환한다.`, () => {
+    expect(isFunction(() => {})).toBe(true);
+    expect(isFunction(/abc/)).toBe(false);
+  });
+  test(`isError 함수는 인자로 받은 값이 Error 객체 이면 true, 아니면 false를 반환한다.`, () => {
+    expect(isError(new Error())).toBe(true);
+    expect(isError(new TypeError())).toBe(true);
+    expect(isError(new SyntaxError())).toBe(true);
+    expect(isError(new ReferenceError())).toBe(true);
+    expect(isError(new RangeError())).toBe(true);
+    expect(isError(new URIError())).toBe(true);
+    expect(isError(new EvalError())).toBe(true);
+    expect(isError(Error)).toBe(false);
+  });
+  test(`isElement 함수는 인자로 받은 값이 Element 객체이면 true 아니면 false를 반환한다.`, () => {
+    expect(isElement(document.createElement('div'))).toBe(true);
   });
 });
