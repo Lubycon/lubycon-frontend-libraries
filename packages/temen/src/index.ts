@@ -42,6 +42,7 @@ export { default as isObjectLike } from './isObjectLike';
 export * from './throttle';
 export * from './groupBy';
 export * from './debounce';
+export { default as isBuffer } from './isBuffer';
 export { default as isDate } from './isDate';
 export { default as isEqualWith } from './isEqualWith';
 export { default as isFunction } from './isFunction';
