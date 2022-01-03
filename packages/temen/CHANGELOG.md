@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.26.0...temen@1.27.0) (2022-01-03)
+
+
+### Features
+
+* **teman:** isBuffer  추가 ([#126](https://github.com/Lubycon/lubycon-frontend-libraries/issues/126)) ([d02d12d](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d02d12d80e97d0b9a56c129fe770eaa5ba6d3698))
+
+
+
+
+
 # [1.26.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.25.0...temen@1.26.0) (2022-01-02)
 
 
