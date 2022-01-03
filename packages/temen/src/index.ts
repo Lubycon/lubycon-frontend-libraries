@@ -48,3 +48,4 @@ export { default as isFunction } from './isFunction';
 export { default as isError } from './isError';
 export { default as isElement } from './isElement';
 export { default as memoize } from './memoize';
+export * from './flatten';
