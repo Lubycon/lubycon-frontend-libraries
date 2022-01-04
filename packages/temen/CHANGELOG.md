@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.27.0...temen@1.28.0) (2022-01-04)
+
+
+### Features
+
+* **temen:** flatten 함수 추가 ([#129](https://github.com/Lubycon/lubycon-frontend-libraries/issues/129)) ([bfad069](https://github.com/Lubycon/lubycon-frontend-libraries/commit/bfad06972727a919a3d8a25f1e0381d096a52e09))
+
+
+
+
+
 # [1.27.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.26.0...temen@1.27.0) (2022-01-03)
 
 
