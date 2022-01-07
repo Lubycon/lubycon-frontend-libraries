@@ -1,6 +1,6 @@
 import { AmplitudeClient, Config } from 'amplitude-js';
 
-interface amplitudeConfig {
+interface AmplitudeConfig {
   apiKey: string;
   userId?: string;
   options?: Config;
@@ -13,7 +13,7 @@ export const initializeAmplitude = ({
   apiKey,
   userId = 'unknown',
   options = {},
-}: amplitudeConfig): Promise<AmplitudeClient | null> => {
+}: AmplitudeConfig): Promise<AmplitudeClient | null> => {
   return new Promise(async (resolve) => {
     if (initialized) {
       resolve(amplitudeClient);
