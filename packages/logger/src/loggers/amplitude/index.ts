@@ -1,6 +1,6 @@
 import { AmplitudeClient, Config } from 'amplitude-js';
 
-interface AmplitudeConfig {
+export interface AmplitudeConfig {
   apiKey: string;
   userId?: string;
   options?: Config;
