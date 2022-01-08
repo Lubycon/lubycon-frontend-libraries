@@ -50,3 +50,7 @@ export { default as isError } from './isError';
 export { default as isElement } from './isElement';
 export { default as memoize } from './memoize';
 export * from './flatten';
+export * from './parscalCase';
+export * from './camelCase';
+export * from './trimCharacters';
+export * from './convertFirstLetter';
