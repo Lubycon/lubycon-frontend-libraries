@@ -1,44 +1,54 @@
 import fetch from 'cross-fetch';
-import { LubyconResponse, requestHandler, RequestOptions, responseHandler } from './handlers';
+import { requestHandler, RequestOptions, responseHandler } from './handlers';
 
 export type WithoutRequestBodyOptions = Omit<RequestOptions, 'body'>;
 
 export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
   return {
-    request: <T>(path: string) => doRequest<T>(`${baseUrl}/${path}`, options),
-    get: <T>(path: string) => doGet<T>(`${baseUrl}/${path}`, options),
-    post: <T>(path: string, data: any) => doPost<T>(`${baseUrl}/${path}`, data, options),
-    patch: <T>(path: string, data: any) => doPatch<T>(`${baseUrl}/${path}`, data, options),
-    put: <T>(path: string, data: any) => doPut<T>(`${baseUrl}/${path}`, data, options),
-    delete: <T>(path: string) => doDelete<T>(`${baseUrl}/${path}`, options),
+    request: <T>(path: string, additionalOptions?: RequestOptions) =>
+      doRequest<T>(`${baseUrl}${path}`, { ...options, ...additionalOptions }),
+    get: <T>(path: string, additionalOptions?: RequestOptions) =>
+      doGet<T>(`${baseUrl}${path}`, { ...options, ...additionalOptions }),
+    post: <T>(path: string, data: any, additionalOptions?: RequestOptions) =>
+      doPost<T>(`${baseUrl}${path}`, data, { ...options, ...additionalOptions }),
+    patch: <T>(path: string, data: any, additionalOptions?: RequestOptions) =>
+      doPatch<T>(`${baseUrl}${path}`, data, { ...options, ...additionalOptions }),
+    put: <T>(path: string, data: any, additionalOptions?: RequestOptions) =>
+      doPut<T>(`${baseUrl}${path}`, data, { ...options, ...additionalOptions }),
+    delete: <T>(path: string, additionalOptions?: RequestOptions) =>
+      doDelete<T>(`${baseUrl}${path}`, { ...options, ...additionalOptions }),
   };
 }
 
 /**
- * 모든 요청은 response와 함께 요청을 abort 시킬 수 있는 abort 메서드를 반환합니다
+ * 모든 요청은 header, status, data를 담은 response를 반환합니다.
  *
  * @example
  * ```ts
  * import { doRequest } from 'browser-toolkit';
  *
- * const URL = 'https://pokeapi.co/api/v2/pokemon'
- * const { response, abort: abortFetchPokemon } = doRequest(URL);
+ * const correctFetch = async () => {
+ *  const URL = 'https://pokeapi.co/api/v2/pokemon'
+ *  const response = await doRequest(URL);
+ * };
  *
- * response.then((data) => console.log(data));      // response는 pending 상태인 Promise를 반환합니다
- * abortFetchPokemon();     // abort 메서드를 통해 pending 상태인 fetch 요청을 취소시킬 수 있습니다
+ * const wrongFetch = async () => {
+ *  const WRONG_URL = 'https://pokeapi.co/api/v2/pokekemon';
+ *  const response = await doRequest(WRONG_URL);
+ *  console.log(response.data)   // 요청이 실패한 경우 response의 data 프로퍼티는 null을 반환합니다
+ * };
+ *
+ * const abortController = new AbortController();
+ * doRequest(URL, { signal: abortController.signal }).then((response) => {
+ *  console.log(response);
+ * });
+ * abortController.abort();   // abort 메서드를 통해 pending 상태인 fetch 요청을 취소시킬 수 있습니다
  * ```
  */
 
-export function doRequest<T>(url: string, options?: RequestOptions) {
-  const controller = new AbortController();
-
-  const response = new Promise<LubyconResponse<T>>((resolve, reject) => {
-    fetch(url, requestHandler({ ...options, signal: controller.signal }))
-      .then((result) => resolve(responseHandler<T>(result)))
-      .catch((err) => reject(err));
-  });
-
-  return { response, abort: () => controller.abort() };
+export async function doRequest<T>(url: string, options?: RequestOptions) {
+  const response = await fetch(url, requestHandler({ ...options }));
+  return responseHandler<T>(response);
 }
 
 export function doGet<T>(url: string, options?: WithoutRequestBodyOptions) {
