@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.25...@lubycon/logger@1.11.0) (2022-01-09)
+
+
+### Features
+
+* **logger:** amplitude config 변경 ([#131](https://github.com/Lubycon/lubycon-frontend-libraries/issues/131)) ([a86bfba](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a86bfbaea288a632424edd6f867837298c343253))
+
+
+
+
+
 ## [1.10.25](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.10.24...@lubycon/logger@1.10.25) (2022-01-04)
 
 **Note:** Version bump only for package @lubycon/logger
