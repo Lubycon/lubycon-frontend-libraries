@@ -1,4 +1,4 @@
-import { AmplitudeConfig } from '../loggers/amplitude';
+import { AmplitudeConfig } from './amplitude';
 import { FirebaseConfig } from './firebase';
 import { LubyconLoggerConfig } from './lubyconLogger';
 
