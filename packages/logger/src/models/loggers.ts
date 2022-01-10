@@ -1,9 +1,10 @@
+import { AmplitudeConfig } from './amplitude';
 import { FirebaseConfig } from './firebase';
 import { LubyconLoggerConfig } from './lubyconLogger';
 
 export interface SupportedServices {
   firebase?: FirebaseConfig;
-  amplitude?: string;
+  amplitude?: AmplitudeConfig;
   lubycon?: LubyconLoggerConfig;
 }
 

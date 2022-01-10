@@ -1,10 +1,6 @@
-import { AmplitudeClient, Config } from 'amplitude-js';
+import { AmplitudeClient } from 'amplitude-js';
 
-export interface AmplitudeConfig {
-  apiKey: string;
-  userId?: string;
-  options?: Config;
-}
+import { AmplitudeConfig } from '../../models/amplitude';
 
 let amplitudeClient: AmplitudeClient | null = null;
 let initialized = false;

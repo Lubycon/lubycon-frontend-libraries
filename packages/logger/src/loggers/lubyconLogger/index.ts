@@ -41,7 +41,7 @@ class LubyconLogger {
       }
       LubyconLogger.logHost
         .post('/v1/collect/', { ...LubyconLogger.lubyconLoggerConfig })
-        .response.then(() => {
+        .then(() => {
           LubyconLogger.initialized = true;
         });
     });
