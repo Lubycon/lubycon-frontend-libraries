@@ -10,11 +10,8 @@ interface Options {
  *
  * @example
  * ```ts
- * function loadGoogleSDK () {
- *   return loadScript('https://developers.kakao.com/sdk/js/kakao.js');
- *   // 또는
- *   return loadScript('https://developers.kakao.com/sdk/js/kakao.js', { async: false, defer: true });
- * }
+ * await loadScript('https://developers.kakao.com/sdk/js/kakao.js');
+ * window.Kakao.init('my-token');
  * ```
  */
 export function loadScript(src: string, options: Options = {}) {
