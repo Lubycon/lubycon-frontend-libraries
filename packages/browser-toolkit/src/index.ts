@@ -14,3 +14,4 @@ export * from './copyToClipboard';
 export * from './fetch';
 export * from './cookies';
 export * from './querystring';
+export * from './loadScript';
