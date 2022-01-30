@@ -15,7 +15,6 @@ interface Options {
  * ```
  */
 export function loadScript(src: string, options: Options = {}) {
-  const { async = true, defer = false } = options;
   if (window == null || document == null) {
     console.warn('loadScript 함수는 브라우저가 아닌 환경에서 실행될 수 없습니다.');
     return Promise.resolve();
@@ -26,6 +25,7 @@ export function loadScript(src: string, options: Options = {}) {
     return Promise.resolve();
   }
 
+  const { async = true, defer = false } = options;
   return new Promise((resolve) => {
     const script = document.createElement('script');
     script.async = async;
