@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.0.18...browser-toolkit@1.1.0) (2022-01-30)
+
+
+### Features
+
+* **browser-toolkit:** loadScript 함수 추가 ([#134](https://github.com/Lubycon/lubycon-frontend-libraries/issues/134)) ([d459391](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d459391fdb7f5d139219a9374ceac4d68aa4fb6f))
+
+
+
+
+
 ## [1.0.18](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.0.17...browser-toolkit@1.0.18) (2022-01-10)
 
 **Note:** Version bump only for package browser-toolkit
