@@ -13,3 +13,7 @@ export function convertHeadersToObject(headers: Headers) {
 
   return data;
 }
+
+export function isSucceedResponse(status: number) {
+  return status >= 200 && status < 400;
+}

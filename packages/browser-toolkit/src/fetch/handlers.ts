@@ -1,25 +1,30 @@
 import { QueryParam } from 'temen';
 import { Headers } from 'cross-fetch';
-import { convertHeadersToObject } from './utils';
+import { convertHeadersToObject, isSucceedResponse } from './utils';
+import { LubyconResponse } from './models';
 
-export interface LubyconResponse<T> {
-  headers: Record<string, string>;
-  data: T | null;
-  status: number;
-  statusText: string;
-}
 export async function responseHandler<T>(response: Response): Promise<LubyconResponse<T>> {
   const headers = convertHeadersToObject(response.headers);
   const defaultResponse = {
     headers,
-    status: response.status,
+    statusCode: response.status,
     statusText: response.statusText,
   };
+
+  if (isSucceedResponse(response.status) === false) {
+    return {
+      ...defaultResponse,
+      status: 'failed',
+      reason: 'invalid_status_code',
+      body: null,
+    };
+  }
+
   try {
-    const data = await response.json();
-    return { ...defaultResponse, data };
+    const body = await response.json();
+    return { ...defaultResponse, status: 'success', body };
   } catch {
-    return { ...defaultResponse, data: null };
+    return { ...defaultResponse, status: 'failed', reason: 'failed_json_parsing_body', body: null };
   }
 }
 
