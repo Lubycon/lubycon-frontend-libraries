@@ -48,7 +48,13 @@ export function createFetchInstance(baseUrl: string, options?: RequestOptions) {
 
 export async function doRequest<T>(url: string, options?: RequestOptions) {
   const response = await fetch(url, requestHandler({ ...options }));
-  return responseHandler<T>(response);
+  const lubyconResponse = await responseHandler<T>(response);
+
+  if (lubyconResponse.status === 'failed') {
+    throw lubyconResponse;
+  }
+
+  return lubyconResponse;
 }
 
 export function doGet<T>(url: string, options?: WithoutRequestBodyOptions) {
