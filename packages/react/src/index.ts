@@ -26,3 +26,4 @@ export { default as useScrollEvent } from './hooks/useScrollEvent';
 export { default as useClipboardCopy } from './hooks/useClipboardCopy';
 export { default as useResizeObserver } from './hooks/useResizeObserver';
 export { default as useElementSize } from './hooks/useElementSize';
+export { default as useStates } from './hooks/useStates';
