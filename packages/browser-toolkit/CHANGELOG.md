@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.1.0...browser-toolkit@1.2.0) (2022-02-02)
+
+
+### Features
+
+* **browser-toolkit:** 통신에 실패했을 때 fetch 함수 내부에서 명시적으로 에러를 던지도록 수정 ([#135](https://github.com/Lubycon/lubycon-frontend-libraries/issues/135)) ([cc440ff](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cc440ff6b2aa32f765bce91c84944bb7e5252b51))
+
+
+
+
+
 # [1.1.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.0.18...browser-toolkit@1.1.0) (2022-01-30)
 
 
