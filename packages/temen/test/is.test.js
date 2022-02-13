@@ -14,7 +14,6 @@ import {
   isRegExp,
 } from '../src/is/index';
 
-
 import {
   isArguments,
   isArrayBuffer,
@@ -26,6 +25,9 @@ import {
   isFunction,
   isError,
   isElement,
+  isFinite,
+  isInteger,
+  isMatch,
 } from '../src';
 
 describe('is', () => {
@@ -163,5 +165,30 @@ describe('is', () => {
   });
   test(`isElement 함수는 인자로 받은 값이 Element 객체이면 true 아니면 false를 반환한다.`, () => {
     expect(isElement(document.createElement('div'))).toBe(true);
+  });
+  test(`isFinite 함수는 인자로 받은 값이 유한한 숫자이면 true 아니면 false를 반환한다.`, () => {
+    expect(isFinite(0)).toBe(true);
+    expect(isFinite(1)).toBe(true);
+    expect(isFinite(-1)).toBe(true);
+    expect(isFinite(Infinity)).toBe(false);
+    expect(isFinite(-Infinity)).toBe(false);
+    expect(isFinite(NaN)).toBe(false);
+  });
+  test(`isInteger 함수는 인자로 받은 값이 정수이면 true 아니면 false를 반환한다.`, () => {
+    expect(isInteger(0)).toBe(true);
+    expect(isInteger(1)).toBe(true);
+    expect(isInteger(-1)).toBe(true);
+    expect(isInteger(1.1)).toBe(false);
+    expect(isInteger(-1.1)).toBe(false);
+    expect(isInteger(Infinity)).toBe(false);
+    expect(isInteger(-Infinity)).toBe(false);
+    expect(isInteger(NaN)).toBe(false);
+  });
+  test(`isMatch 함수는 인자로 받은 'object'에 'source'가 존재 하는지 깊은 비교하여 'source'가 존재하면 true 아니면 false를 반환한다.`, () => {
+    expect(isMatch({ a: 1, b: 2 }, { a: 1 })).toBe(true);
+    expect(isMatch({ a: 1, b: 2 }, { a: 1, b: 2 })).toBe(true);
+    expect(isMatch({ a: 1, b: 2 }, { a: 1, b: 3 })).toBe(false);
+    expect(isMatch({ a: 1, b: 2 }, { a: 1, b: 2, c: 3 })).toBe(false);
+    expect(isMatch({ a: { b: 1 } }, { a: { b: 1 } })).toBe(true);
   });
 });
