@@ -54,3 +54,6 @@ export * from './parscalCase';
 export * from './camelCase';
 export * from './trimCharacters';
 export * from './convertFirstLetter';
+export { default as isFinite } from './isFinite';
+export { default as isInteger } from './isInteger';
+export { default as isMatch } from './isMatch';

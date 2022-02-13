@@ -17,7 +17,7 @@
  * ```
  */
 function isInteger(value: number) {
-  return Math.floor(value) === value;
+  return Number.isInteger(value);
 }
 
 export default isInteger;
