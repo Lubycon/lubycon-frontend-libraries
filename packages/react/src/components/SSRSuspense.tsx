@@ -11,7 +11,7 @@ import { ComponentProps, Suspense, useEffect, useState } from 'react';
  * </SSRSuspense>
  * ```
  */
-export default function SSRSuspense({ fallback, children }: ComponentProps<typeof Suspense>) {
+export function SSRSuspense({ fallback, children }: ComponentProps<typeof Suspense>) {
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
