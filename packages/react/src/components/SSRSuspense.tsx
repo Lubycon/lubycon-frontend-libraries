@@ -5,7 +5,7 @@ import { ComponentProps, Suspense, useEffect, useState } from 'react';
  * SSR 환경에서는 fallback를 렌더하고, CSR 환경에서는 Suspsense를 렌더하는 컴포넌트입니다.
  *
  * @example
- * ```tsx
+ * ```jsx
  * <SSRSuspense fallback={<Fallback />}>
  *   <MyPage />
  * </SSRSuspense>
