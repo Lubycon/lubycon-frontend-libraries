@@ -57,3 +57,6 @@ export * from './convertFirstLetter';
 export { default as isNull } from './isNull';
 export { default as isObject } from './isObject';
 export { default as isPlainObject } from './isPlainObject';
+export { default as isFinite } from './isFinite';
+export { default as isInteger } from './isInteger';
+export { default as isMatch } from './isMatch';

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.35...@lubycon/react@1.23.0) (2022-02-20)
+
+
+### Features
+
+* **react:** SSRSuspense 추가 ([#138](https://github.com/Lubycon/lubycon-frontend-libraries/issues/138)) ([24363ec](https://github.com/Lubycon/lubycon-frontend-libraries/commit/24363ecbc0be14d2e6e25ea3c19843a5d98e5306))
+
+
+
+
+
+## [1.22.35](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.34...@lubycon/react@1.22.35) (2022-02-15)
+
+**Note:** Version bump only for package @lubycon/react
+
+
+
+
+
 ## [1.22.34](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.22.33...@lubycon/react@1.22.34) (2022-02-02)
 
 **Note:** Version bump only for package @lubycon/react
