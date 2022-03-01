@@ -1,19 +1,3 @@
-/**
- * 오브젝트를 깊은 복사합니다.
- *
- * @param {T} value 복제 할 값
- * @returns {T} 복제 된 값
- *
- * @example
- * ```js
- * const objects = [{ 'a': 1 }, { 'b': 2 }]
- *
- * const deep = cloneDeep(objects)
- * console.log(deep[0] === objects[0])
- * // => false
- * ```
- */
-
 interface Constructable<T> {
   new (...args: any): T;
 }
@@ -48,6 +32,22 @@ interface GenericTypedArrayConstructor<T> {
 interface GenericTypedArray<T> {
   constructor: GenericTypedArrayConstructor<T>;
 }
+
+/**
+ * 오브젝트를 깊은 복사합니다.
+ *
+ * @param {T} value 복제 할 값
+ * @returns {T} 복제 된 값
+ * @example
+ *
+ * ```ts
+ * const objects = [{ 'a': 1 }, { 'b': 2 }]
+ *
+ * const deep = cloneDeep(objects)
+ * console.log(deep[0] === objects[0])
+ * // => false
+ * ```
+ */
 
 function cloneDeep<T>(value: T): T;
 function cloneDeep(value: Value) {
