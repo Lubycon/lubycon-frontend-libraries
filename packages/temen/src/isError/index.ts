@@ -5,12 +5,13 @@
  * @param {any} value 확인할 값
  * @returns {boolean} Returns value가 `Error` 객체인지 여부
  * @example
- *
+ * ```js
  * isError(new Error)
  * // => true
  *
  * isError(Error)
  * // => false
+ * ```
  */
 
 function isError(value: any): value is Error {

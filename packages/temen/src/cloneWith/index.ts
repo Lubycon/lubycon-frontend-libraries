@@ -9,7 +9,7 @@ import clone from '../clone';
  * @returns {*} Returns 얕은 복사 된 value 또는 customizer의 결과 값
  * @see cloneDeepWith
  * @example
- *
+ * ```js
  * function customizer(value) {
  *   if (isElement(value)) {
  *     return value.cloneNode(false)
@@ -24,6 +24,7 @@ import clone from '../clone';
  * // => 'BODY'
  * console.log(el.childNodes.length)
  * // => 0
+ * ```
  */
 function cloneWith<T, R>(value: T, customizer?: (params: T) => R): R;
 function cloneWith<T>(value: T, customizer?: (params: T) => unknown) {

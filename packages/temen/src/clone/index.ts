@@ -2,12 +2,13 @@
  * @param {T} value 복제 할 값.
  * @returns {T} 복제 된 값을 반환.
  * @example
- *
+ * ```js
  * const objects = [{ 'a': 1 }, { 'b': 2 }]
  *
  * const shallow = clone(objects)
  * console.log(shallow[0] === objects[0])
  * // => true
+ * ```
  */
 
 function clone<T>(value: T): T;
