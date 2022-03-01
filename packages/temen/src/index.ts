@@ -54,3 +54,6 @@ export * from './parscalCase';
 export * from './camelCase';
 export * from './trimCharacters';
 export * from './convertFirstLetter';
+export { default as isNull } from './isNull';
+export { default as isObject } from './isObject';
+export { default as isPlainObject } from './isPlainObject';
