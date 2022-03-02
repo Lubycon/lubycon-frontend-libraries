@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.30.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.29.1...temen@1.30.0) (2022-03-02)
+
+
+### Features
+
+* isNull, isPlainObject, isObject ([#139](https://github.com/Lubycon/lubycon-frontend-libraries/issues/139)) ([59462e9](https://github.com/Lubycon/lubycon-frontend-libraries/commit/59462e96e1eb20ade1cfb7b4b2d58da60e471832))
+
+
+
+
+
 ## [1.29.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.29.0...temen@1.29.1) (2022-02-15)
 
 **Note:** Version bump only for package temen
