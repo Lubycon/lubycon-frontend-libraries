@@ -25,6 +25,9 @@ import {
   isFunction,
   isError,
   isElement,
+  isNull,
+  isObject,
+  isPlainObject,
   isFinite,
   isInteger,
   isMatch,
@@ -165,6 +168,28 @@ describe('is', () => {
   });
   test(`isElement 함수는 인자로 받은 값이 Element 객체이면 true 아니면 false를 반환한다.`, () => {
     expect(isElement(document.createElement('div'))).toBe(true);
+  });
+  test(`isNull 함수는 인자로 받은 값이 null 이면 true 아니면 false를 반환한다`, () => {
+    expect(isNull(null)).toBe(true);
+    expect(isNull(undefined)).toBe(false);
+    expect(isNull(0)).toBe(false);
+    expect(isNull('')).toBe(false);
+    expect(isNull(NaN)).toBe(false);
+    expect(isNull(false)).toBe(false);
+  });
+  test(`isObject 함수는 인자로 받은 값이 오브젝트의 언어타입인 확인한다.`, () => {
+    expect(isObject({})).toBe(true);
+    expect(isObject([1, 2, 3])).toBe(true);
+    expect(isObject(null)).toBe(false);
+  });
+  test(`isPlainObject 함수는 인자로 받은 값이  plane object 인지 확인한다.`, () => {
+    function Foo() {
+      this.a = 1;
+    }
+    expect(isPlainObject(new Foo())).toBe(false);
+    expect(isPlainObject({})).toBe(true);
+    expect(isPlainObject(Object.create(null))).toBe(true);
+    expect(isPlainObject({ a: 1 })).toBe(true);
   });
   test(`isFinite 함수는 인자로 받은 값이 유한한 숫자이면 true 아니면 false를 반환한다.`, () => {
     expect(isFinite(0)).toBe(true);
