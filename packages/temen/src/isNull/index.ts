@@ -5,20 +5,20 @@
  * **Note:** 이 메소드 아래 메소드를 사용합니다.
  * [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
  *
- * @param {*} value - 확인할 값
+ * @param {any} value - 확인할 값
  * @returns {boolean} 만약 value가 안전한 정수라면 `true`를, 그렇지 않다면 `false`를 반환합니다.
  * @example
  *```js
- * _.isSafeInteger(3);
+ * isSafeInteger(3);
  * // => true
  *
- * _.isSafeInteger(Number.MIN_VALUE);
+ * isSafeInteger(Number.MIN_VALUE);
  * // => false
  *
- * _.isSafeInteger(Infinity);
+ * isSafeInteger(Infinity);
  * // => false
  *
- * _.isSafeInteger('3');
+ * isSafeInteger('3');
  * // => false
  * ```
  */
