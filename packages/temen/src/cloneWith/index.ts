@@ -4,9 +4,9 @@ import clone from '../clone';
  * value를 얕은 복사 한다.
  * customizer는 얕은 복사 된 value를 매게변수로 받는다.
  *
- * @param {*} value value를 얕은 복사 합니다.
+ * @param {any} value value를 얕은 복사 합니다.
  * @param {Function} [customizer] The function to customize cloning.
- * @returns {*} Returns 얕은 복사 된 value 또는 customizer의 결과 값
+ * @returns {any} Returns 얕은 복사 된 value 또는 customizer의 결과 값
  * @see cloneDeepWith
  * @example
  * ```js

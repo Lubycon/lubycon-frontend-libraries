@@ -1,7 +1,7 @@
 /**
  * value가 ArrayBuffer인지 확인
  *
- * @param {*} value 검사할 값
+ * @param {any} value 검사할 값
  * @returns {boolean} ArrayBuffer이면 true 반환 아닌 경우 false 반환
  * @example
  *
