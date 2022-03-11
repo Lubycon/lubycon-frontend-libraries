@@ -13,7 +13,7 @@
  * // => false
  * ```
  */
-function isWeakSet(value: any) {
+function isWeakSet(value: any): value is WeakSet<any> {
   return value instanceof WeakSet;
 }
 

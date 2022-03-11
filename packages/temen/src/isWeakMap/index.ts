@@ -14,7 +14,7 @@
  * ```
  */
 
-function isWeakMap(value: any): boolean {
+function isWeakMap(value: any): value is WeakMap<any, any> {
   return value instanceof WeakMap;
 }
 
