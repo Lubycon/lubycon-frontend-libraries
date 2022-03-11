@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.30.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.30.0...temen@1.30.1) (2022-03-11)
+
+**Note:** Version bump only for package temen
+
+
+
+
+
 # [1.30.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.29.1...temen@1.30.0) (2022-03-02)
 
 
