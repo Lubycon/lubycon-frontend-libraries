@@ -60,3 +60,7 @@ export { default as isPlainObject } from './isPlainObject';
 export { default as isFinite } from './isFinite';
 export { default as isInteger } from './isInteger';
 export { default as isMatch } from './isMatch';
+export { default as isSymbol } from './isSymbol';
+export { default as isWeakMap } from './isWeakMap';
+export { default as isWeakSet } from './isWeakSet';
+export { default as isNative } from './isNative';
