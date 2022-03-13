@@ -53,7 +53,7 @@ const Icon = ({
     return () => {
       ignore = true;
     };
-  }, [isVisible, iconHTML]);
+  }, [isVisible, iconHTML, iconName]);
 
   const impressionRef = useImpression({
     onImpressionStart: visible,
