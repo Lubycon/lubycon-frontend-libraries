@@ -31,6 +31,10 @@ import {
   isFinite,
   isInteger,
   isMatch,
+  isSymbol,
+  isWeakMap,
+  isWeakSet,
+  isNative,
 } from '../src';
 
 describe('is', () => {
@@ -215,5 +219,23 @@ describe('is', () => {
     expect(isMatch({ a: 1, b: 2 }, { a: 1, b: 3 })).toBe(false);
     expect(isMatch({ a: 1, b: 2 }, { a: 1, b: 2, c: 3 })).toBe(false);
     expect(isMatch({ a: { b: 1 } }, { a: { b: 1 } })).toBe(true);
+  });
+  test(`isSymbol 함수는 인자로 받은 값이 symbol 이면 true 아니면 false를 반환한다.`, () => {
+    expect(isSymbol(Symbol())).toBe(true);
+    expect(isSymbol(Symbol.iterator)).toBe(true);
+    expect(isSymbol('abc')).toBe(false);
+  });
+  test(`isWeakMap 함수는 인자로 받은 값이 WeakMap 객체이면 true 아니면 false를 반환한다`, () => {
+    expect(isWeakMap(new WeakMap())).toBe(true);
+    expect(isWeakMap(new Map())).toBe(false);
+  });
+  test(`isWeakSet 함수는 인자로 받은 값이 WeakSet 객체이면 true 아니면 false를 반환한다`, () => {
+    expect(isWeakSet(new WeakSet())).toBe(true);
+    expect(isWeakSet(new Set())).toBe(false);
+  });
+  test(`isNative 함수는 인자로 받은 값이 native function 이면 true 아니면 false를 반환한다`, () => {
+    expect(isNative(Array.prototype.push)).toBe(true);
+    expect(isNative(Object.create)).toBe(true);
+    expect(isNative(function () {})).toBe(false);
   });
 });
