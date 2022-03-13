@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.40](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.39...@lubycon/icons@1.2.40) (2022-03-13)
+
+
+### Bug Fixes
+
+* **icons:** 아이콘 이름이 바뀌어도 컴포넌트가 리렌더링되지 않는 이슈 수정 ([#143](https://github.com/Lubycon/lubycon-frontend-libraries/issues/143)) ([2075c5c](https://github.com/Lubycon/lubycon-frontend-libraries/commit/2075c5c060b3272ca720f3d6b56f8a67cdc1e677))
+
+
+
+
+
 ## [1.2.39](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.38...@lubycon/icons@1.2.39) (2022-03-13)
 
 **Note:** Version bump only for package @lubycon/icons
