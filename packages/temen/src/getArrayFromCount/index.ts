@@ -10,7 +10,7 @@ import { identify } from '../functions';
 function getArrayFromCount(count: number): number[];
 function getArrayFromCount<T>(count: number, mapper: (i: number) => T): T[];
 function getArrayFromCount<T>(count: number, mapper?: (i: number) => T) {
-  const array = Array.from<number>({ length: count });
+  const array = Array.from({ length: count }, (_, index) => index);
   return array.map((v) => mapper?.(v) ?? identify(v));
 }
 
