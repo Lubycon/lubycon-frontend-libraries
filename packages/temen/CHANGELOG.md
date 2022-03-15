@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.31.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.31.0...temen@1.31.1) (2022-03-15)
+
+
+### Bug Fixes
+
+* **temen:** getArrayFromCount의 반환 타입이 unknown[]으로 잡히는 이슈 수정 ([#144](https://github.com/Lubycon/lubycon-frontend-libraries/issues/144)) ([ba3ace7](https://github.com/Lubycon/lubycon-frontend-libraries/commit/ba3ace7f5a2d8f22613b845be936b42680beebaf))
+
+
+
+
+
 # [1.31.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.30.1...temen@1.31.0) (2022-03-13)
 
 
