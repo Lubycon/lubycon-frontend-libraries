@@ -1,20 +1,12 @@
-interface Constructable<T> {
-  new (...args: any): T;
-}
+import { isMap, isRegExp, isSet, isTypedArray } from '../is';
+import isDate from '../isDate';
+import isObject from '../isObject';
+import isSymbol from '../isSymbol';
+import { TypedArray } from '../_internal/getType';
+
 interface Obj {
   [key: string]: any;
 }
-
-type TypedArray =
-  | Constructable<Int8Array>
-  | Uint8Array
-  | Uint8ClampedArray
-  | Int16Array
-  | Uint16Array
-  | Int32Array
-  | Uint32Array
-  | Float32Array
-  | Float64Array;
 
 type Value = Date &
   Set<any> &
@@ -22,7 +14,8 @@ type Value = Date &
   Array<any> &
   symbol &
   GenericTypedArray<TypedArray> &
-  Obj;
+  Obj &
+  RegExp;
 
 interface GenericTypedArrayConstructor<T> {
   new (): T;
@@ -60,28 +53,6 @@ function cloneDeep(value: Value) {
   return value;
 }
 
-const isDate = (value: any) => value instanceof Date ?? false;
-const isSet = (value: any) => value instanceof Set ?? false;
-const isMap = (value: any) => value instanceof Map ?? false;
-const isSymbol = (value: any) => typeof value === 'symbol' ?? false;
-const isObject = (value: any) =>
-  typeof value === 'object' && !Array.isArray(value) && value !== null;
-const isTypedArray = (value: any) => {
-  const typedArrays = [
-    Int8Array,
-    Uint8Array,
-    Uint8ClampedArray,
-    Int16Array,
-    Uint16Array,
-    Int32Array,
-    Uint32Array,
-    Float32Array,
-    Float64Array,
-  ];
-
-  return typedArrays.some((typedArray) => typedArray === value.constructor);
-};
-
 const copyValidations = [
   { validation: isDate, copy: copyDate },
   { validation: isSet, copy: copySet },
@@ -90,6 +61,7 @@ const copyValidations = [
   { validation: isSymbol, copy: copySymbol },
   { validation: isTypedArray, copy: copyTypedArray },
   { validation: isObject, copy: copyObject },
+  { validation: isRegExp, copy: copyRegexp },
 ];
 
 function copyDate(value: Date) {
@@ -136,6 +108,10 @@ function copyObject(value: Obj) {
 
 function copyTypedArray(value: GenericTypedArray<TypedArray>) {
   return new value.constructor(value);
+}
+
+function copyRegexp(value: RegExp) {
+  return new RegExp(value.source, value.flags);
 }
 
 export default cloneDeep;
