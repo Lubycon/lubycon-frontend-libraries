@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.32.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.31.1...temen@1.32.0) (2022-03-27)
+
+
+### Features
+
+* **temam:** cloneDeep 함수 고도화 ([#147](https://github.com/Lubycon/lubycon-frontend-libraries/issues/147)) ([e269abc](https://github.com/Lubycon/lubycon-frontend-libraries/commit/e269abc14e7d39ff20e1c968037f1dcd397800ec))
+
+
+
+
+
 ## [1.31.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.31.0...temen@1.31.1) (2022-03-15)
 
 

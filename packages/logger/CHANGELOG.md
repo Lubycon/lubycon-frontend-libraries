@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.9](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.11.8...@lubycon/logger@1.11.9) (2022-03-27)
+
+**Note:** Version bump only for package @lubycon/logger
+
+
+
+
+
 ## [1.11.8](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/logger@1.11.7...@lubycon/logger@1.11.8) (2022-03-15)
 
 **Note:** Version bump only for package @lubycon/logger
