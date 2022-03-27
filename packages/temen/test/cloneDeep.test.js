@@ -8,6 +8,7 @@ describe('deepClone', () => {
   const map = new Map([['foo', 1]]);
   const set = new Set().add('foo');
   const sym = Symbol(1);
+  const regexp = /foo/;
 
   it('deepClone 함수는 인자로 받은 배열을 복사한다.', function () {
     expect(deepClone(array)).toStrictEqual(array);
@@ -36,5 +37,8 @@ describe('deepClone', () => {
   it('deepClone 함수는 인자로 받은 Symbol 객체를 복사한다.', function () {
     expect(String(deepClone(sym))).toBe(String(sym));
     expect(deepClone(sym)).not.toBe(sym);
+  });
+  it('deepClone 함수는 인자로 받은 RegExp 객체를 복사한다.', function () {
+    expect(deepClone(regexp)).not.toBe(regexp);
   });
 });
