@@ -1,5 +1,7 @@
-import { isDate, isObject, isSymbol } from '..';
 import { isMap, isRegExp, isSet, isTypedArray } from '../is';
+import isDate from '../isDate';
+import isObject from '../isObject';
+import isSymbol from '../isSymbol';
 import { TypedArray } from '../_internal/getType';
 
 interface Obj {
