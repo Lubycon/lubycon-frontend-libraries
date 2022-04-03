@@ -6,13 +6,13 @@
  * @returns {boolean} `value`가 `other`보다 작으면 `true`
  * @example
  *
- * _.lt(1, 3);
+ * lt(1, 3);
  * // => true
  *
- * _.lt(3, 3);
+ * lt(3, 3);
  * // => false
  *
- * _.lt(3, 1);
+ * lt(3, 1);
  * // => false
  */
 export function lt(a: number, b: number) {
@@ -27,13 +27,13 @@ export function lt(a: number, b: number) {
  * @returns {boolean} `value`가 `other`보다 작거나 같으면 `true`
  * @example
  *
- * _.lte(1, 3);
+ * lte(1, 3);
  * // => true
  *
- * _.lte(3, 3);
+ * lte(3, 3);
  * // => true
  *
- * _.lte(3, 1);
+ * lte(3, 1);
  * // => false
  */
 export function lte(a: number, b: number) {
