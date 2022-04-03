@@ -5,22 +5,28 @@
  * @returns {Array} 변환된 배열을 반환합니다.
  * @example
  *
- * _.toArray({ 'a': 1, 'b': 2 });
+ * toArray({ 'a': 1, 'b': 2 });
  * // => [1, 2]
  *
- * _.toArray('abc');
+ * toArray('abc');
  * // => ['a', 'b', 'c']
  *
- * _.toArray(1);
+ * toArray(1);
  * // => []
  *
- * _.toArray(null);
+ * toArray(null);
  * // => []
  */
 
 import { isString } from '../is';
 import isObject from '../isObject';
 
+interface Obj {
+  [key: string]: any;
+}
+
+function toArray(value: string): Array<string>;
+function toArray(value: Obj): Array<any>;
 function toArray(value: any) {
   if (isObject(value)) return Object.values(value);
   if (isString(value)) return value.split('');
