@@ -1,5 +1,5 @@
 /**
- * pick object 중에서 원하는 키 값으로 선택한 키로 이루어져있는 개체를 만드는 함수
+ * 객체를 받아 원하는 키만으로 이루어져있는 새로운 객체를 만드는 함수
  *
  * @param object (Object): 객체.
  * @param array (...string|string[]): 선택할 속성

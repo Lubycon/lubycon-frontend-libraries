@@ -64,3 +64,4 @@ export { default as isSymbol } from './isSymbol';
 export { default as isWeakMap } from './isWeakMap';
 export { default as isWeakSet } from './isWeakSet';
 export { default as isNative } from './isNative';
+export { default as omit } from './omit';
