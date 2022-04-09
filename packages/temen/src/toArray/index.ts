@@ -21,12 +21,6 @@
 import { isString } from '../is';
 import isObject from '../isObject';
 
-interface Obj {
-  [key: string]: any;
-}
-
-function toArray(value: string): Array<string>;
-function toArray(value: Obj): Array<any>;
 function toArray(value: boolean): [];
 function toArray(value: number): [];
 function toArray(value: string): string[];
