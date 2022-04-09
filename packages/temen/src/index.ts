@@ -66,3 +66,4 @@ export { default as isWeakSet } from './isWeakSet';
 export { default as isNative } from './isNative';
 export { default as toArray } from './toArray';
 export * from './lt';
+export { default as omit } from './omit';
