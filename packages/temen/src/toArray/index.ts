@@ -27,8 +27,12 @@ interface Obj {
 
 function toArray(value: string): Array<string>;
 function toArray(value: Obj): Array<any>;
-function toArray(value: any) {
-  if (isObject(value)) return Object.values(value);
+function toArray(value: boolean): [];
+function toArray(value: number): [];
+function toArray(value: string): string[];
+function toArray<T>(value: Record<string, T>): T[];
+function toArray<T>(value: any) {
+  if (isObject(value)) return Object.values<T>(value);
   if (isString(value)) return value.split('');
 
   return [];
