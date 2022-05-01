@@ -4,13 +4,14 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "new-package": "hygen packages new",
+    "new-package": "hygen packages new && yarn && yarn build:all",
     "postinstall": "husky install",
     "build:all": "yarn workspaces foreach -pt run build",
     "test:all": "yarn workspaces foreach -pt run test",
+    "typecheck:all": "yarn workspaces foreach run typecheck",
     "docs:generate": "typedoc --tsconfig tsconfig.doc.json",
     "docs:deploy": "node script/deploy.js",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "yarn lint-staged"
   },
   "author": "Lubycon<lubycon@gmail.com>",
   "repository": {
