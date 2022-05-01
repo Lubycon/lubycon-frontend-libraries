@@ -1,0 +1,25 @@
+name: Tests
+
+on: pull_request
+
+jobs:
+  build:
+    name: Build Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Validate dependencies
+        run: yarn install --immutable --immutable-cache
+      - name: Build
+        run: yarn build:all
+      - name: Unit Test
+        run: yarn test:all
+      - name: ESLint
+        run: yarn lint
+      - name: Typecheck
+        run: yarn typecheck:all
