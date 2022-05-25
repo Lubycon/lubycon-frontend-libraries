@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.23.7...@lubycon/react@1.24.0) (2022-05-25)
+
+
+### Features
+
+* **react:** useDetectEscapeKey 추가 ([#152](https://github.com/Lubycon/lubycon-frontend-libraries/issues/152)) ([9a8fae0](https://github.com/Lubycon/lubycon-frontend-libraries/commit/9a8fae0a7edbb9282ecbb6953b27f79d01f20f86))
+
+
+
+
+
 ## [1.23.7](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.23.6...@lubycon/react@1.23.7) (2022-04-10)
 
 **Note:** Version bump only for package @lubycon/react
