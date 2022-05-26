@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import KeyCode from '../_internal/Key';
 
 /**
- * 첫 번째 매게변수로 전달된 키가 눌렸을 때 키(상태) 값을 반환합니다.
- * 두 번째 매게변수로 전달된 함수는 전달된 키가 눌렸을 때 함수를 호출합니다.
+ * 첫 번째 매개변수로 전달된 키가 눌렸을 때 키(상태) 값을 반환합니다.
+ * 두 번째 매개변수로 전달된 함수는 전달된 키가 눌렸을 때 함수를 호출합니다.
  *
  * @param {string} targetKey 눌렸을 때 반환할 키 값
  * @param {() => void} callback 눌렸을 때 실행할 함수
@@ -16,7 +17,7 @@ import { useEffect, useState } from 'react';
  * ```
  */
 
-function useDetectKeyPress(targetKey: string, callback?: () => void) {
+function useDetectKeyPress(targetKey: KeyCode, callback?: () => void) {
   const [key, setKey] = useState('');
 
   useEffect(() => {
