@@ -1,44 +1,22 @@
-import { useEffect, useState } from 'react';
+import useDetectKeyPress from './useDetectKeyPress';
 
 /**
- * esc 키를 눌렀을 때 true인 상태를 반환합니다.
+ * Escape 키가 눌렸을 때 true 반환
  *
+ * @returns {boolean} Escape 키가 눌렸을 때 true
  * @example
+ *
  * ```ts
  * const isEscapeKeyPressed = useDetectEscapeKey();
  *
- * useEffect(()=>{
- *   if(isEscapeKeyPressed) console.log("pressed esc");
- * },[isEscapeKeyPressed])
+ * console.log(isEscapeKeyPressed); // Escape 키가 눌렸을 때 true 출력
  * ```
  */
 
 const useDetectEscapeKey = () => {
-  const [isEscapeKeyPressed, setIsEscapeKeyPressed] = useState(false);
+  const detectKey = useDetectKeyPress();
 
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      setIsEscapeKeyPressed(true);
-    }
-  };
-
-  const handleKeyUp = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      setIsEscapeKeyPressed(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
-    };
-  });
-
-  return isEscapeKeyPressed;
+  return detectKey === 'Escape';
 };
 
 export default useDetectEscapeKey;
