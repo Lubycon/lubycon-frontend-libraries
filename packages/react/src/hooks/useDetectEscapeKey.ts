@@ -14,7 +14,7 @@ import useDetectKeyPress from './useDetectKeyPress';
  */
 
 const useDetectEscapeKey = () => {
-  const detectKey = useDetectKeyPress('Escape');
+  const detectKey = useDetectKeyPress();
 
   return detectKey === 'Escape';
 };

@@ -17,15 +17,15 @@ import KeyCode from '../_internal/Key';
  * ```
  */
 
-function useDetectKeyPress(targetKey: KeyCode, callback?: () => void) {
+function useDetectKeyPress(targetKey?: KeyCode, callback?: () => void) {
   const [key, setKey] = useState('');
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === targetKey) {
-        setKey(event.key);
         callback?.();
       }
+      setKey(event.key);
     };
 
     const handleKeyUp = (event: KeyboardEvent) => {
