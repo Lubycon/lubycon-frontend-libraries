@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.24.0...@lubycon/react@1.25.0) (2022-05-27)
+
+
+### Features
+
+* **react:** useDetectKeyPress 추가 ([#153](https://github.com/Lubycon/lubycon-frontend-libraries/issues/153)) ([cfbff26](https://github.com/Lubycon/lubycon-frontend-libraries/commit/cfbff2653dcf4b1706fd2ae18d7748dbe3a4bf7b))
+
+
+
+
+
 # [1.24.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.23.7...@lubycon/react@1.24.0) (2022-05-25)
 
 
