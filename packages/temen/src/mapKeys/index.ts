@@ -10,11 +10,12 @@
  * @returns {Object} 키 값이 새로 매핑 된 객체
  *
  * @example
- *
+ * ```js
  * mapKeys({ 'a': 1, 'b': 2 }, function(value, key) {
  *   return key + value;
  * });
  * // => { 'a1': 1, 'b2': 2 }
+ * ```
  */
 
 function mapKeys<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {

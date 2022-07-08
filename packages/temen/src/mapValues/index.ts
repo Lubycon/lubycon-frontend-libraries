@@ -8,7 +8,7 @@
  * @returns {Object} 매핑된 새 객체를 반환합니다.
  *
  * @example
- *
+ * ```js
  * const users = {
  *   'fred':    { 'user': 'fred',    'age': 40 },
  *   'pebbles': { 'user': 'pebbles', 'age': 1 }
@@ -19,6 +19,7 @@
  *
  * mapValues(users, 'age');
  * // => { 'fred': 40, 'pebbles': 1 }
+ * ```
  */
 
 function mapValues<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
