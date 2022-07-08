@@ -31,7 +31,7 @@ function mapValues<T>(
   return getObjectKeys(object).reduce<{ [key in keyof T]: any }>((acc, key) => {
     acc[key] = iterate(object[key] as T[keyof T], key as keyof T, object);
     return acc;
-  }, {} as { [key in keyof T]: any });
+  }, {} as { [key in keyof T]: T[keyof T] });
 }
 
 export default mapValues;
