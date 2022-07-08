@@ -20,8 +20,11 @@
 
 import getObjectKeys from '../getObjectKeys';
 
-function mapKeys<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
-  return getObjectKeys(object).reduce<{ [key: string]: any }>((acc, key) => {
+function mapKeys<T>(
+  object: T,
+  iterate: (value: T[keyof T], key: keyof T, object: T) => string | number
+) {
+  return getObjectKeys(object).reduce<Record<string, T[keyof T]>>((acc, key) => {
     acc[iterate(object[key], key, object)] = object[key];
     return acc;
   }, {});
