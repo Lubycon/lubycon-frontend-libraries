@@ -22,10 +22,10 @@
  * ```
  */
 
-function mapValues<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
-  const objectKeys = Object.keys(object) as Array<keyof typeof object>;
+import getObjectKeys from '../getObjectKeys';
 
-  return objectKeys.reduce<{ [key in keyof T]: any }>((acc, key) => {
+function mapValues<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
+  return getObjectKeys(object).reduce<{ [key in keyof T]: any }>((acc, key) => {
     acc[key] = iterate(object[key] as T[keyof T], key as keyof T, object);
     return acc;
   }, {} as { [key in keyof T]: any });

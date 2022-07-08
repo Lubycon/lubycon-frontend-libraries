@@ -18,10 +18,10 @@
  * ```
  */
 
-function mapKeys<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
-  const objectKeys = Object.keys(object) as Array<keyof typeof object>;
+import getObjectKeys from '../getObjectKeys';
 
-  return objectKeys.reduce<{ [key: string]: any }>((acc, key) => {
+function mapKeys<T>(object: T, iterate: (value: T[keyof T], key: keyof T, object: T) => any) {
+  return getObjectKeys(object).reduce<{ [key: string]: any }>((acc, key) => {
     acc[iterate(object[key], key, object)] = object[key];
     return acc;
   }, {});
