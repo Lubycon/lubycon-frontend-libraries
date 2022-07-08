@@ -28,10 +28,13 @@ function mapValues<T>(
   object: T,
   iterate: (value: T[keyof T], key: keyof T, object: T) => string | number
 ) {
-  return getObjectKeys(object).reduce<{ [key in keyof T]: any }>((acc, key) => {
-    acc[key] = iterate(object[key] as T[keyof T], key as keyof T, object);
-    return acc;
-  }, {} as { [key in keyof T]: T[keyof T] });
+  return getObjectKeys(object).reduce<{ [key in keyof T]: ReturnType<typeof iterate> }>(
+    (acc, key) => {
+      acc[key] = iterate(object[key] as T[keyof T], key as keyof T, object);
+      return acc;
+    },
+    {} as { [key in keyof T]: ReturnType<typeof iterate> }
+  );
 }
 
 export default mapValues;

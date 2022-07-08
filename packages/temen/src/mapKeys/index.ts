@@ -24,10 +24,13 @@ function mapKeys<T>(
   object: T,
   iterate: (value: T[keyof T], key: keyof T, object: T) => string | number
 ) {
-  return getObjectKeys(object).reduce<Record<string, T[keyof T]>>((acc, key) => {
-    acc[iterate(object[key], key, object)] = object[key];
-    return acc;
-  }, {});
+  return getObjectKeys(object).reduce<Record<ReturnType<typeof iterate>, T[keyof T]>>(
+    (acc, key) => {
+      acc[iterate(object[key], key, object)] = object[key];
+      return acc;
+    },
+    {}
+  );
 }
 
 export default mapKeys;
