@@ -30,7 +30,7 @@ function mapValues<T>(
 ) {
   return getObjectKeys(object).reduce<{ [key in keyof T]: ReturnType<typeof iterate> }>(
     (acc, key) => {
-      acc[key] = iterate(object[key] as T[keyof T], key as keyof T, object);
+      acc[key] = iterate(object[key], key, object);
       return acc;
     },
     {} as { [key in keyof T]: ReturnType<typeof iterate> }
