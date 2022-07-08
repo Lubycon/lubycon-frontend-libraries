@@ -30,6 +30,7 @@ export * from './intersection';
 export * from './sum';
 export * from './max';
 export * from './min';
+export * from './average';
 export * from './drop';
 export { default as gt } from './gt';
 export { default as gte } from './gte';
