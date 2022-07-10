@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.34.0...temen@1.35.0) (2022-07-10)
+
+
+### Features
+
+* **temen:** add mapValues, mapKeys ([#154](https://github.com/Lubycon/lubycon-frontend-libraries/issues/154)) ([5543ec5](https://github.com/Lubycon/lubycon-frontend-libraries/commit/5543ec56f3435a1961c1d5575fdecb5c826163b5))
+
+
+
+
+
 # [1.34.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.33.0...temen@1.34.0) (2022-04-10)
 
 
