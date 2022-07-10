@@ -67,3 +67,5 @@ export { default as isNative } from './isNative';
 export { default as toArray } from './toArray';
 export * from './lt';
 export { default as omit } from './omit';
+export { default as mapKeys } from './mapKeys';
+export { default as mapValues } from './mapValues';
