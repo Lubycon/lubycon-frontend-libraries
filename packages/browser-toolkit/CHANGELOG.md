@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.2.9...browser-toolkit@1.2.10) (2022-07-11)
+
+**Note:** Version bump only for package browser-toolkit
+
+
+
+
+
 ## [1.2.9](https://github.com/Lubycon/lubycon-frontend-libraries/compare/browser-toolkit@1.2.8...browser-toolkit@1.2.9) (2022-07-10)
 
 **Note:** Version bump only for package browser-toolkit
