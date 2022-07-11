@@ -1,29 +1,19 @@
-/**
- * 'object'와 동일한 키를 가진 객체를 만들고
- * 'object'의 각 열거형 문자열 키 속성을 이용해
- * iterate는 세 가지 인수(value, key, object)로 호출됩니다.
- *
- * @param {Object} object 반복할 객체
- * @param {Function} iterate 반복당 호출 함수
- * @returns {Object} 매핑된 새 객체를 반환합니다.
- *
- * @example
- * ```js
- * const users = {
- *   'fred':    { 'user': 'fred',    'age': 40 },
- *   'pebbles': { 'user': 'pebbles', 'age': 1 }
- * };
- *
- * mapValues(users, function(o) { return o.age; });
- * // => { 'fred': 40, 'pebbles': 1 }
- *
- * mapValues(users, 'age');
- * // => { 'fred': 40, 'pebbles': 1 }
- * ```
- */
-
 import getObjectKeys from '../getObjectKeys';
 
+/**
+ * 객체를 순회하며 값을 매핑하여, 키를 유지한채 새로운 값을 가진 객체를 생성합니다.
+ *
+ * @example
+ * ```ts
+ * const users = {
+ *   fred: { name: 'fred', age: 40 },
+ *   pebbles: { name: 'pebbles', age: 1 }
+ * };
+ *
+ * mapValues(users, (o) => o.age);
+ * // => { fred: 40, pebbles: 1 }
+ * ```
+ */
 function mapValues<T>(
   object: T,
   iterate: (value: T[keyof T], key: keyof T, object: T) => string | number
