@@ -29,6 +29,14 @@ export type LocalStorageNullableReturnValue<T> = [
 ];
 export type LocalStorageReturnValue<T> = [T, (newValue: T | null) => void, () => void];
 
+/**
+ * 로컬스토리지와 지역 상태를 연결하여 리액트 내에서 사용하기 편하게 만든 훅입니다.
+ *
+ * @example
+ * ```ts
+ * const [value, setValue, removeValue] = useLocalStorage('exampleKey');
+ * ```
+ */
 function useLocalStorage<T = string>(key: string): LocalStorageNullableReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaultValue: T): LocalStorageReturnValue<T>;
 function useLocalStorage<T = string>(key: string, defaultValue: T | null = null) {
