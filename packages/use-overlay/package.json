@@ -47,6 +47,6 @@
     "react-dom": "*"
   },
   "dependencies": {
-    "temen": "workspace:^"
+    "temen": "workspace:packages/temen"
   }
 }
