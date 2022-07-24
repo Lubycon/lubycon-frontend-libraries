@@ -14074,7 +14074,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"temen@workspace:^, temen@workspace:packages/temen":
+"temen@workspace:packages/temen":
   version: 0.0.0-use.local
   resolution: "temen@workspace:packages/temen"
   dependencies:
@@ -14827,7 +14827,7 @@ __metadata:
     rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-sourcemaps: ^0.4.2
     rollup-plugin-typescript2: ^0.30.0
-    temen: "workspace:^"
+    temen: "workspace:packages/temen"
     tslib: ^2.3.0
     typescript: ^4.3.5
   peerDependencies:
