@@ -69,3 +69,5 @@ export * from './lt';
 export { default as omit } from './omit';
 export { default as mapKeys } from './mapKeys';
 export { default as mapValues } from './mapValues';
+export { iif } from './iif';
+export { replaceItem, preserveRefReplaceItem } from './replaceItem';
