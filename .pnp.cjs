@@ -43,10 +43,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "temen",\
         "reference": "workspace:packages/temen"\
-      },\
-      {\
-        "name": "use-overlay",\
-        "reference": "workspace:packages/use-overlay"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -58,8 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@lubycon/react", ["virtual:eb2d11e538b9cd8e41dc79875b6e8a71cff399933c4258241016b915276a858cc3bfabb6a1473f82da17d6f400e528a681aa711a47cad4bb303e17456e77c140#workspace:packages/react", "workspace:packages/react"]],\
       ["browser-toolkit", ["workspace:packages/browser-toolkit"]],\
       ["lubycon-frontend-libraries", ["workspace:."]],\
-      ["temen", ["workspace:packages/temen"]],\
-      ["use-overlay", ["workspace:packages/use-overlay"]]\
+      ["temen", ["workspace:packages/temen"]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -6310,9 +6305,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lubycon/logger", "workspace:packages/logger"],\
             ["@types/node", "npm:10.17.60"],\
             ["@types/react", "npm:17.0.40"],\
+            ["@types/react-dom", "npm:18.0.6"],\
             ["browser-toolkit", "workspace:packages/browser-toolkit"],\
             ["cross-env", "npm:5.2.1"],\
             ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0"],\
             ["rimraf", "npm:2.7.1"],\
             ["rollup", "npm:2.70.1"],\
             ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],\
@@ -6337,9 +6334,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@juggle/resize-observer", "npm:3.3.1"],\
             ["@lubycon/logger", "workspace:packages/logger"],\
             ["@types/node", "npm:10.17.60"],\
-            ["@types/react", "npm:17.0.40"],\
+            ["@types/react", "npm:18.0.15"],\
+            ["@types/react-dom", "npm:18.0.6"],\
             ["browser-toolkit", "workspace:packages/browser-toolkit"],\
             ["cross-env", "npm:5.2.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0"],\
             ["rimraf", "npm:2.7.1"],\
             ["rollup", "npm:2.70.1"],\
             ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],\
@@ -16458,10 +16458,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:eced9981d411b87fa339b7db880643b9115aef5b5bf35b37cfe29c7a0564b4ed0ac397680866143ecba99f104a74f5704a0cfb8b5225ae10f9da4cc12f539092#npm:18.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-c940170ca2/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
+        ["virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f2a07a2d9e/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
           "packageDependencies": [\
-            ["react-dom", "virtual:eced9981d411b87fa339b7db880643b9115aef5b5bf35b37cfe29c7a0564b4ed0ac397680866143ecba99f104a74f5704a0cfb8b5225ae10f9da4cc12f539092#npm:18.2.0"],\
+            ["react-dom", "virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0"],\
+            ["@types/react", "npm:17.0.40"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["react", "npm:17.0.2"],\
+            ["scheduler", "npm:0.23.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f6b4b574b6/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0"],\
             ["@types/react", "npm:18.0.15"],\
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.2.0"],\
@@ -19100,32 +19115,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["use", "npm:3.1.1"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["use-overlay", [\
-        ["workspace:packages/use-overlay", {\
-          "packageLocation": "./packages/use-overlay/",\
-          "packageDependencies": [\
-            ["use-overlay", "workspace:packages/use-overlay"],\
-            ["@types/node", "npm:10.17.60"],\
-            ["@types/react", "npm:18.0.15"],\
-            ["@types/react-dom", "npm:18.0.6"],\
-            ["cross-env", "npm:5.2.1"],\
-            ["prettier", "npm:2.6.0"],\
-            ["react", "npm:18.2.0"],\
-            ["react-dom", "virtual:eced9981d411b87fa339b7db880643b9115aef5b5bf35b37cfe29c7a0564b4ed0ac397680866143ecba99f104a74f5704a0cfb8b5225ae10f9da4cc12f539092#npm:18.2.0"],\
-            ["rimraf", "npm:2.7.1"],\
-            ["rollup", "npm:2.70.1"],\
-            ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],\
-            ["rollup-plugin-json", "npm:3.1.0"],\
-            ["rollup-plugin-pnp-resolve", "npm:2.0.0"],\
-            ["rollup-plugin-sourcemaps", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.4.2"],\
-            ["rollup-plugin-typescript2", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:0.30.0"],\
-            ["temen", "workspace:packages/temen"],\
-            ["tslib", "npm:2.3.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["util", [\

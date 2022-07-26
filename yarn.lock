@@ -3565,9 +3565,12 @@ __metadata:
     "@juggle/resize-observer": ^3.3.1
     "@lubycon/logger": "workspace:packages/logger"
     "@types/node": ^10.11.0
-    "@types/react": ^17.0.13
+    "@types/react": ^18.0.0
+    "@types/react-dom": ^18.0.0
     browser-toolkit: "workspace:packages/browser-toolkit"
     cross-env: ^5.2.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
     rimraf: ^2.6.2
     rollup: ^2.38.5
     rollup-plugin-commonjs: ^10.1.0
@@ -3580,6 +3583,7 @@ __metadata:
     typescript: ^4.3.5
   peerDependencies:
     react: ^17.0.2
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -4167,7 +4171,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.6":
+"@types/react-dom@npm:^18.0.0":
   version: 18.0.6
   resolution: "@types/react-dom@npm:18.0.6"
   dependencies:
@@ -4176,7 +4180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.15":
+"@types/react@npm:*, @types/react@npm:^18.0.0":
   version: 18.0.15
   resolution: "@types/react@npm:18.0.15"
   dependencies:
@@ -14808,33 +14812,6 @@ __metadata:
   checksum: 4c076ecfbf3411e888547fe844e52378ab5ada2d2f27625139011eada79925e77f7fbf0e4016d45e6a9e9adb6b7e64981bd49b22700c7c401c5fc15f423303b3
   languageName: node
   linkType: hard
-
-"use-overlay@workspace:packages/use-overlay":
-  version: 0.0.0-use.local
-  resolution: "use-overlay@workspace:packages/use-overlay"
-  dependencies:
-    "@types/node": ^10.11.0
-    "@types/react": ^18.0.15
-    "@types/react-dom": ^18.0.6
-    cross-env: ^5.2.0
-    prettier: ^2.3.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    rimraf: ^2.6.2
-    rollup: ^2.38.5
-    rollup-plugin-commonjs: ^10.1.0
-    rollup-plugin-json: ^3.1.0
-    rollup-plugin-pnp-resolve: ^2.0.0
-    rollup-plugin-sourcemaps: ^0.4.2
-    rollup-plugin-typescript2: ^0.30.0
-    temen: "workspace:packages/temen"
-    tslib: ^2.3.0
-    typescript: ^4.3.5
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
 
 "use@npm:^3.1.0":
   version: 3.1.1
