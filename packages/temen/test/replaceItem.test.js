@@ -15,4 +15,9 @@ describe('replaceItem', () => {
     expect(preserveRefReplaceItem(array, 2, 5)).toStrictEqual([1, 2, 5]);
     expect(preserveRefReplaceItem(array, 2, 5)).toBe(array);
   });
+  it('preserveRefReplaceItem 함수는 유효하지 않은 인덱스 값을 받았을 때 에러를 반환한다.', function () {
+    const array = [1, 2, 3];
+    expect(() => preserveRefReplaceItem(array, 100, 5)).toThrow(Error);
+    expect(() => preserveRefReplaceItem(array, -1, 5)).toThrow(Error);
+  });
 });

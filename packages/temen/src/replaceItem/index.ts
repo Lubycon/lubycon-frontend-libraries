@@ -13,6 +13,9 @@ export function replaceItem<T>(arr: T[], targetIndex: number, newItem: T) {
  * 배열 내 지정된 인덱스에 위치한 원소를 새로운 원소로 변경하고 원본 배열을 반환합니다.
  */
 export function preserveRefReplaceItem<T>(arr: T[], targetIndex: number, newItem: T) {
+  if (targetIndex < 0 || targetIndex > arr.length - 1) {
+    throw new Error('targetIndex의 값이 유효하지 않습니다.');
+  }
   arr[targetIndex] = newItem;
   return arr;
 }
