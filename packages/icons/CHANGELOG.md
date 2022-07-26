@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.50](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.49...@lubycon/icons@1.2.50) (2022-07-26)
+
+**Note:** Version bump only for package @lubycon/icons
+
+
+
+
+
 ## [1.2.49](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/icons@1.2.48...@lubycon/icons@1.2.49) (2022-07-17)
 
 **Note:** Version bump only for package @lubycon/icons
