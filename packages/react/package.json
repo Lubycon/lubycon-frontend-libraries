@@ -42,7 +42,7 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
+    "react": "*",
     "react-dom": "*"
   },
   "dependencies": {
