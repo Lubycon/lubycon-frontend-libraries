@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.25.4...@lubycon/react@1.26.0) (2022-07-27)
+
+
+### Features
+
+* **use-overlay:** Quantumic Design에서 useOverlay만 따로 분리 ([#157](https://github.com/Lubycon/lubycon-frontend-libraries/issues/157)) ([be6b606](https://github.com/Lubycon/lubycon-frontend-libraries/commit/be6b6062b440b322a67bd40661f62d1077f01a4b))
+
+
+
+
+
 ## [1.25.4](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.25.3...@lubycon/react@1.25.4) (2022-07-26)
 
 **Note:** Version bump only for package @lubycon/react
