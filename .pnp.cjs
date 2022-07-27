@@ -6305,9 +6305,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lubycon/logger", "workspace:packages/logger"],\
             ["@types/node", "npm:10.17.60"],\
             ["@types/react", "npm:17.0.40"],\
+            ["@types/react-dom", "npm:18.0.6"],\
             ["browser-toolkit", "workspace:packages/browser-toolkit"],\
             ["cross-env", "npm:5.2.1"],\
             ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0"],\
             ["rimraf", "npm:2.7.1"],\
             ["rollup", "npm:2.70.1"],\
             ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],\
@@ -6332,9 +6334,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@juggle/resize-observer", "npm:3.3.1"],\
             ["@lubycon/logger", "workspace:packages/logger"],\
             ["@types/node", "npm:10.17.60"],\
-            ["@types/react", "npm:17.0.40"],\
+            ["@types/react", "npm:18.0.15"],\
+            ["@types/react-dom", "npm:18.0.6"],\
             ["browser-toolkit", "workspace:packages/browser-toolkit"],\
             ["cross-env", "npm:5.2.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0"],\
             ["rimraf", "npm:2.7.1"],\
             ["rollup", "npm:2.70.1"],\
             ["rollup-plugin-commonjs", "virtual:c44350362dadf573585fbfca0a9553ff425b0c5ca93363885468a9da31bcb072b496806ceef207f28aebcf7986ad01a1d01da16718ade201313bccb226551fe4#npm:10.1.0"],\
@@ -7045,6 +7050,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prop-types", "npm:15.7.4"],\
             ["@types/scheduler", "npm:0.16.2"],\
             ["csstype", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:18.0.15", {\
+          "packageLocation": "./.yarn/cache/@types-react-npm-18.0.15-5275c78b86-e22cc388d1.zip/node_modules/@types/react/",\
+          "packageDependencies": [\
+            ["@types/react", "npm:18.0.15"],\
+            ["@types/prop-types", "npm:15.7.4"],\
+            ["@types/scheduler", "npm:0.16.2"],\
+            ["csstype", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react-dom", [\
+        ["npm:18.0.6", {\
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.0.6-55949dcf84-db571047af.zip/node_modules/@types/react-dom/",\
+          "packageDependencies": [\
+            ["@types/react-dom", "npm:18.0.6"],\
+            ["@types/react", "npm:18.0.15"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16415,6 +16440,53 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["object-assign", "npm:4.1.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:18.2.0", {\
+          "packageLocation": "./.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/",\
+          "packageDependencies": [\
+            ["react", "npm:18.2.0"],\
+            ["loose-envify", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-dom", [\
+        ["npm:18.2.0", {\
+          "packageLocation": "./.yarn/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "npm:18.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f2a07a2d9e/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "virtual:b862bd73db4ddf3e66b68f5dffcd262951f20038c8cbbd503641333269806a050637f705be9892da1ad1f902a2b59706ddac332ad3b4bf59016a1fdf126d8084#npm:18.2.0"],\
+            ["@types/react", "npm:17.0.40"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["react", "npm:17.0.2"],\
+            ["scheduler", "npm:0.23.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f6b4b574b6/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
+          "packageDependencies": [\
+            ["react-dom", "virtual:c2d12d4d92d674b77feaa687bacb5fc4e5ea19104d2076461c8f749f69bfcb922aa4e27ffed752b2fb35b3a9fa3118ef7205cc48815029bd8787bb7f0fecff71#npm:18.2.0"],\
+            ["@types/react", "npm:18.0.15"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["react", "npm:18.2.0"],\
+            ["scheduler", "npm:0.23.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["react-is", [\
@@ -17204,6 +17276,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["saxes", "npm:5.0.1"],\
             ["xmlchars", "npm:2.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["scheduler", [\
+        ["npm:0.23.0", {\
+          "packageLocation": "./.yarn/cache/scheduler-npm-0.23.0-a379a6bc3b-d79192eeaa.zip/node_modules/scheduler/",\
+          "packageDependencies": [\
+            ["scheduler", "npm:0.23.0"],\
+            ["loose-envify", "npm:1.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\

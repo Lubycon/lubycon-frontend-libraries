@@ -29,7 +29,6 @@ to: packages/<%= name %>/package.json
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
-    "@types/react": "^17.0.13",
     "cross-env": "^5.2.0",
     "prettier": "^2.3.2",
     "rimraf": "^2.6.2",
