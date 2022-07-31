@@ -8,7 +8,7 @@ import React, {
   useMemo,
   useContext,
 } from 'react';
-import { Portal } from './Portal';
+import { Portal } from '../../components/Portal';
 
 interface OverlayValues {
   addToArea: (overlayId: string, element: ReactNode) => void;
