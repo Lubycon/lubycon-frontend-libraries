@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.1...@lubycon/react@1.26.2) (2022-07-31)
+
+
+### Bug Fixes
+
+* **react:** export Portal ([#160](https://github.com/Lubycon/lubycon-frontend-libraries/issues/160)) ([a155667](https://github.com/Lubycon/lubycon-frontend-libraries/commit/a15566764a65582ebb69f5cf8a33580d18de6e8e))
+
+
+
+
+
 ## [1.26.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.0...@lubycon/react@1.26.1) (2022-07-31)
 
 
