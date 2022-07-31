@@ -29,3 +29,4 @@ export { default as useElementSize } from './hooks/useElementSize';
 export * from './components/SSRSuspense';
 export { default as useDetectEscapeKey } from './hooks/useDetectEscapeKey';
 export { default as useDetectKeyPress } from './hooks/useDetectKeyPress';
+export * from './hooks/useOverlay';
