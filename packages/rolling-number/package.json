@@ -41,7 +41,6 @@
     "babel-loader": "^8.2.4",
     "cross-env": "^5.2.0",
     "prettier": "^2.3.2",
-    "quantumic-design": "^1.6.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "rimraf": "^2.6.2",
