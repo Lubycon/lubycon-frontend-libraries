@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "outDir": "./dist",
+    "declarationDir": "dist/types"
+  },
+  "include": ["src"],
+  "exclude": ["src/stories/**/*"]
+}
