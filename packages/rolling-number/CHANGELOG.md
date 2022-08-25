@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/rolling-number@1.1.0...@lubycon/rolling-number@1.1.1) (2022-08-25)
+
+**Note:** Version bump only for package @lubycon/rolling-number
+
+
+
+
+
 # 1.1.0 (2022-08-17)
 
 

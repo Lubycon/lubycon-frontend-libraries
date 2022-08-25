@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.3](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.2...@lubycon/react@1.26.3) (2022-08-25)
+
+
+### Bug Fixes
+
+* useResizeObserver 타입 찐빠 수정 ([#162](https://github.com/Lubycon/lubycon-frontend-libraries/issues/162)) ([d725c40](https://github.com/Lubycon/lubycon-frontend-libraries/commit/d725c40b0eed70b49d8c93c03e8b7db12791e33c))
+
+
+
+
+
 ## [1.26.2](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.1...@lubycon/react@1.26.2) (2022-07-31)
 
 
