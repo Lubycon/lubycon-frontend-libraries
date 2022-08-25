@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useMemo } from 'react';
 import { ResizeObserver } from '@juggle/resize-observer';
 
 /**
@@ -13,25 +13,34 @@ import { ResizeObserver } from '@juggle/resize-observer';
  *   return <div ref={ref} />
  * }
  */
-function useResizeObserver(resizeCallback: (arg: ResizeObserverEntry) => void) {
-  const elementRef = useRef<HTMLElement | null>(null);
-  const resizeObsesrverRef = useRef<ResizeObserver | null>(null);
-  const onResize = useRef(resizeCallback);
-
-  useEffect(() => {
-    if (elementRef.current === null) {
-      return;
+function useResizeObserver(resizeCallback: (entry: ResizeObserverEntry) => void) {
+  const resizeObserver = useMemo(() => {
+    if (typeof ResizeObserver === 'undefined') {
+      return undefined;
     }
 
-    resizeObsesrverRef.current = new ResizeObserver((entries) => {
-      onResize.current(entries[0]);
+    return new ResizeObserver((entries) => {
+      if (entries[0] != null) {
+        resizeCallback(entries[0]);
+      }
     });
-    resizeObsesrverRef.current.observe(elementRef.current);
+  }, [resizeCallback]);
 
-    return () => resizeObsesrverRef.current?.disconnect();
-  }, [elementRef.current]);
+  const ref = useCallback(
+    (element: Element | null) => {
+      if (resizeObserver === undefined) {
+        return;
+      }
 
-  return elementRef;
+      resizeObserver.disconnect();
+      if (element !== null) {
+        resizeObserver.observe(element);
+      }
+    },
+    [resizeObserver]
+  );
+
+  return ref;
 }
 
 export default useResizeObserver;
