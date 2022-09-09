@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 16.14.0
       - name: Validate dependencies
         run: yarn install --immutable --immutable-cache
       - name: Build

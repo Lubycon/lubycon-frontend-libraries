@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16.14.0
       - name: Set Git User
         run: |
           git config --global user.name "lubycon-admin"
