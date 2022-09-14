@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 /**
  *
@@ -14,17 +14,13 @@ import { useEffect, useState } from 'react';
  *
  */
 
-function useTabVisibility(onTabVisible: () => void, onTabHidden: () => void) {
-  const [isTabVisible, setTabVisible] = useState(document.visibilityState === 'visible');
-
+function useTabVisibility(onVisible: () => void, onHidden: () => void) {
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
-        setTabVisible(true);
-        onTabVisible();
+        onVisible();
       } else {
-        setTabVisible(false);
-        onTabHidden();
+        onHidden();
       }
     };
 
@@ -34,8 +30,6 @@ function useTabVisibility(onTabVisible: () => void, onTabHidden: () => void) {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
-
-  return isTabVisible;
 }
 
 export default useTabVisibility;
