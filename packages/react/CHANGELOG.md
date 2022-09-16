@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.4...@lubycon/react@1.27.0) (2022-09-16)
+
+
+### Features
+
+* **react:** add useTabVisibility ([#164](https://github.com/Lubycon/lubycon-frontend-libraries/issues/164)) ([fe4b400](https://github.com/Lubycon/lubycon-frontend-libraries/commit/fe4b40098e4e7077cbbeaa94285d30c09eeef0df))
+
+
+
+
+
 ## [1.26.4](https://github.com/Lubycon/lubycon-frontend-libraries/compare/@lubycon/react@1.26.3...@lubycon/react@1.26.4) (2022-09-09)
 
 **Note:** Version bump only for package @lubycon/react
