@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.38.1](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.38.0...temen@1.38.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* **temen:** 빼먹은 export 추가 ([#167](https://github.com/Lubycon/lubycon-frontend-libraries/issues/167)) ([5de4c09](https://github.com/Lubycon/lubycon-frontend-libraries/commit/5de4c09e7dbb84aafdbda38c968aa91fef26c181))
+
+
+
+
+
 # [1.38.0](https://github.com/Lubycon/lubycon-frontend-libraries/compare/temen@1.37.0...temen@1.38.0) (2022-09-16)
 
 
