@@ -71,3 +71,4 @@ export { default as mapKeys } from './mapKeys';
 export { default as mapValues } from './mapValues';
 export { iif } from './iif';
 export { replaceItem, preserveRefReplaceItem } from './replaceItem';
+export { entries } from './entries';
